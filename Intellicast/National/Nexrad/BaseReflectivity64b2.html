@@ -1,0 +1,1318 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from 96.8.93.198/National/Nexrad/BaseReflectivity.aspx?location=default&region=LSX&animate=true by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jul 2019 22:46:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="ctl00_ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><title>
+	Intellicast - Base Reflectivity in United States
+</title><meta name="viewport" content="width=device-width,initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="description" content="Intellicast.com: The Authority in Expert Weather" /><meta name="google-site-verification" content="Ty8E9HwyYpwnoH6SWxOoDkwWIpfXZbnXYxSKIJKinLw" /><meta name="google-site-verification" content="OwqzWim3JgPf7WONV8sYyMir93oTT-JmWDKQW-IApCI" /><meta name="verify-v1" content="bwhh8UmywoDXIeujVrNoVWPt5FmUdjfYgs0MgjMjouc=" /><meta name="msvalidate.01" content="2625493FFF704B18B25610DED3DC742E" /><meta name="y_key" content="66d7db7fca59b234" /><meta http-equiv="PICS-Label" content="(PICS-1.1 &quot;http://www.rsac.org/ratingsv01.html&quot; l gen true comment &quot;RSACi North America Server&quot; for &quot;http://www.intellicast.com&quot; on &quot;1998.08.31T21:19-0800&quot; r (n 0 s 0 v 0 l 0))&quot;" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="0" /><meta http-equiv="pragma" content="no-cache" /><meta id="ctl00_ctl00_adsmetrics_zone" name="adsmetrics_zone" value="home" /><link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" /><link rel="icon" href="../../favicon.ico" type="image/x-icon" /><link href="http://web.archive.org/web/20190402115722/http://images.intellicast.com/Styles/normalize.rexive.css" rel="stylesheet" /><link href="http://web.archive.org/web/20190402110827/http://images.intellicast.com/Styles/main_20160121.css" rel="stylesheet" /><link href="http://web.archive.org/web/20190402114148/http://images.intellicast.com/Styles/Stylesheet_20131220.css" rel="stylesheet" />
+
+  <script src="../../../icons.wxug.com/scripts/modernizr/2.8.2/modernizr.min.js"></script>
+  <script src="../../../cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+  <script src="http://images.intellicast.com/Scripts/ads-sdk-full-v3.js"></script>
+  <script>
+    try { // change delimiters to mustache syntax
+      _.templateSettings.interpolate = /\{\{=([\s\S]+?)\}\}/g;
+      _.templateSettings.evaluate = /\{\{([\s\S]+?)\}\}/g;
+      _.templateSettings.escape = /\{\{-([\s\S]+?)\}\}/g;
+    } catch (e) { /*ignore*/ }
+  </script>
+  <script type="text/javascript">
+    // set global locationId
+    var locationId = '';
+	</script>
+
+	<script type="text/javascript" src="http://images.intellicast.com/Scripts/ads_20170629.js"></script>
+  
+
+	<!-- BEGIN New Ads -->
+	<script src="http://images.intellicast.com/Scripts/Vendor/twc-jquery-1.10.2.min.js"></script>
+	
+  <script src="http://images.intellicast.com/Scripts/ad-v3.js"></script>
+
+
+  <!-- Initialize PCO -->
+	<script>
+	  window.TWC.Configs = {
+	    'dsx': {
+	      'host': '//dsx.weather.com/', //'//dsx01.int.aws.weather.com/',
+	      'apiKey': '7bb1c920-7027-4289-9c96-ae5e263980bc',
+	      'locale': (TWC && TWC.Titan && TWC.Titan.locale) || 'en_US' || 'en_US',
+	      'cmsVersion': 'v1'
+	    },
+	    'image_poc': {
+	      'instart': 0,
+	      'akamai': 0
+	    },
+	    'debug': 1,
+	    'disable_lazyload': 0,
+	    'sunTurbo': {
+	      'baseUrl': 'http://devapi.weather.com',
+	      'apiKey': 'c1ea9f47f6a88b9acb43aba7faf389d4',
+	      'locale': 'en-US' || 'en-us'
+	    }
+	  };
+	  TWC.pco = TWC.initpco(
+				jQuery,
+				{
+				  'page': { locale: 'en-US' },
+				  'ad': {}
+				},
+				null,
+				null,
+				{ "error": "LOCATION_UNAVAILABLE" }
+		);
+	</script>
+
+  <!-- load Tealium -->
+	<script>
+	  // var TWC = TWC || {};
+		// TWC.Events = TWC.Events || {};
+		// TWC.Events.getEvent = TWC.Events.getEvent || function () { return { done: function () {}, resolve: function () {} }; };
+
+		var getScreenSize = function () {
+	    var browserWidth = window.innerWidth || document.body.clientWidth;
+
+	    if (browserWidth < 768) return 'mobile';
+	    if (browserWidth < 1025) return 'tablet';
+	    return 'desktop';
+	  };
+	  var getSaveZipCd = function () {
+	    var e = jQuery;
+	    var t = TWC;
+	    var n = jQuery.jStorage.get("user");
+	    var a = t && t.pco && t.pco.getNodeValue && t.pco.getNodeValue("page", "currentLocation");
+	    var r = a && a.zipCd || n && n.lastVisitedLocation && n.lastVisitedLocation.zipCd || n && n.savedLocations && jQuery.isArray(n.savedLocations) && n.savedLocations[0] && n.savedLocations[0].zipCd || n && n.recentSearchLocations && e.isArray(n.recentSearchLocations) && n.recentSearchLocations[0] && n.recentSearchLocations[0].zipCd || "";
+
+	    return r;
+	  };
+
+	  var getBrowser = function () {
+	    var userAgent = navigator && navigator.userAgent
+	    meta = userAgent && userAgent.match(/chrome|firefox|safari|trident/i);
+
+	    if (meta && jQuery.isArray(meta)) {
+	      switch (meta[0].toLowerCase()) {
+	        case "chrome":
+	          return "twcchrome";
+	        case "firefox":
+	          return "twcff";
+	        case "safari":
+	          return "twcsafari";
+	        case "trident":
+	          return "twcie";
+	        default:
+	          return "twcnative"
+	      }
+	    }
+	  };
+
+		  $(document).ready(function () {
+	      setTimeout(function () {
+	        TWC.Events.getEvent('lotameReady').resolve();
+	      }, 1000);
+
+		    TWC.Events.getEvent('utag_dataReady').done(function () {
+		      utag_data['js_page.positions'] = ['WX_Top300Variable', 'WX_WindowShade', 'WX_Mid300', 'WX_PaidSearch', 'WX_Tile1', 'WX_Tile2', 'WX_BottomLeaderboard'];
+		      // jQuery.ajax({
+		      //   'url': 'https://tags.tiqcdn.com/utag/weather/intellicast/prod/utag.js',
+		      //   'dataType': 'script',
+		      //   'success': void (0),
+		      //   'cache': true
+		      // });
+
+					window.twcMoney = window.twcMoney || {};
+					window.twcMoney.cmd = window.twcMoney.cmd || [];
+					window.twcMoney.cmd.push(function() {
+		        var locale = TWC.Configs.sunTurbo.locale;
+		        var staticAdPositions = utag_data['js_page.positions'];
+		        var zone = utag_data['js_page.zone'];
+		        var custParams = {};
+
+		        var localeA = TWC && TWC.Configs && TWC.Configs.dsx && TWC.Configs.dsx.locale
+		          , amznId = "de_DE" === localeA && "3128" || "1004";
+
+		        var thirdParties = [
+		          {
+		            id: 'amznslots',
+		            amznId: amznId,
+		            async: true,
+		            timeout: 500
+		          },
+		          {
+		            id: 'criteo',
+		            netId: 2305,
+		            timeout: 500,
+		            async: true
+		          },
+		          {
+		            id: 'wfxtg',
+		            acctid: getScreenSize() !== 'mobile' ? '4C2383' : '5B3739',
+		            timeout: 500,
+		            params: {
+		              activeLocation: window.getSaveZipCd() || '30334',
+		            },
+		            async: true,
+		          },
+		          {
+		            id: 'lotame',
+		            clientId: 2215,
+		            async: true,
+		            timeout: 500,
+		            params: {
+		              metrics: TWC.pco.getNodeValue("metrics") || '',
+		              location: {
+		                dmaCd: TWC.pco.getNodeValue("ad", "location").dmaCd || ''
+		              },
+		              adzone: zone,
+		              lang: TWC.pco.getNodeValue("page", "lang") || ''
+		            }
+		          }
+		        ];
+		        var customAdConfig = {
+		          preparePositions: function (requestObj) {
+		            var positions = [
+		              {
+		                "id": "WX_Top300Variable",
+		                "pos": "wx_300var",
+		                "sizes": [
+		                  [300, 600],
+		                  [300, 251],
+											[300, 250],
+		                  [300, 1050],
+		                  [300, 276]
+		                ]
+		              },
+		              {
+		                "id": "WX_WindowShade",
+		                "pos": "wx_ws",
+		                "sizes": [
+		                  [300, 276],
+		                  [728, 91],
+											[728, 90],
+		                  [728, 50],
+		                  [970, 250]
+		                ],
+		                "device": [ "desktop" ]
+		              },
+		              {
+		                "id": "WX_Mid300",
+		                "pos": "wx_mid300",
+		                "sizes": [[300, 251], [300, 250], [320, 300]]
+		              },
+		              {
+		                "id": "WX_PaidSearch",
+		                "pos": "wx_pds",
+		                "sizes": [[300, 251], [300, 250]]
+		              },
+		              // {
+		              //    "id": "WX_Tile1",
+		              //    "pos": "wx_t1",
+		              //    "sizes": [[125, 125]]
+		              // },
+		              // {
+		              //   "id": "WX_Tile2",
+		              //   "pos": "wx_t2",
+		              //   "sizes": [[125, 125]]
+		              // },
+		              {
+		                "id": "WX_BottomLeaderboard",
+		                "pos": "wx_botldr",
+		                "sizes": [[728, 91], [728, 90]]
+		              }
+		            ];
+
+		            console.log('========');
+		            console.log(requestObj);
+		            console.log('========');
+
+		            return positions.filter(function (item) {
+		              return requestObj.positions.indexOf(item.id) >= 0;
+		            });
+		          },
+		          getAdUnit: function (locale, deviceType) {
+		            var adUnit = null;
+		            var js_page_ad_unit = utag_data['js_page.ad_unit'].split('../../index.html');
+
+		            adUnit = {
+		              adUnit: js_page_ad_unit[2] || '',
+		              networkCode: '/' + (js_page_ad_unit[1] || '')
+		            };
+
+		            return adUnit;
+		          },
+		          getCustParams: function () {
+		            return {
+		              refurl: "intellicast",
+		              browser: getBrowser(),
+		              cc: TWC.pco.getNodeValue("user", "currentLocation").cntryCd,
+		              ct: TWC.pco.getNodeValue("user", "currentLocation").cityNm,
+		              dma: TWC.pco.getNodeValue("ad", "location").dmaCd,
+		              ent: utag_data["js_page.ent"],
+		              impression_id: TWC.pco.getNodeValue("ad", "impression_id"),
+		              intl: utag_data["js_page.gpr"],
+		              lang: TWC.pco.getNodeValue("page", "lang"),
+		              lat: TWC.pco.getNodeValue("ad", "location").lat,
+		              lon: TWC.pco.getNodeValue("ad", "location").long,
+		              loc: utag_data["js_page.locid"],
+		              ord: utag_data["js_page.ord"],
+		              plat: utag_data["js_page.plat"],
+		              refurl: utag_data["js_page.refurl"],
+		              rmid: utag_data["js_page.rmid"],
+		              st: TWC.pco.getNodeValue("user", "currentLocation").stCd,
+		              zip: utag_data["js_page.zip"],
+		              tf: utag_data["js_page.zone"]
+		            };
+		          }
+		        };
+
+		        var adLocation = TWC.pco.getNodeValue("ad", "location");
+		        var geocode = adLocation.lat + ',' + adLocation.long;//'42.36,-71.06'
+
+		        window.twcMoney.SunDataService.fetchData({ geocode: geocode })
+		          .then(function(result) {
+		            var custParams = result.custParams;
+
+		            console.log('========');
+		            console.log(result);
+		            console.log('========');
+
+		            window.twcMoney.moneyTree({ useLightSpeed: false, locale: locale })
+		              .start({
+		                adZone: zone,
+		                locale: locale,
+		                thirdParties: thirdParties,
+		                custParams: custParams,
+		                pageAdPositions: [],
+		                staticAdPositions: staticAdPositions,
+		                processStatic: true,
+
+		                adConfig: customAdConfig
+		              })
+									.then(function () {
+										window.twcMoney.moneyTree().getBidProcessPromise('lotame')
+										.then(function () {
+											var lotameData = {};
+											var jStorage = JSON.parse(localStorage
+												&& localStorage.jStorage);
+											var lotameRaw = jStorage && jStorage.lotameRaw || {};
+
+											var lot_abbr, lot_id, lotameData;
+											if (lotameData = TWC.pco.getNodeValue("user", "lotame") || {},
+											lotameData.lot_tpid = lotameRaw
+												&& lotameRaw.Profile
+												&& lotameRaw.Profile.tpid || lotameData.lot_tpid,
+											lotameData.lot_pid = lotameRaw
+												&& lotameRaw.Profile
+												&& lotameRaw.Profile.pid || lotameData.lot_pid,
+											lot_abbr = lotameData && lotameData.lot_abbr || "",
+											lot_id = lotameData && lotameData.lot_id || "",
+											audienceLength = lotameRaw
+												&& lotameRaw.Profile
+												&& lotameRaw.Profile.Audiences
+												&& lotameRaw.Profile.Audiences.Audience
+												&& lotameRaw.Profile.Audiences.Audience.length,
+											audienceLength > 0) {
+													lot_abbr = "",
+													lot_id = "";
+													for (var c = 0; c < audienceLength; c++)
+															lot_abbr += lotameRaw.Profile.Audiences.Audience[c].abbr + (c < audienceLength - 1 ? "," : ""),
+															lot_id += lotameRaw.Profile.Audiences.Audience[c].id + (c < audienceLength - 1 ? "," : "");
+
+													lotameData.lot_abbr = lot_abbr,
+													lotameData.lot_id = lot_id
+											}
+
+											TWC.pco.setNodeValue("user", "lotame", lotameData);
+										});
+									});
+		          });
+					});
+		    });
+		  });
+	</script>
+
+  <!-- Optimizely -->
+  <script src="../../../cdn.optimizely.com/js/878051086.js"></script>
+
+  <!-- BEGIN Omniture -->
+
+  <script src="https://www.wunderground.com/intellicast"></script>
+
+  <script type="text/javascript">
+	(function () {
+		var _recentLocations = [];
+
+		_recentLocations.push(1);
+
+		_recentLocations = _recentLocations.join();
+
+		var _brdcrmb = window.location.pathname !== "/" ? window.location.pathname.substring(1).split("../../index.html") : ["Home"];
+		if (_brdcrmb.length > 1) {
+			_brdcrmb.unshift("Home");
+			_brdcrmb[_brdcrmb.length - 1] = _brdcrmb[_brdcrmb.length - 1].substring(0, _brdcrmb[_brdcrmb.length - 1].indexOf("."));
+		}
+		s.pageName = document.title;
+		s.prop2 = s.evar4 = _brdcrmb.join(" > "); // sub section e.g. home > maps > regionmap
+		s.prop6 = s.evar6 = "::"; // city:state:country
+		s.prop8 = s.evar8 = ""; // dma id
+		s.prop9 = s.evar9 = ""; // zip code
+		s.evar23 = ""; // marketing campaigns
+		s.evar24 = window.location.href; // full url
+		//SiteCatalyst Beacon Parameter: event15 Page View Event
+
+		s.prop10 = _recentLocations; // recent locations, number then location id
+		s.prop14 = ""; // intra-page actions
+		s.evar10 = _recentLocations; // saved locations, number then location id
+
+		s.evar11 = ""; // internal search term
+		s.evar12 = ""; // member type (member, non-member)
+		s.evar13 = ""; // weather map layer
+		s.evar14 = ""; // boating map layer
+		s.evar17 = ""; // search type (other or zip)
+		s.evar18 = ""; // search error message
+		/*
+			event7: Membership Signup
+			event8: Sign-Ins
+			event9: Sign-Outs
+		*/
+		var s_code = s.t();
+		if (s_code) document.write(s_code);
+	}());
+  </script>
+
+  <!-- END Omniture -->
+
+  <!-- END New Ads -->
+
+  <script src="http://images.intellicast.com/App_Scripts/icast.storage.min.js"></script>
+	<script src="http://images.intellicast.com/App_Scripts/jquery-autocomplete.min.js"></script>
+
+	
+	
+
+  <meta name="description" content="Single-site NEXRAD base reflectivity data are updated every 5, 6, or 10 minutes, depending on whether the radar is in normal precipitation mode, storm precipitation mode, or clear air mode. The same NEXRAD base reflectivity information (excluding clear air mode data) is incorporated into the WSI NOWrad national and regional mosaics, except that the NOWrad images go through rigorous quality control procedures that remove most false echoes caused by ground clutter and anomalous propagation (AP). Caution must be exercised in attempting to interpret the single site NEXRAD images because they often contain 'artifacts' that are not actual precipitation echoes." />
+  <meta name="keywords" content="weather, radar, satellite, local, national, global, storm, rain, snow, temperature, loop" />
+
+<style type="text/css">
+	#leftColumn {
+		width:800px;
+	}
+	#rightColumn {
+		margin-right:-140px;
+	}
+  /* New Ads */
+  .img-link{display:block;margin:10px 0;}
+  .img-link img{border:none;display:block;}
+  /* New Ads */
+</style>
+
+	<!-- HTML5 Shim: IE8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body id="ctl00_ctl00_MasterBody">
+	
+
+	<!-- Begin comScore Tag -->
+	<script type="text/javascript">var _comscore = _comscore || []; _comscore.push({ c1: "2", c2: "9576127", c3: "", c4: window.location.href }); (function () { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();</script>
+	<noscript><img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=9576127&amp;c3=&amp;c4=www.intellicast.com/National/Nexrad/BaseReflectivity.aspx?location=default&amp;region=LSX&amp;animate=true&amp;c5=&amp;c6=&amp;c15=&amp;cv=2.0&amp;cj=1" alt="" style="position:absolute;top:-1000px;" /></noscript>
+	<!-- End comScore Tag -->
+
+	<header id="header" class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="logo-wrapper">
+					<a href="../../index.html" class="logo">
+						<span class="sr-only">Intellicast.com</span>
+						<span class="slogan">The Authority in Expert Weather</span>
+					</a>
+				</div>
+				<div class="user-tools">
+					<div class="constants" style="width:60%;float:right;">
+						
+            
+						<a class="alerts" href="../../Storm/Severe/Bulletins.html"><i class="icon"></i>Alerts</a>
+						<a class="hurricane""" href="https://www.wunderground.com/hurricane"><i class="icon"></i>Hurricanes</a>
+						<a class="help" href="../../Help/Default.html"><i class="icon"></i>Help</a>
+						
+					</div>
+					<div class="inav-flyout toggle-target">
+						
+							<a href="../../Default.html">Sign-In to Add to iNav</a>
+						
+					</div>
+					<form method="get" action="http://96.8.93.198/Local/Default.aspx" class="ui-front location-search">
+						<input tabindex="1" class="blurred" id="locSearch" name="query" type="text" value="Enter City, State, Country or U.S. Zip code" autocomplete="off" />
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="site-nav">
+					<ul class="nav">
+						<li><a href="http://96.8.93.198/Local/Weather.aspx" class="toggle-btn">Local</a>
+							<ul>
+								<li><a href="http://96.8.93.198/Local/Default.aspx">Find A Location</a></li>
+								<li><a href="http://96.8.93.198/Local/Weather.aspx">Weather Report</a></li>
+								<li><a href="../../Local/WxMap.html">Interactive Weather Map</a></li>
+								<li><a href="http://96.8.93.198/Local/Forecast.aspx">Extended Forecast</a></li>
+								<li><a href="http://96.8.93.198/Local/Hourly.aspx">Hourly Forecast</a></li>
+								<li><a href="http://96.8.93.198/Local/Observation.aspx">Past Observations</a></li>
+								<li><a href="http://96.8.93.198/Local/ObservationsSummary.aspx">Past Observations Summary</a></li>
+								<li><a href="http://96.8.93.198/Local/History.aspx">Historic Averages</a></li>
+							</ul>
+						</li>
+						<li><a href="../../Local/WxMap.html" class="toggle-btn">Interactive</a>
+							<ul>
+								<li><a href="../../Video/Player.html">Videos</a></li>
+                <li><a href="../../Local/WxMap.html">Interactive Weather Map</a></li>
+								
+								<li><a href="http://96.8.93.198/Local/WxMapSm.aspx">Interactive Map (Small)</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="../Default.html" class="toggle-btn">National</a>
+							<ul>
+								<li><a href="../Default.html">National Home</a></li>
+								<li><a href="../Weather.html">Current Weather</a></li>
+								<li><a href="../ForecastToday.html">Today's Forecast</a></li>
+								<li><a href="../ForecastTomorrow.html">Tomorrow's Forecast</a></li>
+								<li><a href="../Radar/Default.html">Radar<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Radar/Current.html">Current Radar</a></li>
+										<li><a href="../Radar/Forecast.html">Forecast Radar</a></li>
+										<li><a href="../Radar/Summary.html">Radar Summary</a></li>
+										<li><a href="../Radar/Yesterday.html">Yesterday's Radar Loop</a></li>
+										<li><a href="../Radar/OneKM.html">1Km Radar</a></li>
+										<li><a href="../Radar/Metro.html">Metro Radar</a></li>
+									</ul>
+								</li>
+								<li><a href="Default.html">Nexrad<i class="caret"></i></a>
+									<ul>
+										<li><a href="BaseReflectivity.html">Base Reflectivity</a></li>
+										<li><a href="RadialVelocity.html">Radial Velocity</a></li>
+									</ul>
+								</li>
+								<li><a href="../Surface/Default.html">Surface Analysis<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Surface/Current.html">Current Surface Analysis</a></li>
+										<li><a href="../Surface/Mixed.html">Mixed Surface Analysis</a></li>
+										<li><a href="../Surface/Forecast12.html">12-Hour Surface Forecast</a></li>
+										<li><a href="../Surface/Forecast24.html">24-Hour Surface Forecast</a></li>
+										<li><a href="../Surface/Forecast36.html">36-Hour Surface Forecast</a></li>
+										<li><a href="../Surface/Forecast48.html">48-Hour Surface Forecast</a></li>
+									</ul>
+								</li>
+								<li><a href="../Satellite/Default.html">Satellite<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Satellite/Infrared.html">National Infrared Satellite</a></li>
+										<li><a href="../Satellite/Regional.html">Regional Infrared Satellite</a></li>
+										<li><a href="../Satellite/Visible.html">Visible Satellite</a></li>
+										<li><a href="../Satellite/WaterVapor.html">Water Vapor</a></li>
+									</ul>
+								</li>
+								<li><a href="../Temperature/Default.html">Temperature<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Temperature/Current.html">Current Temperatures</a></li>
+										<li><a href="../Temperature/HighToday.html">High Temperatures Today</a></li>
+										<li><a href="../Temperature/HighTomorrow.html">High Temperatures Tomorrow</a></li>
+										<li><a href="../Temperature/LowTomorrow.html">Low Temperatures Tomorrow</a></li>
+										<li><a href="../Temperature/TEMPcast.html">TEMPcast</a></li>
+										<li><a href="../Temperature/WindChill.html">Wind Chill</a></li>
+										<li><a href="../Temperature/Extreme.html">Feels Like Temps</a></li>
+										<li><a href="../Temperature/Departure.html">Temp Departure</a></li>
+										<li><a href="../Temperature/Departure10.html">10 Day Temp Departure</a></li>
+										<li><a href="../Temperature/Departure30.html">30 Day Temp Departure</a></li>
+										<li><a href="../Temperature/Departure90.html">90 Day Temp Departure</a></li>
+										<li><a href="../Temperature/FrostFreeze.html">Frost &amp; Freeze</a></li>
+										<li><a href="../Temperature/FirstLastFreeze.html">First &amp; Last Freeze</a></li>
+										<li><a href="../Temperature/Delta.html">24hr Deltas</a></li>
+									</ul>
+								</li>
+								<li><a href="../Outdoors/Default.html">Outdoors<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Outdoors/SOLARcast.html">SOLARcast</a></li>
+										<li><a href="../Outdoors/Summer.html">Summer Fun</a></li>
+										<li><a href="../Outdoors/Gardening.html">Gardening</a></li>
+										<li><a href="../Outdoors/Watering.html">Plant Watering</a></li>
+										<li><a href="../Outdoors/Painting.html">Painting</a></li>
+										<li><a href="../Outdoors/Golfing.html">Golfing</a></li>
+										<li><a href="../Outdoors/Turf.html">Golf Turf Conditions</a></li>
+										<li><a href="../Outdoors/UltraViolet.html">UV Report</a></li>
+										<li><a href="../Outdoors/Sky.html">Sky Watch</a></li>
+									</ul>
+								</li>
+								<li><a href="../Precipitation/Default.html">Precipitation<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Precipitation/PrecipCast.html">PRECIPcast</a></li>
+										<li><a href="../Precipitation/RainCast.html">RAINcast</a></li>
+										<li><a href="../Precipitation/PopCast.html">POPcast</a></li>
+										<li><a href="../Precipitation/Estimated.html">Estimated Rainfall</a></li>
+										<li><a href="../Precipitation/Daily.html">Daily Precipitation</a></li>
+										<li><a href="../Precipitation/Weekly.html">Weekly Precipitation</a></li>
+										<li><a href="../Precipitation/Departure10.html">10 Day Precip Departure</a></li>
+										<li><a href="../Precipitation/Departure30.html">30 Day Precip Departure</a></li>
+										<li><a href="../Precipitation/Departure90.html">90 Day Precip Departure</a></li>
+									</ul>
+								</li>
+								<li><a href="../Wind/Default.html">Wind<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Wind/Current.html">Current Winds</a></li>
+										<li><a href="../Wind/WINDcast.html">WINDcast</a></li>
+										<li><a href="../Wind/JetStream.html">Jet Stream</a></li>
+									</ul>
+								</li>
+								<li><a href="../Humidity/Default.html">Humidity<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Humidity/Current.html">Current Humidity</a></li>
+										<li><a href="../Humidity/IndoorRelative.html">Indoor Relative Humidity</a></li>
+										<li><a href="../Humidity/HUMIDITYcast.html">HUMIDITYcast</a></li>
+										<li><a href="../Humidity/FOGcast.html">FOGcast</a></li>
+										<li><a href="../Humidity/DewPoint.html">Dew Point</a></li>
+									</ul>
+								</li>
+								<li><a href="../Analysis/Default.html">Analysis Charts<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Analysis/SuperFax.html">WSI SuperFax</a></li>
+										<li><a href="../Analysis/UpperAir300.html">300MB Upper Air</a></li>
+										<li><a href="../Analysis/UpperAir500.html">500MB Upper Air</a></li>
+										<li><a href="../Analysis/UpperAir850.html">850MB Upper Air</a></li>
+										<li><a href="../Analysis/Difax24.html">24hr Difax</a></li>
+										<li><a href="../Analysis/Difax48.html">48hr Difax</a></li>
+										<li><a href="../Analysis/Difax72.html">72hr Difax</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../../Global/Default.html" class="toggle-btn">Global</a>
+							<ul>
+								<li><a href="../../Global/Default.html">Global Home</a></li>
+								<li><a href="../../Global/Humidity.html">Relative Humidity</a></li>
+								<li><a href="../../Global/Surface.html">Surface Analysis</a></li>
+								<li><a href="../../Global/Satellite/Default.html">Satellite<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Satellite/Current.html">Current Satellite</a></li>
+										<li><a href="../../Global/Satellite/Infrared.html">Infrared Satellite</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Global/Temperature/Default.html">Temperature<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Temperature/Current.html">Current Temperatures</a></li>
+										<li><a href="../../Global/Temperature/Minimum.html">Minimum Temperatures</a></li>
+										<li><a href="../../Global/Temperature/Maximum.html">Maximum Temperatures</a></li>
+										<li><a href="../../Global/Temperature/Sunshine.html">Sunshine</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Global/Precipitation/Default.html">Precipitation<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Precipitation/Current.html">Current Precipitation</a></li>
+										<li><a href="../../Global/Precipitation/ForecastAM.html">AM Precipitation Forecast</a></li>
+										<li><a href="../../Global/Precipitation/ForecastPM.html">PM Precipitation Forecast</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Global/Wind/Default.html">Wind<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Wind/Current.html">Current Winds</a></li>
+										<li><a href="../../Global/Wind/Forecast.html">Forecast Winds</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../../Storm/Default.html" class="toggle-btn">Storms</a>
+							<ul>
+								<li><a href="../../Storm/Default.html">Storm Home</a></li>
+								<li><a href="../../Storm/Severe/Default.html">Severe Weather<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Storm/Severe/Bulletins.html">Weather Alerts</a></li>
+										<li><a href="../../Storm/Severe/WatchesWarnings.html">Watches &amp; Warnings</a></li>
+										<li><a href="../../Storm/Severe/OneKM.html">1Km Storm Watch</a></li>
+										<li><a href="../../Storm/Severe/Metro.html">Metro Storm Watch</a></li>
+										<li><a href="../../Storm/Severe/OutlookToday.html">Severe Outlook Today</a></li>
+										<li><a href="../../Storm/Severe/OutlookTomorrow.html">Severe Outlook Tomorrow</a></li>
+										<li><a href="../../Storm/Severe/Lightning.html">Lightning Strikes</a></li>
+										<li><a href="../../Storm/Severe/ThunderCast.html">THUNDERcast</a></li>
+										<li><a href="../../Storm/Severe/WaterVapor.html">Water Vapor</a></li>
+									</ul>
+								</li>
+								<li><a href="https://www.wunderground.com/hurricane">Hurricane<i class="caret"></i></a>
+									<ul>
+										<li><a href="https://www.wunderground.com/hurricane">Active Track</a></li>
+										<li><a href="../../Storm/Hurricane/TropicalWinds24.html">24hr Tropical Winds</a></li>
+										<li><a href="../../Storm/Hurricane/TropicalWinds48.html">48hr Tropical Winds</a></li>
+										<li><a href="../../Storm/Hurricane/TropicalWinds72.html">72hr Tropical Winds</a></li>
+										<li><a href="../../Storm/Hurricane/AtlanticAnalysis.html">Atlantic Analysis</a></li>
+										<li><a href="../../Storm/Hurricane/AtlanticSatellite.html">Atlantic Satellite</a></li>
+										<li><a href="../../Storm/Hurricane/AtlanticForecast.html">Atlantic Forecast</a></li>
+										<li><a href="../../Storm/Hurricane/CaribbeanSatellite.html">Caribbean Satellite</a></li>
+										<li><a href="../../Storm/Hurricane/PacificAnalysis.html">Pacific Analysis</a></li>
+										<li><a href="../../Storm/Hurricane/PacificSatellite.html">Pacific Satellite</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Storm/Summary/Default.html">Season Summaries<i class="caret"></i></a>
+									<ul>
+                    <li><a href="../../Storm/Summary/Hurricane2015.html">2015 Hurricane Summary</a></li>
+                    <li><a href="../../Storm/Summary/Hurricane2014.html">2014 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2013.html">2013 Hurricane Summary</a></li>
+                    <li><a href="../../Storm/Summary/Hurricane2012.html">2012 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2011.html">2011 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2010.html">2010 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2009.html">2009 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2008.html">2008 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2007.html">2007 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2006.html">2006 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2005.html">2005 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2004.html">2004 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2003.html">2003 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2002.html">2002 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2001.html">2001 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2000.html">2000 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane1999.html">1999 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane1998.html">1998 Hurricane Summary</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../../Health/Default.html" class="toggle-btn">Health</a>
+							<ul>
+								<li><a href="../../Health/Default.html">Health Home</a></li>
+								<li><a href="../../Health/AchesPains.html">Aches &amp; Pains</a></li>
+								<li><a href="../../Health/Air.html">Air Stagnation</a></li>
+								<li><a href="../../Health/Attentiveness.html">Attentiveness</a></li>
+								<li><a href="../../Health/BadHairDay.html">Bad Hair Day</a></li>
+								<li><a href="../../Health/Influenza.html">Influenza Report</a></li>
+								<li><a href="../../Health/Labor.html">Labor Index</a></li>
+								<li><a href="../../Health/Mood.html">Mood Index</a></li>
+								<li><a href="../../Health/Reflex.html">Reflex Times</a></li>
+								<li><a href="../../Health/Respiratory.html">Respiratory Distress</a></li>
+							</ul>
+						</li>
+						<li><a href="../../Travel/Default.html" class="toggle-btn">Travel</a>
+							<ul>
+								<li><a href="../../Travel/Default.html">Travel Home</a></li>
+								<li><a href="../../Travel/Risk.html">Delay Risk</a></li>
+								<li><a href="../../Travel/Outlook.html">Outlook</a></li>
+								<li><a href="../../Travel/Flying/Default.html">Airport Delays</a></li>
+								<li><a href="../../Travel/Library/Browse.html">Climate Guides</a></li>
+								<li><a href="../../Travel/Driving/Road.html">Driving<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Travel/Driving/Highways.html">Highway Conditions</a></li>
+										<li><a href="../../Travel/Driving/Road.html">Roadway Conditions</a></li>
+										<li><a href="../../Travel/Driving/TopUpTopDown.html">Top Up Top Down</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Travel/Weather/Snow/Default.html">Ski &amp; Snow<i class="caret"></i></a>
+									<ul>
+										<li><a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=39&longitude=-97&zoomLevel=4&opacity=1&basemap=0014&layers=0053');">Interactive Snow Cover</a></li>
+										<li><a href="../../Travel/Weather/Snow/Ski.html">Ski Conditions</a></li>
+										<li><a href="../../Travel/Weather/Snow/Cover.html">Snow Cover</a></li>
+										<li><a href="../../Travel/Weather/Snow/SNOWcast.html">SNOWcast</a></li>
+										<li><a href="../../Travel/Weather/Snow/Forecast.html">48hr Snow Forecast</a></li>
+										<li><a href="../../Travel/Weather/Snow/Storm.html">24hr Snow Forecast</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Travel/Weather/Marine/Default.html">Boat &amp; Beach<i class="caret"></i></a>
+									<ul>
+										
+										<li><a href="../../Travel/Weather/Marine/Sailing.html">Great Sailing</a></li>
+										<li><a href="../../Travel/Weather/Marine/Water.html">Water Temperatures</a></li>
+										<li><a href="../../Travel/Weather/Marine/Waves.html">Wave Heights</a></li>
+										<li><a href="../../Travel/Weather/Marine/Forecast.html">Marine Forecast</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../ForecastToday.html" class="toggle-btn">Forecast</a>
+							<ul>
+								<li><a href="http://96.8.93.198/Local/Weather.aspx">10-Day Weather Report</a></li>
+								<li><a href="http://96.8.93.198/Local/Hourly.aspx">Hourly</a></li>
+								<li><a href="../Radar/Forecast.html">Radar</a></li>
+								<li><a href="../Surface/Forecast12.html">Surface</a></li>
+								<li><a href="../Temperature/TEMPcast.html">Temperature</a></li>
+								<li><a href="../Precipitation/PrecipCast.html">Precipitation</a></li>
+								<li><a href="../Precipitation/RainCast.html">Rain</a></li>
+								<li><a href="../../Storm/Severe/ThunderCast.html">Thunder</a></li>
+								<li><a href="../Wind/WINDcast.html">Winds</a></li>
+								<li><a href="../Humidity/HUMIDITYcast.html">Humidity</a></li>
+							</ul>
+						</li>
+						<li><a href="../Weather.html" class="toggle-btn">Current</a>
+							<ul>
+								<li><a href="../Radar/Current.html">Radar</a></li>
+								<li><a href="../Surface/Current.html">Surface</a></li>
+								<li><a href="../Temperature/Current.html">Temperatures</a></li>
+								<li><a href="../Temperature/Delta.html">Temperature Changes</a></li>
+								<li><a href="../Precipitation/Estimated.html">Precipitation</a></li>
+								<li><a href="../Wind/Current.html">Winds</a></li>
+								<li><a href="../Humidity/Current.html">Humidity</a></li>
+							</ul>
+						</li>
+						<li><a href="../Radar/Default.html" class="toggle-btn">Radar</a>
+							<ul>
+								<li><a href="../../Local/WxMap.html">Interactive Radar</a></li>
+								<li><a href="../Radar/Current.html">Current Radar</a></li>
+								<li><a href="../Radar/Currente5e7.html?animate=true">Current Loops</a></li>
+								<li><a href="../Radar/Forecast.html">Forecast</a></li>
+								<li><a href="../Radar/OneKM.html">Regional (1Km)</a></li>
+								<li><a href="../Radar/OneKMe5e7.html?animate=true">Regional (1Km) Loop</a></li>
+								<li><a href="../Radar/Metro.html">Metro</a></li>
+								<li><a href="../Radar/Metroe5e7.html?animate=true">Metro Loop</a></li>
+								<li><a href="../Radar/Summary.html">Summary</a></li>
+								<li><a href="../../Local/WxMap.html">Java Radar Loop</a></li>
+							</ul>
+						</li>
+						<li><a href="../Satellite/Default.html" class="toggle-btn">Satellite</a>
+							<ul>
+								<li><a href="../../Global/Satellite/Infrared.html">Global Infrared</a></li>
+								<li><a href="../Satellite/Infrared.html">US National Infrared</a></li>
+								<li><a href="../Satellite/Regional.html">US Regional Infrared</a></li>
+								<li><a href="../../Storm/Hurricane/AtlanticSatellite.html">Atlantic Infrared Satellite</a></li>
+								<li><a href="../../Storm/Hurricane/PacificSatellite.html">Pacific Infrared Satellite</a></li>
+								<li><a href="../../Storm/Hurricane/CaribbeanSatellite.html">Caribbean Infrared Satellite</a></li>
+								<li><a href="../Satellite/Visible.html">Visible Satellite</a></li>
+								<li><a href="../../Global/Satellite/Current.html">Current Satellite</a></li>
+								<li><a href="../Satellite/WaterVapor.html">Water Vapor</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="location-bar clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="user-location">
+						<a class="current-location toggle-btn" href="http://96.8.93.198/Local/Weather.aspx?location=">
+							
+						</a>
+						
+					</div>
+					<div class="uni-time">
+						<strong>Universal Time:</strong>&nbsp;Thursday, 11 Jul 2019, 22:28
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="referral" class="referral-form">
+			<div id="referralForm" style="display:block;">
+				<strong><span style="margin-right:5px;">Send this page to a friend</span>
+        <img src="http://images.intellicast.com/App_Images/btn_close.gif" alt="Close" class="Close" onclick="javascript:$('#referral').toggle();" style="float:right;" /></strong>
+				<div>
+					Your Name:<br />
+					<input type="text" id="FromName" maxlength="50" />
+				</div>
+				<div>
+					Your E-mail Address: <br />
+					<input type="text" id="FromEmail" maxlength="256" />
+				</div>
+				<div>
+					Friend's E-mail Address: <br />
+					<input type="text" id="ToEmail" maxlength="256" />
+				</div>
+				<div>
+					<button type="button" id="ReferralSubmit" onclick="javascript: SendReferral()">Send</button>
+				</div>
+			</div>
+			<div id="referralMessage" style="display:none;">
+				<strong style="text-align:center;">Thank you!<img src="http://images.intellicast.com/App_Images/btn_close.gif" alt="Close" class="Close" onclick="javascript:$('#referral').toggle();" /></strong>
+				<br /><br />
+					Your referral has been sent.<br /><br />
+					<a href="#" onclick="javascript:$('#referralForm').show();$('#referralMessage').hide();">Click here to send another one.</a>
+			</div>
+		</div>
+	</header>
+
+	<div class="main container clearfix" id="content">
+		<form name="aspnetForm" method="post" action="http://96.8.93.198/National/Nexrad/BaseReflectivity.aspx?location=default&amp;region=LSX&amp;animate=true" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJNTk1NTI5NDI2ZGRvSRnGDWqGYA5Ro4f9aygQ7HWU9w==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5DAB8CFB" />
+</div>
+			
+
+<div id="leftColumn">
+
+<div class="pageHeader wide">
+  <div class="Primary Header" style="float: left;">Base Reflectivity</div>
+  <div class="breadcrumb"><a href="../../index.html">Home</a> &raquo; <a href="../index.html">National</a> &raquo; <a href="index.html">Nexrad</a> &raquo; Base Reflectivity</div>
+</div>
+<div class="Chrome RelatedTopWide">
+  <div class="Title">Nexrad Maps</div>
+</div>
+<div class="Container RelatedContainerWide">
+  <table class="Related">
+    <tr>
+      <td class="Selected">
+        <a href="BaseReflectivity.html"><img src="http://images.intellicast.com/WxImages/Nexrad/nexrad.gif" alt="Base Reflectivity" class="Thumbnail" /><br />
+        Base Reflectivity</a>
+      </td>
+      <td>
+        <a href="RadialVelocity.html"><img src="http://images.intellicast.com/WxImages/Nexrad/nexrad.gif" alt="Radial Velocity" class="Thumbnail" /><br />
+        Radial Velocity</a>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="../../Global/Default.html">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_global.gif" alt="Global Weather"  />
+            Global Weather
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="https://www.wunderground.com/hurricane">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_storm.gif" alt="Storm Tracking"  />
+            Storm Tracking
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=39&longitude=-97&zoomLevel=4&opacity=1&basemap=0014&layers=0039');">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header">
+            <img src="http://images.intellicast.com/App_Images/thx_radar.gif" alt="Current Radar">
+            Current Radar
+          </a>
+        </div>
+      </td>
+			<td rowspan="2">
+        <a href="../../Local/WxMap.html"><img src="http://images.intellicast.com/App_Images/Ads/129x233_imap.jpg" alt="Interactive Map" style="height:190px;" /></a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="FocusIcon">
+          <a href="http://96.8.93.198/Local/Weather.aspx">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_weather.gif" alt="Local Weather"  />
+            Local Weather
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="../../Local/WxMap.html">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_wximap.jpg" alt="Interactive Weather Map"  />
+            Interactive Weather
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=39&longitude=-97&zoomLevel=4&opacity=1&basemap=0014&layers=0055');">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_temps.gif" alt="Temperatures"  />
+            Temperatures
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=39&longitude=-97&zoomLevel=4&opacity=1&basemap=0014&layers=0040');">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_satellite.jpg" alt="Satellite Weather"  />
+            Satellite Weather
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="../../Travel/Weather/Snow/Default.html">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_snow.jpg" alt="Ski and Snow"  />
+            Ski &amp; Snow
+          </a>
+        </div>
+      </td>
+    </tr>
+  </table>    
+</div> 
+
+
+
+<div class="Chrome">
+  <div class="Title">Base Reflectivity</div>
+</div>
+<div style="border-left:solid .5px #999;">
+  <table id="controls">
+    <tr style="vertical-align: top;">
+      <td>
+        
+          <table style="margin:10px;"><tr style="vertical-align:middle;">
+          <td style="width:60px;"><strong>Region:&nbsp;</strong></td><td><select id="regionList" style="width:150px;" onchange="javascript: document.location.href=window.location.pathname + '?region=' + $(this).val();">
+            <option value="default">Select...</option>
+          <option value="apd">AK - Fort Wainwright</option><option value="aih">AK - Middleton Island</option><option value="ahg">AK - Nikiski</option><option value="mxx">AL - East Tallassee</option><option value="htx">AL - Estillfork</option><option value="eox">AL - Newville</option><option value="bmx">AL - Saginaw</option><option value="mob">AL - Semmes</option><option value="srx">AR - Fort Smith</option><option value="lzk">AR - Sherwood</option><option value="fsx">AZ - Happy Jack</option><option value="iwa">AZ - Queen Creek</option><option value="yux">AZ - San Luis</option><option value="emx">AZ - Vail</option><option value="eyx">CA - Boron</option><option value="dax">CA - El Macero</option><option value="bhx">CA - Ferndale</option><option value="hnx">CA - Hanford</option><option value="mux">CA - New Almaden</option><option value="vtx">CA - Ojai</option><option value="bbx">CA - Oroville</option><option value="nkx">CA - Poway</option><option value="vbx">CA - Santa Maria</option><option value="sox">CA - Silverado</option><option value="ftg">CO - Bennett</option><option value="pux">CO - Boone</option><option value="gjx">CO - Mesa</option><option value="dox">DE - Ellendale</option><option value="byx">FL - Big Coppitt Key</option><option value="evx">FL - Ebro</option><option value="jax">FL - Jacksonville</option><option value="mlb">FL - Melbourne</option><option value="amx">FL - Perrine</option><option value="tbw">FL - Ruskin</option><option value="tlh">FL - Tallahassee</option><option value="jgx">GA - Jeffersonville</option><option value="ffc">GA - Peachtree City</option><option value="vax">GA - Stockton</option><option value="hki">HI - Eleele</option><option value="hkm">HI - Kapaau</option><option value="hmo">HI - Molokai</option><option value="hwa">HI - Naalehu</option><option value="dvn">IA - Davenport</option><option value="dmx">IA - Johnston</option><option value="cbx">ID - Boise</option><option value="sfx">ID - Springfield</option><option value="ilx">IL - Lincoln</option><option value="lot">IL - Lockport</option><option value="ind">IN - Indianapolis</option><option value="iwx">IN - North Webster</option><option value="vwx">IN - Owensville</option><option value="twx">KS - Alma</option><option value="ddc">KS - Fort Dodge</option><option value="gld">KS - Goodland</option><option value="ict">KS - Wichita</option><option value="jkl">KY - Rousseau</option><option value="hpx">KY - Trenton</option><option value="pah">KY - West Paducah</option><option value="lvx">KY - West Point</option><option value="poe">LA - Lacamp</option><option value="lch">LA - Lake Charles</option><option value="lix">LA - Pearl River</option><option value="shv">LA - Shreveport</option><option value="box">MA - Norton</option><option value="cbw">ME - Houlton</option><option value="gyx">ME - Pownal</option><option value="dtx">MI - Alpine Valley Ski Area</option><option value="grr">MI - Kentwood</option><option value="mqt">MI - Negaunee</option><option value="apx">MI - Waters</option><option value="mpx">MN - Chanhassen</option><option value="dlh">MN - Duluth</option><option value="lsx">MO - Chesterfield</option><option value="eax">MO - Pleasant Hill</option><option value="sgf">MO - Springfield</option><option value="jan">MS - Brandon</option><option value="gwx">MS - Greenwood Springs</option><option value="msx">MT - Arlee</option><option value="blx">MT - Billings</option><option value="ggw">MT - Glasgow</option><option value="tfx">MT - Great Falls/Malmstrom AFB</option><option value="rax">NC - Clayton</option><option value="mhx">NC - Newport</option><option value="ltx">NC - Shallotte</option><option value="bis">ND - Bismarck</option><option value="mbx">ND - Granville</option><option value="mvx">ND - Mayville</option><option value="uex">NE - Blue Hill</option><option value="lnx">NE - Thedford</option><option value="oax">NE - Valley</option><option value="dix">NJ - Whiting</option><option value="abx">NM - Albuquerque (West)</option><option value="fdx">NM - McAlister</option><option value="epz">NM - Santa Teresa</option><option value="hdx">NM - Tularosa</option><option value="lrx">NV - Battle Mountain</option><option value="esx">NV - Searchlight</option><option value="rgx">NV - Wadsworth</option><option value="buf">NY - Cheektowaga</option><option value="enx">NY - East Berne</option><option value="tyx">NY - Lowville</option><option value="bgm">NY - Maine</option><option value="okx">NY - Upton</option><option value="cle">OH - Brook Park</option><option value="iln">OH - Wilmington</option><option value="fdr">OK - Frederick</option><option value="inx">OK - Inola</option><option value="vnx">OK - Jet</option><option value="tlx">OK - Norman</option><option value="max">OR - Ashland</option><option value="pdt">OR - Pendleton</option><option value="rtx">OR - Scappoose</option><option value="pbz">PA - Crescent</option><option value="ccx">PA - Julian</option><option value="jua">PR - Cayey</option><option value="cae">SC - Cayce</option><option value="clx">SC - Coosawhatchie</option><option value="gsp">SC - Greenville-Spartanburg Intl Arpt</option><option value="abr">SD - Aberdeen</option><option value="udx">SD - New Underwood</option><option value="fsd">SD - Sioux Falls</option><option value="nqa">TN - Millington</option><option value="ohx">TN - Mount Juliet</option><option value="mrx">TN - Talbott</option><option value="ama">TX - Amarillo</option><option value="dfx">TX - Brackettville</option><option value="bro">TX - Brownsville</option><option value="fws">TX - Burleson</option><option value="crp">TX - Corpus Christi</option><option value="hgx">TX - Dickinson</option><option value="grk">TX - Granger</option><option value="lbb">TX - Lubbock</option><option value="maf">TX - Midland</option><option value="dyx">TX - Moran</option><option value="ewx">TX - New Braunfels</option><option value="sjt">TX - San Angelo</option><option value="icx">UT - Brian Head</option><option value="mtx">UT - Hooper</option><option value="fcx">VA - Check</option><option value="lwx">VA - Dulles</option><option value="akq">VA - Wakefield</option><option value="cxx">VT - Winooski</option><option value="otx">WA - Airway Heights</option><option value="atx">WA - Camano Island</option><option value="grb">WI - Ashwaubenon</option><option value="arx">WI - Mount Lacrosse Ski Area</option><option value="mkx">WI - Sullivan</option><option value="rlx">WV - Dunbar</option><option value="cys">WY - Cheyenne</option><option value="riw">WY - Riverton</option></select></td></tr></table>
+       
+      </td>
+      <td style="width:800px;padding: 10px 10px 0px 0px;">
+        <div class="Button"><a href="BaseReflectivity3a18.html?location=default&amp;region=LSX"><img src="http://images.intellicast.com/App_Images/stop.gif" />Stop Animation</a></div><div class="Button"><a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=38.65&longitude=-90.55&zoomLevel=8&opacity=1&basemap=0014&layers=0039');" class="Secondary">Pan & Zoom</a></div>
+      </td>
+    </tr>
+    <!-- Check if Singleton -->
+    
+    <tr>
+      <td colspan="2" style="padding:0px 10px 0px 10px;">
+        <div style="float:left;width:580px;">
+          <strong>Toggle National and Regional Views</strong><br />
+          Click the blue-button above to toggle between National/World and Regional views. View persists until toggle back.<br />
+          For adding explicit book-marks to directly access preferred weather maps, <a href="../../Help/Faq.html">click here to visit our FAQ page.</a>
+        </div>
+      </td>
+    </tr>
+  
+  </table>
+</div>
+<div class="Content Container" style="text-align:center;">
+  <div id="ctl00_ctl00_master_body_map_basemap" style="background-repeat: no-repeat; background-position: center;">
+    <div id="ctl00_ctl00_master_body_map_weather" style="background-repeat: no-repeat; background-position: center;">
+      <div id="ctl00_ctl00_master_body_map_counties" style="background-repeat: no-repeat; background-position: center;">
+        <div id="ctl00_ctl00_master_body_map_highways" style="background-repeat: no-repeat; background-position: center;">
+          <div id="ctl00_ctl00_master_body_map_watchboxes" style="background-repeat: no-repeat; background-position: center;">
+            <div id="ctl00_ctl00_master_body_map_cities" style="background-repeat: no-repeat; background-position: center;">
+              <img id="map" src="http://images.intellicast.com/WxImages/Nexrad/nexrad.gif" alt="" style="visibility: visible;" usemap="#nexradMap" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>      
+<map id="nexradMap" name="nexradMap">
+  <area shape="rect" coords="171,56,178,63" href="BaseReflectivityd4ae.html?location=USSD0001" title="ABR - Aberdeen, SD" alt="ABR - Aberdeen, SD Nexrad Map" />
+  <area shape="rect" coords="115,137,122,144" href="BaseReflectivity283b.html?location=USNM0005" title="ABX - Albuquerque, NM" alt="ABX - Albuquerque, NM Nexrad Map" />
+  <area shape="rect" coords="58,233,65,240" href="BaseReflectivity9743.html?location=USAK0165" title="AHG - Anchorage, AK" alt="AHG - Anchorage, AK Nexrad Map" />
+  <area shape="rect" coords="68,237,75,244" href="BaseReflectivitya6ca.html?location=USAK0154" title="AIH - Middleton is, AK" alt="AIH - Middleton is, AK Nexrad Map" />
+  <area shape="rect" coords="313,108,320,115" href="BaseReflectivity188d.html?location=USVA0801" title="AKQ - Wakefield, VA" alt="AKQ - Wakefield, VA Nexrad Map" />
+  <area shape="rect" coords="150,137,155,143" href="BaseReflectivity06ec.html?location=USTX0029" title="AMA - Amarillo, TX" alt="AMA - Amarillo, TX Nexrad Map" />
+  <area shape="rect" coords="306,206,313,213" href="BaseReflectivityb7a9.html?location=USFL0570" title="AMX - Miami, FL" alt="AMX - Miami, FL Nexrad Map" />
+  <area shape="rect" coords="66,215,73,222" href="BaseReflectivity0593.html?location=USAK0089" title="APD - Fairbanks, AK" alt="APD - Fairbanks, AK Nexrad Map" />
+  <area shape="rect" coords="250,55,257,62" href="BaseReflectivity4382.html?location=USMI0868" title="APX - Alpena, MI" alt="APX - Alpena, MI Nexrad Map" />
+  <area shape="rect" coords="216,67,223,74" href="BaseReflectivity780f.html?location=USWI0472" title="ARX - La Crosse, WI" alt="ARX - La Crosse, WI Nexrad Map" />
+  <area shape="rect" coords="42,9,49,16" href="BaseReflectivityf100.html?location=USWA0510" title="ATX - Seattle, WA" alt="ATX - Seattle, WA Nexrad Map" />
+  <area shape="rect" coords="24,86,31,93" href="BaseReflectivityd695.html?location=USCA0818" title="BBX - Beale AFB, CA" alt="BBX - Beale AFB, CA Nexrad Map" />
+  <area shape="rect" coords="306,63,313,70" href="BaseReflectivity6a05.html?location=USNY0850" title="BGM - Binghamton, NY" alt="BGM - Binghamton, NY Nexrad Map" />
+  <area shape="rect" coords="13,70,20,77" href="BaseReflectivity2361.html?location=USCA0373" title="BHX - Eureka, CA" alt="BHX - Eureka, CA Nexrad Map" />
+  <area shape="rect" coords="158,43,165,50" href="BaseReflectivitybe7d.html?location=USND0037" title="BIS - Bismarck, ND" alt="BIS - Bismarck, ND Nexrad Map" />
+  <area shape="rect" coords="115,47,122,54" href="BaseReflectivityc9e9.html?location=USMT0031" title="BLX - Billings, MT" alt="BLX - Billings, MT Nexrad Map" />
+  <area shape="rect" coords="252,153,259,160" href="BaseReflectivity192b.html?location=USAL0473" title="BMX - Birmingham, AL" alt="BMX - Birmingham, AL Nexrad Map" />
+  <area shape="rect" coords="337,57,344,64" href="BaseReflectivity16de.html?location=USMA0310" title="BOX - Taunton, MA" alt="BOX - Taunton, MA Nexrad Map" />
+  <area shape="rect" coords="180,214,187,221" href="BaseReflectivity6f53.html?location=USTX0166" title="BRO - Brownsville, TX" alt="BRO - Brownsville, TX Nexrad Map" />
+  <area shape="rect" coords="290,61,297,68" href="BaseReflectivitydd0f.html?location=USNY1642" title="BUF - Buffalo, NY" alt="BUF - Buffalo, NY Nexrad Map" />
+  <area shape="rect" coords="295,217,302,224" href="BaseReflectivityb14d.html?location=USFL0035" title="BYX - Key West, FL" alt="BYX - Key West, FL Nexrad Map" />
+  <area shape="rect" coords="288,139,295,146" href="BaseReflectivityde61.html?location=USSC0046" title="CAE - Columbia, SC" alt="CAE - Columbia, SC Nexrad Map" />
+  <area shape="rect" coords="344,18,351,25" href="BaseReflectivity5031.html?location=USME0185" title="CBW - Hodgdon, ME" alt="CBW - Hodgdon, ME Nexrad Map" />
+  <area shape="rect" coords="66,58,73,65" href="BaseReflectivity2e68.html?location=USID0025" title="CBX - Boise, ID" alt="CBX - Boise, ID Nexrad Map" />
+  <area shape="rect" coords="298,77,305,84" href="BaseReflectivityd86d.html?location=USPA0800" title="CCX - State College, PA" alt="CCX - State College, PA Nexrad Map" />
+  <area shape="rect" coords="271,80,278,87" href="BaseReflectivity8020.html?location=USOH0125" title="CLE - Cleveland, OH" alt="CLE - Cleveland, OH Nexrad Map" />
+  <area shape="rect" coords="292,150,299,157" href="BaseReflectivity8eab.html?location=USSC0071" title="CLX - Charleston, SC" alt="CLX - Charleston, SC Nexrad Map" />
+  <area shape="rect" coords="178,198,185,205" href="BaseReflectivity6a87.html?location=USTX0294" title="CRP - Corpus Christi, TX" alt="CRP - Corpus Christi, TX Nexrad Map" />
+  <area shape="rect" coords="318,41,325,48" href="BaseReflectivitye44e.html?location=USVT0292" title="CXX - Colchester, VT" alt="CXX - Colchester, VT Nexrad Map" />
+  <area shape="rect" coords="132,88,139,95" href="BaseReflectivityf0bf.html?location=USWY0032" title="CYS - Cheyenne, WY" alt="CYS - Cheyenne, WY Nexrad Map" />
+  <area shape="rect" coords="22,93,29,100" href="BaseReflectivitya44c.html?location=USCA0337" title="DAX - Sacramento, CA" alt="DAX - Sacramento, CA Nexrad Map" />
+  <area shape="rect" coords="162,118,169,125" href="BaseReflectivity5063.html?location=USKS0640" title="DDC - Dodge City, KS" alt="DDC - Dodge City, KS Nexrad Map" />
+  <area shape="rect" coords="159,187,166,194" href="BaseReflectivityb193.html?location=USTX0145" title="DFX - Laughlin AFB, TX" alt="DFX - Laughlin AFB, TX Nexrad Map" />
+  <area shape="rect" coords="322,79,329,86" href="BaseReflectivityab73.html?location=USNJ0562" title="DIX - Philadelphia, PA" alt="DIX - Philadelphia, PA Nexrad Map" />
+  <area shape="rect" coords="206,42,213,49" href="BaseReflectivity346b.html?location=USMN0208" title="DLH - Duluth, MN" alt="DLH - Duluth, MN Nexrad Map" />
+  <area shape="rect" coords="201,85,208,92" href="BaseReflectivity4354.html?location=USIA0424" title="DMX - Des Moines, IA" alt="DMX - Des Moines, IA Nexrad Map" />
+  <area shape="rect" coords="318,90,325,97" href="BaseReflectivity1da3.html?location=USDE0014" title="DOX - Dover, DE" alt="DOX - Dover, DE Nexrad Map" />
+  <area shape="rect" coords="261,70,268,77" href="BaseReflectivity878c.html?location=USMI0024" title="DTX - Detroit/Pontiac, MI" alt="DTX - Detroit/Pontiac, MI Nexrad Map" />
+  <area shape="rect" coords="220,84,227,91" href="BaseReflectivityaec2.html?location=USIA0211" title="DVN - Davenport, IA" alt="DVN - Davenport, IA Nexrad Map" />
+  <area shape="rect" coords="167,161,174,168" href="BaseReflectivity8c10.html?location=USTX0914" title="DYX - Dyess AFB, TX" alt="DYX - Dyess AFB, TX Nexrad Map" />
+  <area shape="rect" coords="199,108,206,115" href="BaseReflectivity5d66.html?location=USMO0702" title="EAX - Kansas City, MO" alt="EAX - Kansas City, MO Nexrad Map" />
+  <area shape="rect" coords="88,161,95,168" href="BaseReflectivity12f5.html?location=USAZ0251" title="EMX - Tucson, AZ" alt="EMX - Tucson, AZ Nexrad Map" />
+  <area shape="rect" coords="316,57,323,64" href="BaseReflectivityf770.html?location=USNY0409" title="ENX - Albany, NY" alt="ENX - Albany, NY Nexrad Map" />
+  <area shape="rect" coords="264,164,271,171" href="BaseReflectivity479f.html?location=USAL0404" title="EOX - Fort Rucker, AL" alt="EOX - Fort Rucker, AL Nexrad Map" />
+  <area shape="rect" coords="116,164,123,171" href="BaseReflectivityca9e.html?location=USNM0294" title="EPZ - Santa Teresa, NM" alt="EPZ - Santa Teresa, NM Nexrad Map" />
+  <area shape="rect" coords="61,126,68,133" href="BaseReflectivityde15.html?location=USNV0081" title="ESX - Las Vegas, NV" alt="ESX - Las Vegas, NV Nexrad Map" />
+  <area shape="rect" coords="260,172,267,179" href="BaseReflectivityfc0b.html?location=USFL0128" title="EVX - Eglin AFB, FL" alt="EVX - Eglin AFB, FL Nexrad Map" />
+  <area shape="rect" coords="175,184,182,191" href="BaseReflectivity9dbf.html?location=USTX0950" title="EWX - Austin, TX" alt="EWX - Austin, TX Nexrad Map" />
+  <area shape="rect" coords="43,128,50,135" href="BaseReflectivity0a55.html?location=USCA0118" title="EYX - Edwards AFB, CA" alt="EYX - Edwards AFB, CA Nexrad Map" />
+  <area shape="rect" coords="291,111,298,118" href="BaseReflectivityace5.html?location=USVA0146" title="FCX - Roanoke, VA" alt="FCX - Roanoke, VA Nexrad Map" />
+  <area shape="rect" coords="169,146,176,153" href="BaseReflectivity15dc.html?location=USOK0207" title="FDR - Frederick, OK" alt="FDR - Frederick, OK Nexrad Map" />
+  <area shape="rect" coords="135,142,142,149" href="BaseReflectivityb262.html?location=USNM0190" title="FDX - Cannon AFB, NM" alt="FDX - Cannon AFB, NM Nexrad Map" />
+  <area shape="rect" coords="267,149,274,156" href="BaseReflectivitybbde.html?location=USGA0435" title="FFC - Peachtree City, GA" alt="Nexrad Map" />
+  <area shape="rect" coords="181,70,188,77" href="BaseReflectivity9583.html?location=USSD0315" title="FSD - Sioux falls, SD" alt="FSD - Sioux falls, SD Nexrad Map" />
+  <area shape="rect" coords="87,138,94,145" href="BaseReflectivityf123.html?location=USAZ0094" title="FSX - Flagstaff, AZ" alt="FSX - Flagstaff, AZ Nexrad Map" />
+  <area shape="rect" coords="134,100,141,107" href="BaseReflectivityf160.html?location=USCO0029" title="FTG - Denver, CO" alt="FTG - Denver, CO Nexrad Map" />
+  <area shape="rect" coords="180,160,187,167" href="BaseReflectivitybbb8.html?location=USTX0184" title="FWS - Ft Worth, TX" alt="FWS - Ft Worth, TX Nexrad Map" />
+  <area shape="rect" coords="128,31,135,38" href="BaseReflectivityd5f2.html?location=USMT0139" title="GGW - Glasgow, MT" alt="GGW - Glasgow, MT Nexrad Map" />
+  <area shape="rect" coords="109,104,116,111" href="BaseReflectivity4440.html?location=USCO0265" title="GJX - Grand Jct, CO" alt="GJX - Grand Jct, CO Nexrad Map" />
+  <area shape="rect" coords="151,105,158,112" href="BaseReflectivitybe87.html?location=USKS0227" title="GLD - Goodland, KS" alt="GLD - Goodland, KS Nexrad Map" />
+  <area shape="rect" coords="232,61,239,68" href="BaseReflectivityf2da.html?location=USWI0772" title="GRB - Green Bay, WI" alt="GRB - Green Bay, WI Nexrad Map" />
+  <area shape="rect" coords="180,176,187,183" href="BaseReflectivity8338.html?location=USTX0546" title="GRK - Killeen/Gray AAF, TX" alt="GRK - Killeen/Gray AAF, TX Nexrad Map" />
+  <area shape="rect" coords="249,72,256,79" href="BaseReflectivity8054.html?location=USMI0912" title="GRR - Grand Rapids, MI" alt="GRR - Grand Rapids, MI Nexrad Map" />
+  <area shape="rect" coords="281,132,288,139" href="BaseReflectivity5d33.html?location=USSC0141" title="GSP - Greer, SC" alt="GSP - Greer, SC Nexrad Map" />
+  <area shape="rect" coords="241,147,248,154" href="BaseReflectivity5fcb.html?location=USMS0143" title="GWX - Columbus, MS" alt="GWX - Columbus, MS Nexrad Map" />
+  <area shape="rect" coords="336,39,343,46" href="BaseReflectivityc7dd.html?location=USME0329" title="GYX - Gray, ME" alt="GYX - Gray, ME Nexrad Map" />
+  <area shape="rect" coords="121,156,128,163" href="BaseReflectivity2faa.html?location=USNM0334" title="HDX - Holloman AFB, NM" alt="HDX - Holloman AFB, NM Nexrad Map" />
+  <area shape="rect" coords="196,186,203,193" href="BaseReflectivity08ea.html?location=USTX0365" title="HGX - Houston, TX" alt="HGX - Houston, TX Nexrad Map" />
+  <area shape="rect" coords="151,234,158,241" href="BaseReflectivity3f3d.html?location=USHI0007" title="HKI - South Kauai, HI" alt="HKI - South Kauai, HI Nexrad Map" />
+  <area shape="rect" coords="206,252,213,259" href="BaseReflectivity0584.html?location=USHI0039" title="HKM - Kohala, HI" alt="HKM - Kohala, HI Nexrad Map" />
+  <area shape="rect" coords="184,240,191,247" href="BaseReflectivity81d9.html?location=USHI0102" title="HMO - Molokai, HI" alt="HMO - Molokai, HI Nexrad Map" />
+  <area shape="rect" coords="32,115,39,122" href="BaseReflectivityb955.html?location=USCA0461" title="HNX - Hanford, CA" alt="HNX - Hanford, CA Nexrad Map" />
+  <area shape="rect" coords="246,122,253,129" href="BaseReflectivity8523.html?location=USKY1399" title="HPX - Hopkinsville, KY" alt="HPX - Hopkinsville, KY Nexrad Map" />
+  <area shape="rect" coords="255,137,262,144" href="BaseReflectivity1ddd.html?location=USAL0185" title="HTX - Hytop, AL" alt="HTX - Hytop, AL Nexrad Map" />
+  <area shape="rect" coords="214,269,221,276" href="BaseReflectivitydacc.html?location=USHI0067" title="HWA - South Hawaii, HI" alt="HWA - South Hawaii, HI Nexrad Map" />
+  <area shape="rect" coords="176,120,183,127" href="BaseReflectivity11ba.html?location=USKS0620" title="ICT - Wichita, KS" alt="ICT - Wichita, KS Nexrad Map" />
+  <area shape="rect" coords="78,112,85,119" href="BaseReflectivityec03.html?location=USUT0025" title="ICX - Cedar City, UT" alt="ICX - Cedar City, UT Nexrad Map" />
+  <area shape="rect" coords="263,96,270,103" href="BaseReflectivity6cfb.html?location=USOH1057" title="ILN - Wilmington, OH" alt="ILN - Wilmington, OH Nexrad Map" />
+  <area shape="rect" coords="230,97,237,104" href="BaseReflectivity3f28.html?location=USIL0669" title="ILX - Lincoln, IL" alt="ILX - Lincoln, IL Nexrad Map" />
+  <area shape="rect" coords="250,99,257,106" href="BaseReflectivitya470.html?location=USIN0305" title="IND - Indianapolis, IN" alt="IND - Indianapolis, IN Nexrad Map" />
+  <area shape="rect" coords="191,130,198,137" href="BaseReflectivity0781.html?location=USOK0275" title="INX - Tulsa, OK" alt="INX - Tulsa, OK Nexrad Map" />
+  <area shape="rect" coords="82,148,89,155" href="BaseReflectivity8c06.html?location=USAZ0181" title="IWA - Chandler, AZ" alt="IWA - Chandler, AZ Nexrad Map" />
+  <area shape="rect" coords="249,83,256,90" href="BaseReflectivityee71.html?location=USIN0491" title="IWX - N. Webster, IN" alt="IWX - N. Webster, IN Nexrad Map" />
+  <area shape="rect" coords="230,161,237,168" href="BaseReflectivity21c9.html?location=USMS0040" title="JAN - Jackson, MS" alt="JAN - Jackson, MS Nexrad Map" />
+  <area shape="rect" coords="289,168,296,175" href="BaseReflectivityf4df.html?location=USFL0228" title="JAX - Jacksonville, FL" alt="JAX - Jacksonville, FL Nexrad Map" />
+  <area shape="rect" coords="275,154,282,161" href="BaseReflectivityaa7d.html?location=USGA0295" title="JGX - Robins AFB, GA" alt="JGX - Robins AFB, GA Nexrad Map" />
+  <area shape="rect" coords="270,111,277,118" href="BaseReflectivity7f06.html?location=USKY1292" title="JKL - Jackson, KY" alt="JKL - Jackson, KY Nexrad Map" />
+  <area shape="rect" coords="345, 248, 352, 255" href="BaseReflectivity417e.html?location=USPR0023" title="JUA - San Juan, PR" alt="JUA - San Juan, PR Nexrad Map" />
+  <area shape="rect" coords="149,151,156,158" href="BaseReflectivity8139.html?location=USTX0808" title="LBB - Lubbock, TX" alt="LBB - Lubbock, TX Nexrad Map" />
+  <area shape="rect" coords="208,181,215,188" href="BaseReflectivity042a.html?location=USLA0264" title="LCH - Lake Charles, LA" alt="LCH - Lake Charles, LA Nexrad Map" />
+  <area shape="rect" coords="232,176,239,183" href="BaseReflectivity7390.html?location=USLA0362" title="LIX - New Orleans, LA" alt="LIX - New Orleans, LA Nexrad Map" />
+  <area shape="rect" coords="156,83,163,90" href="BaseReflectivity1150.html?location=USNE0481" title="LNX - North Platte, NE" alt="LNX - North Platte, NE Nexrad Map" />
+  <area shape="rect" coords="235,83,242,90" href="BaseReflectivityd515.html?location=USIL0681" title="LOT - Romeoville, IL" alt="LOT - Romeoville, IL Nexrad Map" />
+  <area shape="rect" coords="57,80,64,87" href="BaseReflectivitye00d.html?location=USNV0006" title="LRX - Elko, NV" alt="LRX - Elko, NV Nexrad Map" />
+  <area shape="rect" coords="222,109,229,116" href="BaseReflectivityef6b.html?location=USMO0170" title="LSX - St Louis, MO" alt="LSX - St Louis, MO Nexrad Map" />
+  <area shape="rect" coords="306,135,313,142" href="BaseReflectivity78f9.html?location=USNC0623" title="LTX - Wilmington, NC" alt="LTX - Wilmington, NC Nexrad Map" />
+  <area shape="rect" coords="251,112,258,119" href="BaseReflectivityd402.html?location=USKY1447" title="LVX - Louisville, KY" alt="LWX - Sterling, VA Nexrad Map" />
+  <area shape="rect" coords="306,92,313,99" href="BaseReflectivity8251.html?location=USVA0232" title="LWX - Sterling, VA" alt="LWX - Sterling, VA Nexrad Map" />
+  <area shape="rect" coords="214,141,221,148" href="BaseReflectivityc39b.html?location=USAR0512" title="LZK - N. Little Rock, AR" alt="LZK - N. Little Rock, AR Nexrad Map" />
+  <area shape="rect" coords="146,165,153,172" href="BaseReflectivity8b3d.html?location=USTX0888" title="MAF - Midland, TX" alt="MAF - Midland, TX Nexrad Map" />
+  <area shape="rect" coords="25,59,32,66" href="BaseReflectivity4d43.html?location=USOR0015" title="MAX - Medford, OR" alt="MAX - Medford, OR Nexrad Map" />
+  <area shape="rect" coords="158,31,165,38" href="BaseReflectivityd15c.html?location=USND0149" title="MBX - Minot AFB, ND" alt="MBX - Minot AFB, ND Nexrad Map" />
+  <area shape="rect" coords="319,126,326,133" href="BaseReflectivityc8ee.html?location=USNC0490" title="MHX - Morehead City, NC" alt="MHX - Morehead City, NC Nexrad Map" />
+  <area shape="rect" coords="232,72,239,79" href="BaseReflectivity1523.html?location=USWI0673" title="MKX - Milwaukee, WI" alt="MKX - Milwaukee, WI Nexrad Map" />
+  <area shape="rect" coords="300,186,307,193" href="BaseReflectivity4727.html?location=USFL0311" title="MLB - Melbourne, FL" alt="MLB - Melbourne, FL Nexrad Map" />
+  <area shape="rect" coords="244,172,251,179" href="BaseReflectivityd609.html?location=USAL0490" title="MOB - Mobile/Bates, AL" alt="MOB - Mobile/Bates, AL Nexrad Map" />
+  <area shape="rect" coords="201,59,208,66" href="BaseReflectivitycf36.html?location=USMN0135" title="MPX - Chanhassen, MN" alt="MPX - Chanhassen, MN Nexrad Map" />
+  <area shape="rect" coords="234,43,241,50" href="BaseReflectivity02b8.html?location=USMI0593" title="MQT - Marquette, MI" alt="MQT - Marquette, MI Nexrad Map" />
+  <area shape="rect" coords="272,123,279,130" href="BaseReflectivity04dd.html?location=USTN0496" title="MRX - Morristown, TN" alt="MRX - Morristown, TN Nexrad Map" />
+  <area shape="rect" coords="84,33,91,40" href="BaseReflectivity352f.html?location=USMT0009" title="MSX - Missoula, MT" alt="MSX - Missoula, MT Nexrad Map" />
+  <area shape="rect" coords="86,82,93,89" href="BaseReflectivity0e78.html?location=USUT0114" title="MTX - Salt Lake, UT" alt="MTX - Salt Lake, UT Nexrad Map" />
+  <area shape="rect" coords="17,102,24,109" href="BaseReflectivity8815.html?location=USCA0756" title="MUX - San Francisco, CA" alt="MUX - San Francisco, CA Nexrad Map" />
+  <area shape="rect" coords="178,38,185,45" href="BaseReflectivity23e5.html?location=USND0226" title="MVX - Fargo, ND" alt="MVX - Fargo, ND Nexrad Map" />
+  <area shape="rect" coords="259,157,266,164" href="BaseReflectivity6245.html?location=USAL0168" title="MXX - Maxwell AFB, AL" alt="MXX - Maxwell AFB, AL Nexrad Map" />
+  <area shape="rect" coords="44,147,51,154" href="BaseReflectivity03fd.html?location=USCA0900" title="NKX - San Diego/Mirama, CA" alt="NKX - San Diego/Mirama, CA Nexrad Map" />
+  <area shape="rect" coords="230,134,237,141" href="BaseReflectivityd24c.html?location=USTN0333" title="NQA - Millington, TN" alt="NQA - Millington, TN Nexrad Map" />
+  <area shape="rect" coords="183,88,190,95" href="BaseReflectivity94c8.html?location=USNE0495" title="OAX - Omaha/Valley, NE" alt="OAX - Omaha/Valley, NE Nexrad Map" />
+  <area shape="rect" coords="251,127,258,134" href="BaseReflectivity3255.html?location=USTN0350" title="OHX - Nashville, TN" alt="OHX - Nashville, TN Nexrad Map" />
+  <area shape="rect" coords="330,70,337,77" href="BaseReflectivity8e0b.html?location=USNY1475" title="OKX - Upton/Brookhaven, NY" alt="OKX - Upton/Brookhaven, NY Nexrad Map" />
+  <area shape="rect" coords="67,22,74,29" href="BaseReflectivity61bc.html?location=USWA0005" title="OTX - Spokane, WA" alt="OTX - Spokane, WA Nexrad Map" />
+  <area shape="rect" coords="234,119,241,126" href="BaseReflectivityae5f.html?location=USKY1446" title="PAH - Paducah, KY" alt="PAH - Paducah, KY Nexrad Map" />
+  <area shape="rect" coords="285,83,292,90" href="BaseReflectivity1c74.html?location=USPA1860" title="PBZ - Pittsburgh, PA" alt="PBZ - Pittsburgh, PA Nexrad Map" />
+  <area shape="rect" coords="55,37,62,44" href="BaseReflectivity798d.html?location=USOR0267" title="PDT - Pendleton, OR" alt="PDT - Pendleton, OR Nexrad Map" />
+  <area shape="rect" coords="208,172,215,179" href="BaseReflectivity702a.html?location=USLA0258" title="POE - Fort Polk, LA" alt="POE - Fort Polk, LA Nexrad Map" />
+  <area shape="rect" coords="136,111,143,118" href="BaseReflectivityacb0.html?location=USCO0037" title="PUX - Pueblo, CO" alt="PUX - Pueblo, CO Nexrad Map" />
+  <area shape="rect" coords="306,120,313,127" href="BaseReflectivitya6d8.html?location=USNC0132" title="RAX - Raleigh, NC" alt="RAX - Raleigh, NC Nexrad Map" />
+  <area shape="rect" coords="40,83,47,90" href="BaseReflectivity7abf.html?location=USNV0096" title="RGX - Reno, NV" alt="RGX - Reno, NV Nexrad Map" />
+  <area shape="rect" coords="113,70,120,77" href="BaseReflectivity91f4.html?location=USWY0143" title="RIW - Riverton, WY" alt="RIW - Riverton, WY Nexrad Map" />
+  <area shape="rect" coords="279,104,286,111" href="BaseReflectivity6a14.html?location=USWV0208" title="RLX - Charleston, WV" alt="RLX - Charleston, WV Nexrad Map" />
+  <area shape="rect" coords="32,29,39,36" href="BaseReflectivityd9c0.html?location=USOR0307" title="RTX - Portland, OR" alt="RTX - Portland, OR Nexrad Map" />
+  <area shape="rect" coords="86,67,93,74" href="BaseReflectivity57cf.html?location=USID0244" title="SFX - Pocatello, ID" alt="SFX - Pocatello, ID Nexrad Map" />
+  <area shape="rect" coords="206,122,213,129" href="BaseReflectivity28ab.html?location=USMO0828" title="SGF - Springfield, MO" alt="SGF - Springfield, MO Nexrad Map" />
+  <area shape="rect" coords="204,161,211,168" href="BaseReflectivitybdbc.html?location=USLA0426" title="SHV - Shreveport, LA" alt="SHV - Shreveport, LA Nexrad Map" />
+  <area shape="rect" coords="159,170,166,177" href="BaseReflectivity8675.html?location=USTX1199" title="SJT - San Angelo, TX" alt="SJT - San Angelo, TX Nexrad Map" />
+  <area shape="rect" coords="40,139,47,146" href="BaseReflectivity469e.html?location=USCA1059" title="SOX - Santa Ana mt, CA" alt="SOX - Santa Ana mt, CA Nexrad Map" />
+  <area shape="rect" coords="198,138,205,145" href="BaseReflectivity4dde.html?location=USAR0197" title="SRX - Fort Chaffee, AR" alt="SRX - Fort Chaffee, AR Nexrad Map" />
+  <area shape="rect" coords="288,192,295,199" href="BaseReflectivity7849.html?location=USFL0431" title="TBW - Tampa Bay/Ruskin, FL" alt="TBW - Tampa Bay/Ruskin, FL Nexrad Map" />
+  <area shape="rect" coords="99,31,106,38" href="BaseReflectivitydcea.html?location=USMT0147" title="TFX - Great Falls, MT" alt="TFX - Great Falls, MT Nexrad Map" />
+  <area shape="rect" coords="273,172,280,179" href="BaseReflectivity4f2b.html?location=USFL0479" title="TLH - Tallahassee, FL" alt="TLH - Tallahassee, FL Nexrad Map" />
+  <area shape="rect" coords="180,137,187,144" href="BaseReflectivityb3d4.html?location=USOK0388" title="TLX - Twin Lakes, OK" alt="TLX - Twin Lakes, OK Nexrad Map" />
+  <area shape="rect" coords="186,108,193,115" href="BaseReflectivityb422.html?location=USKS0010" title="TWX - Topeka, KS" alt="TWX - Topeka, KS Nexrad Map" />
+  <area shape="rect" coords="305,49,312,56" href="BaseReflectivityb728.html?location=USNY0837" title="TYX - Montague, NY" alt="TYX - Montague, NY Nexrad Map" />
+  <area shape="rect" coords="146,65,153,72" href="BaseReflectivity1f49.html?location=USSD0239" title="UDX - Rapid City, SD" alt="UDX - Rapid City, SD Nexrad Map" />
+  <area shape="rect" coords="170,97,177,104" href="BaseReflectivity73ff.html?location=USNE0062" title="UEX - Grand Island, NE" alt="UEX - Grand Island, NE Nexrad Map" />
+  <area shape="rect" coords="279,166,286,173" href="BaseReflectivityc4cf.html?location=USGA0539" title="VAX - Valdosta, GA" alt="VAX - Valdosta, GA Nexrad Map" />
+  <area shape="rect" coords="24,127,31,134" href="BaseReflectivitya2ce.html?location=USCA1023" title="VBX - Vandenberg, CA" alt="VBX - Vandenberg, CA Nexrad Map" />
+  <area shape="rect" coords="171,126,178,133" href="BaseReflectivity4087.html?location=USOK0280" title="VNX - Vance AFB, OK" alt="VNX - Vance AFB, OK Nexrad Map" />
+  <area shape="rect" coords="31,132,38,139" href="BaseReflectivityb17e.html?location=USCA0799" title="VTX - Los Angeles, CA" alt="VTX - Los Angeles, CA Nexrad Map" />
+  <area shape="rect" coords="243,107,248,113" href="BaseReflectivitya013.html?location=USIN0512" title="VWX - Owensville, IN" alt="VWX - Owensville, IN Nexrad Map" />
+  <area shape="rect" coords="59,151,66,158" href="BaseReflectivity1d90.html?location=USAZ0201" title="YUX - Yuma, AZ" alt="YUX - Yuma, AZ Nexrad Map" />
+</map>
+
+<script type="Text/javascript">
+function ToggleOverlay(checkbox, folder) {
+  switch (folder) {
+    case "counties":
+      var control = document.getElementById("ctl00_ctl00_master_body_map_counties");
+      break;
+    case "highways":
+      var control = document.getElementById("ctl00_ctl00_master_body_map_highways");
+      break;
+    case "cities":
+      var control = document.getElementById("ctl00_ctl00_master_body_map_cities");
+      break;
+    case "WatchBoxes":
+      var control = document.getElementById("ctl00_ctl00_master_body_map_watchboxes");
+      break;
+  }
+  switch (folder) {
+    case "WatchBoxes":
+      control.style.backgroundImage = checkbox.checked ? 'url(http://images.intellicast.com/WxImages/NexradWatchBoxes/http://images.intellicast.com/WxImages/Nexrad/nexrad.gif.gif)' : '';
+      break;
+    default:
+      control.style.backgroundImage = checkbox.checked ? 'url(http://images.intellicast.com/images/Overlays/Nexrad/' + folder + '/http://images.intellicast.com/WxImages/Nexrad/nexrad.gif.gif)' : '';
+      break;
+  }
+  setCookie(folder + "Overlay", checkbox.checked, 365);
+}
+
+function LoadOverlays() {
+  if (getCookie("countiesOverlay") != "") {
+    var counties = document.getElementById("ctl00_ctl00_master_body_map_counties");
+    var countiesToggle = document.getElementById("ToggleCounties");
+    counties.style.backgroundImage = getCookie("countiesOverlay") == "true" ? 'url(http://images.intellicast.com/images/Overlays/Nexrad/counties/http://images.intellicast.com/WxImages/Nexrad/nexrad.gif.gif)' : '';
+    countiesToggle.checked = (getCookie("countiesOverlay") == "true");
+  }
+  if (getCookie("highwaysOverlay") != "") {
+    var highways = document.getElementById("ctl00_ctl00_master_body_map_highways");
+    var highwaysToggle = document.getElementById("ToggleHighways");
+    highways.style.backgroundImage = getCookie("highwaysOverlay") == "true" ? 'url(http://images.intellicast.com/images/Overlays/Nexrad/highways/http://images.intellicast.com/WxImages/Nexrad/nexrad.gif.gif)' : '';
+    highwaysToggle.checked = (getCookie("highwaysOverlay") == "true");
+  }
+  if (getCookie("citiesOverlay") != "") {
+    var cities = document.getElementById("ctl00_ctl00_master_body_map_cities");
+    var citiesToggle = document.getElementById("ToggleCities");
+    cities.style.backgroundImage = getCookie("citiesOverlay") == "true" ? 'url(http://images.intellicast.com/images/Overlays/Nexrad/cities/http://images.intellicast.com/WxImages/Nexrad/nexrad.gif.gif)' : '';
+    citiesToggle.checked = (getCookie("citiesOverlay") == "true");
+  }
+  if (getCookie("WatchBoxesOverlay")) {
+    var WatchBoxes = document.getElementById("ctl00_ctl00_master_body_map_watchboxes");
+    var WatchBoxesToggle = document.getElementById("ToggleWatchboxes");
+    WatchBoxes.style.backgroundImage = getCookie("WatchBoxesOverlay") == "true" ? 'url(http://images.intellicast.com/WxImages/NexradWatchBoxes/http://images.intellicast.com/WxImages/Nexrad/nexrad.gif.gif)' : '';
+    WatchBoxesToggle.checked = (getCookie("WatchBoxesOverlay") == "true");
+  }
+}
+</script>
+
+<div class="Chrome">
+  <div class="Title">Learn about Base Reflectivity</div>
+  <div style="float: right;"><a style="color:#FFF;font-family:'Segoe UI', Tahoma, sans-serif;" href="http://en.wikipedia.org/wiki/Weather_radar" target="_blank">View Detailed Information &raquo;</a></div>
+</div>
+<div id="weathercom" class="Content Container">
+  Single-site NEXRAD base reflectivity data are updated every 5, 6, or 10 minutes, depending on whether the <a href="../Radar/Current.html">radar</a> is in normal <a href="../Precipitation/PrecipCast.html">precipitation</a> mode, <a href="../../Storm/Default.html">storm</a> precipitation mode, or clear air mode. The same NEXRAD base reflectivity information (excluding clear air mode data) is incorporated into the WSI NOWrad national and regional mosaics, except that the NOWrad images go through rigorous quality control procedures that remove most false echoes caused by ground clutter and anomalous propagation (AP). Caution must be exercised in attempting to interpret the single site NEXRAD images because they often contain 'artifacts' that are not actual precipitation echoes.<br /><br />
+  Base Reflectivity is a measure of the intensity of precipitation occurring, and is reported in units of DBZ. The WSR-88D emits pulses of energy into the atmosphere at regular intervals. When this energy impacts something (i.e. a <a href="../Precipitation/RainCast.html">raindrop</a>, a <a href="../../Travel/Weather/Snow/Default.html">snowflake</a>, a mountain, etc.), some of the energy is scattered back to the radar dish. The amount of energy which is received back at the radar dish is measured in units of DBZ (decibels). The higher the DBZ value the larger the object. Large <a href="../Precipitation/RainCast.html">raindrops</a> and hail, for example, produce high DBZ values. In general, DBZ values greater than 15 indicate areas where <a href="../Precipitation/PrecipCast.html">precipitation</a> is reaching the ground; DBZ values less than 15 usually are an indication of very light <a href="../Precipitation/PrecipCast.html">precipitation</a> which in most cases is evaporating in the atmosphere before it reaches the ground.<br /><br />
+  NEXRAD or Nexrad (Next-Generation Radar) is a network of 158 high-resolution <a href="../Radar/Current.html">Doppler weather radars</a> operated by the National Weather Service, an agency of the National Oceanic and Atmospheric Administration (NOAA) within the United States Department of Commerce. Its technical name is WSR-88D, which stands for Weather Surveillance Radar, 1988, Doppler. NEXRAD detects <a href="../Precipitation/PrecipCast.html">precipitation</a> and atmospheric movement or wind. It returns data which when processed can be displayed in a mosaic map which shows patterns of precipitation and its movement. The radar system operates in two basic modes, selectable by the operator: a slow-scanning clear-air mode for analyzing air movements when there is little or no activity in the area, and a precipitation mode with a faster scan time for tracking active weather. NEXRAD has an increased emphasis on automation, including the use of algorithms and automated volume scans.
+</div>   
+
+</div>
+<div id="rightColumn">
+  <div class="adHeader">
+    <div class="title">Advertisements</div>
+    <div class="miniAd"><a href="http://www.aolnews.com/category/nation/" target="_blank" onclick="javascript:linkTracker._trackPageview('../../AOL/Header/www.aolnews.com/category/nation/index.html');"><span>National News</span></a></div>
+  </div>
+  <!-- DirecTV ad -->
+	
+
+  <!-- Old Ads -->
+  
+  <!-- Old Ads -->
+  <!-- New Ads -->
+  <div id="AdPageCounterDiv">
+    <div id="WX_PageCounter">
+      
+    </div>
+  </div>
+	<div>
+	  <div id="WX_Top300Variable">
+	    
+	  </div>
+	</div>
+  <!-- Promo ad for storm/icast mobile -->
+	<div id="promoAd" style="position:relative;">
+    <a href="https://go.onelink.me/RFZA?pid=Intellicast&amp;c=Display" target="_blank">
+    	<img style="display:block;" src="http://images.intellicast.com/App_Images/STORM_BANNERS_S7_300X125.jpg" alt="Storm Radar with NOAA Weather" />
+		</a>
+	</div>
+  <!-- Special Snow Forcast iPad App Ad on Radar page -->
+  
+	<div>
+	  <div id="WX_Mid300">
+	    
+	  </div>
+	</div>
+	<div>
+	  <div id="WX_Hidden">
+	    
+	  </div>
+	</div>
+  <div id="WX_Tiles">
+		<div style="float:left;">
+      <div id="WX_Tile1">
+        
+      </div>
+		</div>
+		<div style="float:right;">
+      <div id="WX_Tile2">
+        
+      </div>
+		</div>
+	</div>
+	<div>
+	  <div id="WX_PaidSearch">
+	    
+	  </div>
+	</div>
+  <!-- New Ads -->
+</div>
+<div class="clearfix" style="clear:both;">
+<div id="WX_BottomLeaderboard">
+  
+</div>
+</div>
+
+		</form>
+	</div>
+
+	
+		<footer class="site-footer">
+			<div class="help-links">
+				<div class="container">
+					<a href="../../About/Default.html">About Us</a>
+					<a href="https://advertising.weather.com/contact/" target="_blank">Advertise with Us</a>
+					<a href="https://www.wunderground.com/about/contact-us">Contact Us</a>
+					
+					<a href="../../Help/Default.html">Help</a>
+					<a href="http://www.aolnews.com/" target="_blank">News</a>
+					<a href="http://www.aboutads.info/choices/" target="_blank" style="background: url(../../../icons.wxug.com/i/misc/adChoices.png) no-repeat right; padding-right: 20px;">Ad Choices</a>
+				</div>
+			</div>
+			<div class="legal-links">
+				<div class="container">
+					<a href="../../About/Terms.html">Terms of Use</a>
+					<a href="../../About/Privacy.html">Privacy Statement</a>
+					<span>&copy;Copyright 2019 TWC Product and Technology, LLC</span>
+					
+					<span>Version 4.6.201311.1</span>
+				</div>
+				<!-- MACHINE NAME: ICAST-WEB2 -->
+			</div>
+		</footer>
+	
+
+	
+	
+	
+  
+	<script type="text/javascript" src="http://images.intellicast.com/Scripts/core_20150225.js"></script>
+
+  <script>
+    var cod = {
+      latitude: '0',
+      longitude: '0',
+      unit: 'F'
+    };
+  </script>
+  <script src="http://images.intellicast.com/Scripts/cod_20150330.js"></script>
+</body>
+
+<!-- Mirrored from 96.8.93.198/National/Nexrad/BaseReflectivity.aspx?location=default&region=LSX&animate=true by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jul 2019 22:46:37 GMT -->
+</html>

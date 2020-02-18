@@ -1,0 +1,149 @@
+﻿#content #alerts {
+	display: none;
+	overflow-y: auto;
+	overflow-x: hidden;
+	height: 217px;
+	width: 249px;
+	margin-left: -9px;
+}
+
+	#content #alerts div {
+		padding-left: 5px;
+	}
+
+#content #cities {
+}
+
+	#content #cities td {
+		border-bottom: solid 1px #e3e6ea;
+		white-space: nowrap;
+		padding: 4px 0px;
+		font-family: 'Segoe UI', Tahoma, sans-serif;
+	}
+
+#content #weatherAlertsType td {
+	line-height: 20px;
+}
+
+#content #homeTop tr {
+	vertical-align: top;
+}
+
+#content #sliders {
+	width: 398px;
+}
+
+	#content #sliders .Container {
+		height: 247px;
+		width: 396px;
+		overflow: hidden;
+	}
+
+#content #slideControlPanel {
+	height: 30px;
+	background-color: #383e49;
+	border-top: solid 1px #FFF;
+	padding-top: 5px;
+}
+
+#content #slideNumbers {
+	padding-left: 10px;
+	width: 100px;
+}
+
+	#content #slideNumbers td {
+		padding-right: 5px;
+	}
+
+#content #slideButtons {
+	text-align: right;
+	padding-right: 10px;
+}
+
+	#content #slideButtons td {
+		padding-right: 5px;
+	}
+
+#content #rotatorDiv2, #content #rotatorDiv3, #content #rotatorDiv4, #content #rotatorDiv5 {
+	visibility: hidden;
+	display: none;
+}
+
+	#content #rotatorDiv3 .Header {
+		padding-top: 3px;
+	}
+
+		#content #rotatorDiv3 .Header a {
+			color: #383e49;
+			font-weight: bold;
+		}
+
+#content #search {
+	float: left;
+}
+
+#content #homeSearchBox {
+	float: left;
+	margin-top: 7px;
+	border: #285E82 solid 1px;
+	height: 16px;
+	width: 197px;
+	font-size: 10px;
+	color: #999;
+	padding-top: 3px;
+}
+
+#content #homeSearchButton {
+	float: left;
+	margin-top: 7px;
+	vertical-align: middle;
+}
+
+#content #ffc {
+	width: 100%;
+	height: 100%;
+	vertical-align: top;
+	cursor: pointer;
+	background: url(../App_Images/bnr_Syndication.gif) no-repeat;
+}
+
+#content #focus {
+	overflow:hidden;
+}
+
+#content .HomeColumns {
+	float: left;
+	width: 322px;
+}
+
+	#content .HomeColumns .Container {
+		height: 130px;
+	}
+
+	#content .HomeColumns ul {
+		margin-top: 5px;
+		margin-left: 15px;
+	}
+
+#content .RotatorHeader {
+	height: 30px;
+	line-height: 30px;
+	border-bottom: solid 1px #FFFFFF;
+	padding-left: 10px;
+}
+
+	#content .RotatorHeader a {
+		color: #FFF;
+	}
+
+#content .RotatorInner {
+	padding-left: 220px;
+	padding-top: 78px;
+	text-align: center;
+}
+
+	#content .RotatorInner a {
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+	}

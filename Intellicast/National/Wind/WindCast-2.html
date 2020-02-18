@@ -1,0 +1,1312 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from 96.8.93.198/National/Wind/WindCast.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jul 2019 21:53:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="ctl00_ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><title>
+	Intellicast - WINDcast in United States
+</title><meta name="viewport" content="width=device-width,initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="description" content="Intellicast.com: The Authority in Expert Weather" /><meta name="google-site-verification" content="Ty8E9HwyYpwnoH6SWxOoDkwWIpfXZbnXYxSKIJKinLw" /><meta name="google-site-verification" content="OwqzWim3JgPf7WONV8sYyMir93oTT-JmWDKQW-IApCI" /><meta name="verify-v1" content="bwhh8UmywoDXIeujVrNoVWPt5FmUdjfYgs0MgjMjouc=" /><meta name="msvalidate.01" content="2625493FFF704B18B25610DED3DC742E" /><meta name="y_key" content="66d7db7fca59b234" /><meta http-equiv="PICS-Label" content="(PICS-1.1 &quot;http://www.rsac.org/ratingsv01.html&quot; l gen true comment &quot;RSACi North America Server&quot; for &quot;http://www.intellicast.com&quot; on &quot;1998.08.31T21:19-0800&quot; r (n 0 s 0 v 0 l 0))&quot;" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="0" /><meta http-equiv="pragma" content="no-cache" /><meta id="ctl00_ctl00_adsmetrics_zone" name="adsmetrics_zone" value="home" /><link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" /><link rel="icon" href="../../favicon.ico" type="image/x-icon" /><link href="http://web.archive.org/web/20190402115722/http://images.intellicast.com/Styles/normalize.rexive.css" rel="stylesheet" /><link href="http://web.archive.org/web/20190402110827/http://images.intellicast.com/Styles/main_20160121.css" rel="stylesheet" /><link href="http://web.archive.org/web/20190402114148/http://images.intellicast.com/Styles/Stylesheet_20131220.css" rel="stylesheet" />
+
+  <script src="../../../icons.wxug.com/scripts/modernizr/2.8.2/modernizr.min.js"></script>
+  <script src="../../../cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+  <script src="http://images.intellicast.com/Scripts/ads-sdk-full-v3.js"></script>
+  <script>
+    try { // change delimiters to mustache syntax
+      _.templateSettings.interpolate = /\{\{=([\s\S]+?)\}\}/g;
+      _.templateSettings.evaluate = /\{\{([\s\S]+?)\}\}/g;
+      _.templateSettings.escape = /\{\{-([\s\S]+?)\}\}/g;
+    } catch (e) { /*ignore*/ }
+  </script>
+  <script type="text/javascript">
+    // set global locationId
+    var locationId = '';
+	</script>
+
+	<script type="text/javascript" src="http://images.intellicast.com/Scripts/ads_20170629.js"></script>
+  
+
+	<!-- BEGIN New Ads -->
+	<script src="http://images.intellicast.com/Scripts/Vendor/twc-jquery-1.10.2.min.js"></script>
+	
+  <script src="http://images.intellicast.com/Scripts/ad-v3.js"></script>
+
+
+  <!-- Initialize PCO -->
+	<script>
+	  window.TWC.Configs = {
+	    'dsx': {
+	      'host': '//dsx.weather.com/', //'//dsx01.int.aws.weather.com/',
+	      'apiKey': '7bb1c920-7027-4289-9c96-ae5e263980bc',
+	      'locale': (TWC && TWC.Titan && TWC.Titan.locale) || 'en_US' || 'en_US',
+	      'cmsVersion': 'v1'
+	    },
+	    'image_poc': {
+	      'instart': 0,
+	      'akamai': 0
+	    },
+	    'debug': 1,
+	    'disable_lazyload': 0,
+	    'sunTurbo': {
+	      'baseUrl': 'http://devapi.weather.com',
+	      'apiKey': 'c1ea9f47f6a88b9acb43aba7faf389d4',
+	      'locale': 'en-US' || 'en-us'
+	    }
+	  };
+	  TWC.pco = TWC.initpco(
+				jQuery,
+				{
+				  'page': { locale: 'en-US' },
+				  'ad': {}
+				},
+				null,
+				null,
+				{ "error": "LOCATION_UNAVAILABLE" }
+		);
+	</script>
+
+  <!-- load Tealium -->
+	<script>
+	  // var TWC = TWC || {};
+		// TWC.Events = TWC.Events || {};
+		// TWC.Events.getEvent = TWC.Events.getEvent || function () { return { done: function () {}, resolve: function () {} }; };
+
+		var getScreenSize = function () {
+	    var browserWidth = window.innerWidth || document.body.clientWidth;
+
+	    if (browserWidth < 768) return 'mobile';
+	    if (browserWidth < 1025) return 'tablet';
+	    return 'desktop';
+	  };
+	  var getSaveZipCd = function () {
+	    var e = jQuery;
+	    var t = TWC;
+	    var n = jQuery.jStorage.get("user");
+	    var a = t && t.pco && t.pco.getNodeValue && t.pco.getNodeValue("page", "currentLocation");
+	    var r = a && a.zipCd || n && n.lastVisitedLocation && n.lastVisitedLocation.zipCd || n && n.savedLocations && jQuery.isArray(n.savedLocations) && n.savedLocations[0] && n.savedLocations[0].zipCd || n && n.recentSearchLocations && e.isArray(n.recentSearchLocations) && n.recentSearchLocations[0] && n.recentSearchLocations[0].zipCd || "";
+
+	    return r;
+	  };
+
+	  var getBrowser = function () {
+	    var userAgent = navigator && navigator.userAgent
+	    meta = userAgent && userAgent.match(/chrome|firefox|safari|trident/i);
+
+	    if (meta && jQuery.isArray(meta)) {
+	      switch (meta[0].toLowerCase()) {
+	        case "chrome":
+	          return "twcchrome";
+	        case "firefox":
+	          return "twcff";
+	        case "safari":
+	          return "twcsafari";
+	        case "trident":
+	          return "twcie";
+	        default:
+	          return "twcnative"
+	      }
+	    }
+	  };
+
+		  $(document).ready(function () {
+	      setTimeout(function () {
+	        TWC.Events.getEvent('lotameReady').resolve();
+	      }, 1000);
+
+		    TWC.Events.getEvent('utag_dataReady').done(function () {
+		      utag_data['js_page.positions'] = ['WX_Top300Variable', 'WX_WindowShade', 'WX_Mid300', 'WX_PaidSearch', 'WX_Tile1', 'WX_Tile2', 'WX_BottomLeaderboard'];
+		      // jQuery.ajax({
+		      //   'url': 'https://tags.tiqcdn.com/utag/weather/intellicast/prod/utag.js',
+		      //   'dataType': 'script',
+		      //   'success': void (0),
+		      //   'cache': true
+		      // });
+
+					window.twcMoney = window.twcMoney || {};
+					window.twcMoney.cmd = window.twcMoney.cmd || [];
+					window.twcMoney.cmd.push(function() {
+		        var locale = TWC.Configs.sunTurbo.locale;
+		        var staticAdPositions = utag_data['js_page.positions'];
+		        var zone = utag_data['js_page.zone'];
+		        var custParams = {};
+
+		        var localeA = TWC && TWC.Configs && TWC.Configs.dsx && TWC.Configs.dsx.locale
+		          , amznId = "de_DE" === localeA && "3128" || "1004";
+
+		        var thirdParties = [
+		          {
+		            id: 'amznslots',
+		            amznId: amznId,
+		            async: true,
+		            timeout: 500
+		          },
+		          {
+		            id: 'criteo',
+		            netId: 2305,
+		            timeout: 500,
+		            async: true
+		          },
+		          {
+		            id: 'wfxtg',
+		            acctid: getScreenSize() !== 'mobile' ? '4C2383' : '5B3739',
+		            timeout: 500,
+		            params: {
+		              activeLocation: window.getSaveZipCd() || '30334',
+		            },
+		            async: true,
+		          },
+		          {
+		            id: 'lotame',
+		            clientId: 2215,
+		            async: true,
+		            timeout: 500,
+		            params: {
+		              metrics: TWC.pco.getNodeValue("metrics") || '',
+		              location: {
+		                dmaCd: TWC.pco.getNodeValue("ad", "location").dmaCd || ''
+		              },
+		              adzone: zone,
+		              lang: TWC.pco.getNodeValue("page", "lang") || ''
+		            }
+		          }
+		        ];
+		        var customAdConfig = {
+		          preparePositions: function (requestObj) {
+		            var positions = [
+		              {
+		                "id": "WX_Top300Variable",
+		                "pos": "wx_300var",
+		                "sizes": [
+		                  [300, 600],
+		                  [300, 251],
+											[300, 250],
+		                  [300, 1050],
+		                  [300, 276]
+		                ]
+		              },
+		              {
+		                "id": "WX_WindowShade",
+		                "pos": "wx_ws",
+		                "sizes": [
+		                  [300, 276],
+		                  [728, 91],
+											[728, 90],
+		                  [728, 50],
+		                  [970, 250]
+		                ],
+		                "device": [ "desktop" ]
+		              },
+		              {
+		                "id": "WX_Mid300",
+		                "pos": "wx_mid300",
+		                "sizes": [[300, 251], [300, 250], [320, 300]]
+		              },
+		              {
+		                "id": "WX_PaidSearch",
+		                "pos": "wx_pds",
+		                "sizes": [[300, 251], [300, 250]]
+		              },
+		              // {
+		              //    "id": "WX_Tile1",
+		              //    "pos": "wx_t1",
+		              //    "sizes": [[125, 125]]
+		              // },
+		              // {
+		              //   "id": "WX_Tile2",
+		              //   "pos": "wx_t2",
+		              //   "sizes": [[125, 125]]
+		              // },
+		              {
+		                "id": "WX_BottomLeaderboard",
+		                "pos": "wx_botldr",
+		                "sizes": [[728, 91], [728, 90]]
+		              }
+		            ];
+
+		            console.log('========');
+		            console.log(requestObj);
+		            console.log('========');
+
+		            return positions.filter(function (item) {
+		              return requestObj.positions.indexOf(item.id) >= 0;
+		            });
+		          },
+		          getAdUnit: function (locale, deviceType) {
+		            var adUnit = null;
+		            var js_page_ad_unit = utag_data['js_page.ad_unit'].split('../../index.html');
+
+		            adUnit = {
+		              adUnit: js_page_ad_unit[2] || '',
+		              networkCode: '/' + (js_page_ad_unit[1] || '')
+		            };
+
+		            return adUnit;
+		          },
+		          getCustParams: function () {
+		            return {
+		              refurl: "intellicast",
+		              browser: getBrowser(),
+		              cc: TWC.pco.getNodeValue("user", "currentLocation").cntryCd,
+		              ct: TWC.pco.getNodeValue("user", "currentLocation").cityNm,
+		              dma: TWC.pco.getNodeValue("ad", "location").dmaCd,
+		              ent: utag_data["js_page.ent"],
+		              impression_id: TWC.pco.getNodeValue("ad", "impression_id"),
+		              intl: utag_data["js_page.gpr"],
+		              lang: TWC.pco.getNodeValue("page", "lang"),
+		              lat: TWC.pco.getNodeValue("ad", "location").lat,
+		              lon: TWC.pco.getNodeValue("ad", "location").long,
+		              loc: utag_data["js_page.locid"],
+		              ord: utag_data["js_page.ord"],
+		              plat: utag_data["js_page.plat"],
+		              refurl: utag_data["js_page.refurl"],
+		              rmid: utag_data["js_page.rmid"],
+		              st: TWC.pco.getNodeValue("user", "currentLocation").stCd,
+		              zip: utag_data["js_page.zip"],
+		              tf: utag_data["js_page.zone"]
+		            };
+		          }
+		        };
+
+		        var adLocation = TWC.pco.getNodeValue("ad", "location");
+		        var geocode = adLocation.lat + ',' + adLocation.long;//'42.36,-71.06'
+
+		        window.twcMoney.SunDataService.fetchData({ geocode: geocode })
+		          .then(function(result) {
+		            var custParams = result.custParams;
+
+		            console.log('========');
+		            console.log(result);
+		            console.log('========');
+
+		            window.twcMoney.moneyTree({ useLightSpeed: false, locale: locale })
+		              .start({
+		                adZone: zone,
+		                locale: locale,
+		                thirdParties: thirdParties,
+		                custParams: custParams,
+		                pageAdPositions: [],
+		                staticAdPositions: staticAdPositions,
+		                processStatic: true,
+
+		                adConfig: customAdConfig
+		              })
+									.then(function () {
+										window.twcMoney.moneyTree().getBidProcessPromise('lotame')
+										.then(function () {
+											var lotameData = {};
+											var jStorage = JSON.parse(localStorage
+												&& localStorage.jStorage);
+											var lotameRaw = jStorage && jStorage.lotameRaw || {};
+
+											var lot_abbr, lot_id, lotameData;
+											if (lotameData = TWC.pco.getNodeValue("user", "lotame") || {},
+											lotameData.lot_tpid = lotameRaw
+												&& lotameRaw.Profile
+												&& lotameRaw.Profile.tpid || lotameData.lot_tpid,
+											lotameData.lot_pid = lotameRaw
+												&& lotameRaw.Profile
+												&& lotameRaw.Profile.pid || lotameData.lot_pid,
+											lot_abbr = lotameData && lotameData.lot_abbr || "",
+											lot_id = lotameData && lotameData.lot_id || "",
+											audienceLength = lotameRaw
+												&& lotameRaw.Profile
+												&& lotameRaw.Profile.Audiences
+												&& lotameRaw.Profile.Audiences.Audience
+												&& lotameRaw.Profile.Audiences.Audience.length,
+											audienceLength > 0) {
+													lot_abbr = "",
+													lot_id = "";
+													for (var c = 0; c < audienceLength; c++)
+															lot_abbr += lotameRaw.Profile.Audiences.Audience[c].abbr + (c < audienceLength - 1 ? "," : ""),
+															lot_id += lotameRaw.Profile.Audiences.Audience[c].id + (c < audienceLength - 1 ? "," : "");
+
+													lotameData.lot_abbr = lot_abbr,
+													lotameData.lot_id = lot_id
+											}
+
+											TWC.pco.setNodeValue("user", "lotame", lotameData);
+										});
+									});
+		          });
+					});
+		    });
+		  });
+	</script>
+
+  <!-- Optimizely -->
+  <script src="../../../cdn.optimizely.com/js/878051086.js"></script>
+
+  <!-- BEGIN Omniture -->
+
+  <script src="https://www.wunderground.com/intellicast"></script>
+
+  <script type="text/javascript">
+	(function () {
+		var _recentLocations = [];
+
+		_recentLocations.push(1);
+
+		_recentLocations = _recentLocations.join();
+
+		var _brdcrmb = window.location.pathname !== "/" ? window.location.pathname.substring(1).split("../../index.html") : ["Home"];
+		if (_brdcrmb.length > 1) {
+			_brdcrmb.unshift("Home");
+			_brdcrmb[_brdcrmb.length - 1] = _brdcrmb[_brdcrmb.length - 1].substring(0, _brdcrmb[_brdcrmb.length - 1].indexOf("."));
+		}
+		s.pageName = document.title;
+		s.prop2 = s.evar4 = _brdcrmb.join(" > "); // sub section e.g. home > maps > regionmap
+		s.prop6 = s.evar6 = "::"; // city:state:country
+		s.prop8 = s.evar8 = ""; // dma id
+		s.prop9 = s.evar9 = ""; // zip code
+		s.evar23 = ""; // marketing campaigns
+		s.evar24 = window.location.href; // full url
+		//SiteCatalyst Beacon Parameter: event15 Page View Event
+
+		s.prop10 = _recentLocations; // recent locations, number then location id
+		s.prop14 = ""; // intra-page actions
+		s.evar10 = _recentLocations; // saved locations, number then location id
+
+		s.evar11 = ""; // internal search term
+		s.evar12 = ""; // member type (member, non-member)
+		s.evar13 = ""; // weather map layer
+		s.evar14 = ""; // boating map layer
+		s.evar17 = ""; // search type (other or zip)
+		s.evar18 = ""; // search error message
+		/*
+			event7: Membership Signup
+			event8: Sign-Ins
+			event9: Sign-Outs
+		*/
+		var s_code = s.t();
+		if (s_code) document.write(s_code);
+	}());
+  </script>
+
+  <!-- END Omniture -->
+
+  <!-- END New Ads -->
+
+  <script src="http://images.intellicast.com/App_Scripts/icast.storage.min.js"></script>
+	<script src="http://images.intellicast.com/App_Scripts/jquery-autocomplete.min.js"></script>
+
+	
+	
+
+  <meta name="description" content="The WINDcast map shows the  wind forecast for the next 6 hours.   Wind direction is determined by the direction from which it originates. For example, a northerly wind blows from the north to the south. Wind is the flow of air that occurs as it is heated by the sun and thus rises. Cool air then occupies the area from which the hot air has moved, creating what could loosely be termed a convection current." />
+  <meta name="keywords" content="wind forecast,  wind forecast, wind direction" />
+
+<!-- New Ads -->
+<style type="text/css">
+  .img-link{display:block;margin:10px 0;}
+  .img-link img{border:none;display:block;}
+</style>
+<!-- New Ads -->
+
+	<!-- HTML5 Shim: IE8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body id="ctl00_ctl00_MasterBody">
+	
+
+	<!-- Begin comScore Tag -->
+	<script type="text/javascript">var _comscore = _comscore || []; _comscore.push({ c1: "2", c2: "9576127", c3: "", c4: window.location.href }); (function () { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();</script>
+	<noscript><img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=9576127&amp;c3=&amp;c4=www.intellicast.com/National/Wind/WindCast.aspx&amp;c5=&amp;c6=&amp;c15=&amp;cv=2.0&amp;cj=1" alt="" style="position:absolute;top:-1000px;" /></noscript>
+	<!-- End comScore Tag -->
+
+	<header id="header" class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="logo-wrapper">
+					<a href="../../index.html" class="logo">
+						<span class="sr-only">Intellicast.com</span>
+						<span class="slogan">The Authority in Expert Weather</span>
+					</a>
+				</div>
+				<div class="user-tools">
+					<div class="constants" style="width:60%;float:right;">
+						
+            
+						<a class="alerts" href="../../Storm/Severe/Bulletins.html"><i class="icon"></i>Alerts</a>
+						<a class="hurricane""" href="https://www.wunderground.com/hurricane"><i class="icon"></i>Hurricanes</a>
+						<a class="help" href="../../Help/Default.html"><i class="icon"></i>Help</a>
+						
+					</div>
+					<div class="inav-flyout toggle-target">
+						
+							<a href="../../Default.html">Sign-In to Add to iNav</a>
+						
+					</div>
+					<form method="get" action="http://96.8.93.198/Local/Default.aspx" class="ui-front location-search">
+						<input tabindex="1" class="blurred" id="locSearch" name="query" type="text" value="Enter City, State, Country or U.S. Zip code" autocomplete="off" />
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="site-nav">
+					<ul class="nav">
+						<li><a href="http://96.8.93.198/Local/Weather.aspx" class="toggle-btn">Local</a>
+							<ul>
+								<li><a href="http://96.8.93.198/Local/Default.aspx">Find A Location</a></li>
+								<li><a href="http://96.8.93.198/Local/Weather.aspx">Weather Report</a></li>
+								<li><a href="../../Local/WxMap.html">Interactive Weather Map</a></li>
+								<li><a href="http://96.8.93.198/Local/Forecast.aspx">Extended Forecast</a></li>
+								<li><a href="http://96.8.93.198/Local/Hourly.aspx">Hourly Forecast</a></li>
+								<li><a href="http://96.8.93.198/Local/Observation.aspx">Past Observations</a></li>
+								<li><a href="http://96.8.93.198/Local/ObservationsSummary.aspx">Past Observations Summary</a></li>
+								<li><a href="http://96.8.93.198/Local/History.aspx">Historic Averages</a></li>
+							</ul>
+						</li>
+						<li><a href="../../Local/WxMap.html" class="toggle-btn">Interactive</a>
+							<ul>
+								<li><a href="../../Video/Player.html">Videos</a></li>
+                <li><a href="../../Local/WxMap.html">Interactive Weather Map</a></li>
+								
+								<li><a href="http://96.8.93.198/Local/WxMapSm.aspx">Interactive Map (Small)</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="../Default.html" class="toggle-btn">National</a>
+							<ul>
+								<li><a href="../Default.html">National Home</a></li>
+								<li><a href="../Weather.html">Current Weather</a></li>
+								<li><a href="../ForecastToday.html">Today's Forecast</a></li>
+								<li><a href="../ForecastTomorrow.html">Tomorrow's Forecast</a></li>
+								<li><a href="../Radar/Default.html">Radar<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Radar/Current.html">Current Radar</a></li>
+										<li><a href="../Radar/Forecast.html">Forecast Radar</a></li>
+										<li><a href="../Radar/Summary.html">Radar Summary</a></li>
+										<li><a href="../Radar/Yesterday.html">Yesterday's Radar Loop</a></li>
+										<li><a href="../Radar/OneKM.html">1Km Radar</a></li>
+										<li><a href="../Radar/Metro.html">Metro Radar</a></li>
+									</ul>
+								</li>
+								<li><a href="../Nexrad/Default.html">Nexrad<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Nexrad/BaseReflectivity.html">Base Reflectivity</a></li>
+										<li><a href="../Nexrad/RadialVelocity.html">Radial Velocity</a></li>
+									</ul>
+								</li>
+								<li><a href="../Surface/Default.html">Surface Analysis<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Surface/Current.html">Current Surface Analysis</a></li>
+										<li><a href="../Surface/Mixed.html">Mixed Surface Analysis</a></li>
+										<li><a href="../Surface/Forecast12.html">12-Hour Surface Forecast</a></li>
+										<li><a href="../Surface/Forecast24.html">24-Hour Surface Forecast</a></li>
+										<li><a href="../Surface/Forecast36.html">36-Hour Surface Forecast</a></li>
+										<li><a href="../Surface/Forecast48.html">48-Hour Surface Forecast</a></li>
+									</ul>
+								</li>
+								<li><a href="../Satellite/Default.html">Satellite<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Satellite/Infrared.html">National Infrared Satellite</a></li>
+										<li><a href="../Satellite/Regional.html">Regional Infrared Satellite</a></li>
+										<li><a href="../Satellite/Visible.html">Visible Satellite</a></li>
+										<li><a href="../Satellite/WaterVapor.html">Water Vapor</a></li>
+									</ul>
+								</li>
+								<li><a href="../Temperature/Default.html">Temperature<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Temperature/Current.html">Current Temperatures</a></li>
+										<li><a href="../Temperature/HighToday.html">High Temperatures Today</a></li>
+										<li><a href="../Temperature/HighTomorrow.html">High Temperatures Tomorrow</a></li>
+										<li><a href="../Temperature/LowTomorrow.html">Low Temperatures Tomorrow</a></li>
+										<li><a href="../Temperature/TEMPcast.html">TEMPcast</a></li>
+										<li><a href="../Temperature/WindChill.html">Wind Chill</a></li>
+										<li><a href="../Temperature/Extreme.html">Feels Like Temps</a></li>
+										<li><a href="../Temperature/Departure.html">Temp Departure</a></li>
+										<li><a href="../Temperature/Departure10.html">10 Day Temp Departure</a></li>
+										<li><a href="../Temperature/Departure30.html">30 Day Temp Departure</a></li>
+										<li><a href="../Temperature/Departure90.html">90 Day Temp Departure</a></li>
+										<li><a href="../Temperature/FrostFreeze.html">Frost &amp; Freeze</a></li>
+										<li><a href="../Temperature/FirstLastFreeze.html">First &amp; Last Freeze</a></li>
+										<li><a href="../Temperature/Delta.html">24hr Deltas</a></li>
+									</ul>
+								</li>
+								<li><a href="../Outdoors/Default.html">Outdoors<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Outdoors/SOLARcast.html">SOLARcast</a></li>
+										<li><a href="../Outdoors/Summer.html">Summer Fun</a></li>
+										<li><a href="../Outdoors/Gardening.html">Gardening</a></li>
+										<li><a href="../Outdoors/Watering.html">Plant Watering</a></li>
+										<li><a href="../Outdoors/Painting.html">Painting</a></li>
+										<li><a href="../Outdoors/Golfing.html">Golfing</a></li>
+										<li><a href="../Outdoors/Turf.html">Golf Turf Conditions</a></li>
+										<li><a href="../Outdoors/UltraViolet.html">UV Report</a></li>
+										<li><a href="../Outdoors/Sky.html">Sky Watch</a></li>
+									</ul>
+								</li>
+								<li><a href="../Precipitation/Default.html">Precipitation<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Precipitation/PrecipCast.html">PRECIPcast</a></li>
+										<li><a href="../Precipitation/RainCast.html">RAINcast</a></li>
+										<li><a href="../Precipitation/PopCast.html">POPcast</a></li>
+										<li><a href="../Precipitation/Estimated.html">Estimated Rainfall</a></li>
+										<li><a href="../Precipitation/Daily.html">Daily Precipitation</a></li>
+										<li><a href="../Precipitation/Weekly.html">Weekly Precipitation</a></li>
+										<li><a href="../Precipitation/Departure10.html">10 Day Precip Departure</a></li>
+										<li><a href="../Precipitation/Departure30.html">30 Day Precip Departure</a></li>
+										<li><a href="../Precipitation/Departure90.html">90 Day Precip Departure</a></li>
+									</ul>
+								</li>
+								<li><a href="Default.html">Wind<i class="caret"></i></a>
+									<ul>
+										<li><a href="Current.html">Current Winds</a></li>
+										<li><a href="WINDcast.html">WINDcast</a></li>
+										<li><a href="JetStream.html">Jet Stream</a></li>
+									</ul>
+								</li>
+								<li><a href="../Humidity/Default.html">Humidity<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Humidity/Current.html">Current Humidity</a></li>
+										<li><a href="../Humidity/IndoorRelative.html">Indoor Relative Humidity</a></li>
+										<li><a href="../Humidity/HUMIDITYcast.html">HUMIDITYcast</a></li>
+										<li><a href="../Humidity/FOGcast.html">FOGcast</a></li>
+										<li><a href="../Humidity/DewPoint.html">Dew Point</a></li>
+									</ul>
+								</li>
+								<li><a href="../Analysis/Default.html">Analysis Charts<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Analysis/SuperFax.html">WSI SuperFax</a></li>
+										<li><a href="../Analysis/UpperAir300.html">300MB Upper Air</a></li>
+										<li><a href="../Analysis/UpperAir500.html">500MB Upper Air</a></li>
+										<li><a href="../Analysis/UpperAir850.html">850MB Upper Air</a></li>
+										<li><a href="../Analysis/Difax24.html">24hr Difax</a></li>
+										<li><a href="../Analysis/Difax48.html">48hr Difax</a></li>
+										<li><a href="../Analysis/Difax72.html">72hr Difax</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../../Global/Default.html" class="toggle-btn">Global</a>
+							<ul>
+								<li><a href="../../Global/Default.html">Global Home</a></li>
+								<li><a href="../../Global/Humidity.html">Relative Humidity</a></li>
+								<li><a href="../../Global/Surface.html">Surface Analysis</a></li>
+								<li><a href="../../Global/Satellite/Default.html">Satellite<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Satellite/Current.html">Current Satellite</a></li>
+										<li><a href="../../Global/Satellite/Infrared.html">Infrared Satellite</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Global/Temperature/Default.html">Temperature<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Temperature/Current.html">Current Temperatures</a></li>
+										<li><a href="../../Global/Temperature/Minimum.html">Minimum Temperatures</a></li>
+										<li><a href="../../Global/Temperature/Maximum.html">Maximum Temperatures</a></li>
+										<li><a href="../../Global/Temperature/Sunshine.html">Sunshine</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Global/Precipitation/Default.html">Precipitation<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Precipitation/Current.html">Current Precipitation</a></li>
+										<li><a href="../../Global/Precipitation/ForecastAM.html">AM Precipitation Forecast</a></li>
+										<li><a href="../../Global/Precipitation/ForecastPM.html">PM Precipitation Forecast</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Global/Wind/Default.html">Wind<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Wind/Current.html">Current Winds</a></li>
+										<li><a href="../../Global/Wind/Forecast.html">Forecast Winds</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../../Storm/Default.html" class="toggle-btn">Storms</a>
+							<ul>
+								<li><a href="../../Storm/Default.html">Storm Home</a></li>
+								<li><a href="../../Storm/Severe/Default.html">Severe Weather<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Storm/Severe/Bulletins.html">Weather Alerts</a></li>
+										<li><a href="../../Storm/Severe/WatchesWarnings.html">Watches &amp; Warnings</a></li>
+										<li><a href="../../Storm/Severe/OneKM.html">1Km Storm Watch</a></li>
+										<li><a href="../../Storm/Severe/Metro.html">Metro Storm Watch</a></li>
+										<li><a href="../../Storm/Severe/OutlookToday.html">Severe Outlook Today</a></li>
+										<li><a href="../../Storm/Severe/OutlookTomorrow.html">Severe Outlook Tomorrow</a></li>
+										<li><a href="../../Storm/Severe/Lightning.html">Lightning Strikes</a></li>
+										<li><a href="../../Storm/Severe/ThunderCast.html">THUNDERcast</a></li>
+										<li><a href="../../Storm/Severe/WaterVapor.html">Water Vapor</a></li>
+									</ul>
+								</li>
+								<li><a href="https://www.wunderground.com/hurricane">Hurricane<i class="caret"></i></a>
+									<ul>
+										<li><a href="https://www.wunderground.com/hurricane">Active Track</a></li>
+										<li><a href="../../Storm/Hurricane/TropicalWinds24.html">24hr Tropical Winds</a></li>
+										<li><a href="../../Storm/Hurricane/TropicalWinds48.html">48hr Tropical Winds</a></li>
+										<li><a href="../../Storm/Hurricane/TropicalWinds72.html">72hr Tropical Winds</a></li>
+										<li><a href="../../Storm/Hurricane/AtlanticAnalysis.html">Atlantic Analysis</a></li>
+										<li><a href="../../Storm/Hurricane/AtlanticSatellite.html">Atlantic Satellite</a></li>
+										<li><a href="../../Storm/Hurricane/AtlanticForecast.html">Atlantic Forecast</a></li>
+										<li><a href="../../Storm/Hurricane/CaribbeanSatellite.html">Caribbean Satellite</a></li>
+										<li><a href="../../Storm/Hurricane/PacificAnalysis.html">Pacific Analysis</a></li>
+										<li><a href="../../Storm/Hurricane/PacificSatellite.html">Pacific Satellite</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Storm/Summary/Default.html">Season Summaries<i class="caret"></i></a>
+									<ul>
+                    <li><a href="../../Storm/Summary/Hurricane2015.html">2015 Hurricane Summary</a></li>
+                    <li><a href="../../Storm/Summary/Hurricane2014.html">2014 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2013.html">2013 Hurricane Summary</a></li>
+                    <li><a href="../../Storm/Summary/Hurricane2012.html">2012 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2011.html">2011 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2010.html">2010 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2009.html">2009 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2008.html">2008 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2007.html">2007 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2006.html">2006 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2005.html">2005 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2004.html">2004 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2003.html">2003 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2002.html">2002 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2001.html">2001 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2000.html">2000 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane1999.html">1999 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane1998.html">1998 Hurricane Summary</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../../Health/Default.html" class="toggle-btn">Health</a>
+							<ul>
+								<li><a href="../../Health/Default.html">Health Home</a></li>
+								<li><a href="../../Health/AchesPains.html">Aches &amp; Pains</a></li>
+								<li><a href="../../Health/Air.html">Air Stagnation</a></li>
+								<li><a href="../../Health/Attentiveness.html">Attentiveness</a></li>
+								<li><a href="../../Health/BadHairDay.html">Bad Hair Day</a></li>
+								<li><a href="../../Health/Influenza.html">Influenza Report</a></li>
+								<li><a href="../../Health/Labor.html">Labor Index</a></li>
+								<li><a href="../../Health/Mood.html">Mood Index</a></li>
+								<li><a href="../../Health/Reflex.html">Reflex Times</a></li>
+								<li><a href="../../Health/Respiratory.html">Respiratory Distress</a></li>
+							</ul>
+						</li>
+						<li><a href="../../Travel/Default.html" class="toggle-btn">Travel</a>
+							<ul>
+								<li><a href="../../Travel/Default.html">Travel Home</a></li>
+								<li><a href="../../Travel/Risk.html">Delay Risk</a></li>
+								<li><a href="../../Travel/Outlook.html">Outlook</a></li>
+								<li><a href="../../Travel/Flying/Default.html">Airport Delays</a></li>
+								<li><a href="../../Travel/Library/Browse.html">Climate Guides</a></li>
+								<li><a href="../../Travel/Driving/Road.html">Driving<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Travel/Driving/Highways.html">Highway Conditions</a></li>
+										<li><a href="../../Travel/Driving/Road.html">Roadway Conditions</a></li>
+										<li><a href="../../Travel/Driving/TopUpTopDown.html">Top Up Top Down</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Travel/Weather/Snow/Default.html">Ski &amp; Snow<i class="caret"></i></a>
+									<ul>
+										<li><a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=39&longitude=-97&zoomLevel=4&opacity=1&basemap=0014&layers=0053');">Interactive Snow Cover</a></li>
+										<li><a href="../../Travel/Weather/Snow/Ski.html">Ski Conditions</a></li>
+										<li><a href="../../Travel/Weather/Snow/Cover.html">Snow Cover</a></li>
+										<li><a href="../../Travel/Weather/Snow/SNOWcast.html">SNOWcast</a></li>
+										<li><a href="../../Travel/Weather/Snow/Forecast.html">48hr Snow Forecast</a></li>
+										<li><a href="../../Travel/Weather/Snow/Storm.html">24hr Snow Forecast</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Travel/Weather/Marine/Default.html">Boat &amp; Beach<i class="caret"></i></a>
+									<ul>
+										
+										<li><a href="../../Travel/Weather/Marine/Sailing.html">Great Sailing</a></li>
+										<li><a href="../../Travel/Weather/Marine/Water.html">Water Temperatures</a></li>
+										<li><a href="../../Travel/Weather/Marine/Waves.html">Wave Heights</a></li>
+										<li><a href="../../Travel/Weather/Marine/Forecast.html">Marine Forecast</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../ForecastToday.html" class="toggle-btn">Forecast</a>
+							<ul>
+								<li><a href="http://96.8.93.198/Local/Weather.aspx">10-Day Weather Report</a></li>
+								<li><a href="http://96.8.93.198/Local/Hourly.aspx">Hourly</a></li>
+								<li><a href="../Radar/Forecast.html">Radar</a></li>
+								<li><a href="../Surface/Forecast12.html">Surface</a></li>
+								<li><a href="../Temperature/TEMPcast.html">Temperature</a></li>
+								<li><a href="../Precipitation/PrecipCast.html">Precipitation</a></li>
+								<li><a href="../Precipitation/RainCast.html">Rain</a></li>
+								<li><a href="../../Storm/Severe/ThunderCast.html">Thunder</a></li>
+								<li><a href="WINDcast.html">Winds</a></li>
+								<li><a href="../Humidity/HUMIDITYcast.html">Humidity</a></li>
+							</ul>
+						</li>
+						<li><a href="../Weather.html" class="toggle-btn">Current</a>
+							<ul>
+								<li><a href="../Radar/Current.html">Radar</a></li>
+								<li><a href="../Surface/Current.html">Surface</a></li>
+								<li><a href="../Temperature/Current.html">Temperatures</a></li>
+								<li><a href="../Temperature/Delta.html">Temperature Changes</a></li>
+								<li><a href="../Precipitation/Estimated.html">Precipitation</a></li>
+								<li><a href="Current.html">Winds</a></li>
+								<li><a href="../Humidity/Current.html">Humidity</a></li>
+							</ul>
+						</li>
+						<li><a href="../Radar/Default.html" class="toggle-btn">Radar</a>
+							<ul>
+								<li><a href="../../Local/WxMap.html">Interactive Radar</a></li>
+								<li><a href="../Radar/Current.html">Current Radar</a></li>
+								<li><a href="../Radar/Currente5e7.html?animate=true">Current Loops</a></li>
+								<li><a href="../Radar/Forecast.html">Forecast</a></li>
+								<li><a href="../Radar/OneKM.html">Regional (1Km)</a></li>
+								<li><a href="../Radar/OneKMe5e7.html?animate=true">Regional (1Km) Loop</a></li>
+								<li><a href="../Radar/Metro.html">Metro</a></li>
+								<li><a href="../Radar/Metroe5e7.html?animate=true">Metro Loop</a></li>
+								<li><a href="../Radar/Summary.html">Summary</a></li>
+								<li><a href="../../Local/WxMap.html">Java Radar Loop</a></li>
+							</ul>
+						</li>
+						<li><a href="../Satellite/Default.html" class="toggle-btn">Satellite</a>
+							<ul>
+								<li><a href="../../Global/Satellite/Infrared.html">Global Infrared</a></li>
+								<li><a href="../Satellite/Infrared.html">US National Infrared</a></li>
+								<li><a href="../Satellite/Regional.html">US Regional Infrared</a></li>
+								<li><a href="../../Storm/Hurricane/AtlanticSatellite.html">Atlantic Infrared Satellite</a></li>
+								<li><a href="../../Storm/Hurricane/PacificSatellite.html">Pacific Infrared Satellite</a></li>
+								<li><a href="../../Storm/Hurricane/CaribbeanSatellite.html">Caribbean Infrared Satellite</a></li>
+								<li><a href="../Satellite/Visible.html">Visible Satellite</a></li>
+								<li><a href="../../Global/Satellite/Current.html">Current Satellite</a></li>
+								<li><a href="../Satellite/WaterVapor.html">Water Vapor</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="location-bar clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="user-location">
+						<a class="current-location toggle-btn" href="http://96.8.93.198/Local/Weather.aspx?location=">
+							
+						</a>
+						
+					</div>
+					<div class="uni-time">
+						<strong>Universal Time:</strong>&nbsp;Thursday, 11 Jul 2019, 21:12
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="referral" class="referral-form">
+			<div id="referralForm" style="display:block;">
+				<strong><span style="margin-right:5px;">Send this page to a friend</span>
+        <img src="http://images.intellicast.com/App_Images/btn_close.gif" alt="Close" class="Close" onclick="javascript:$('#referral').toggle();" style="float:right;" /></strong>
+				<div>
+					Your Name:<br />
+					<input type="text" id="FromName" maxlength="50" />
+				</div>
+				<div>
+					Your E-mail Address: <br />
+					<input type="text" id="FromEmail" maxlength="256" />
+				</div>
+				<div>
+					Friend's E-mail Address: <br />
+					<input type="text" id="ToEmail" maxlength="256" />
+				</div>
+				<div>
+					<button type="button" id="ReferralSubmit" onclick="javascript: SendReferral()">Send</button>
+				</div>
+			</div>
+			<div id="referralMessage" style="display:none;">
+				<strong style="text-align:center;">Thank you!<img src="http://images.intellicast.com/App_Images/btn_close.gif" alt="Close" class="Close" onclick="javascript:$('#referral').toggle();" /></strong>
+				<br /><br />
+					Your referral has been sent.<br /><br />
+					<a href="#" onclick="javascript:$('#referralForm').show();$('#referralMessage').hide();">Click here to send another one.</a>
+			</div>
+		</div>
+	</header>
+
+	<div class="main container clearfix" id="content">
+		<form name="aspnetForm" method="post" action="http://96.8.93.198/National/Wind/WindCast.aspx" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUJOTc3MTQ4NzIwZGQXg2Z1jitBY11sgAG/05jcngLCpg==" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="3378B74E" />
+</div>
+			
+<div style="clear:both;width:1000px;">
+<div id="leftColumn">
+  
+<div class="pageHeader">
+  <div class="Primary Header" style="float: left;">WINDcast</div>
+  <div class="breadcrumb"><a href="../../index.html">Home</a> &raquo; <a href="../index.html">National</a> &raquo; <a href="index.html">Wind</a> &raquo; WINDcast</div>
+</div>
+<div class="Chrome RelatedTop">
+  <div class="Title">Wind Maps</div>
+</div>
+<div class="Container RelatedContainer">
+  <table class="Related">
+    <tr>
+      <td>
+        <a href="Current.html"><img src="http://images.intellicast.com/WxImages/_100w/CurrentWinds/usa.jpg" alt="Current Winds" class="Thumbnail" /><br />
+        Current Winds</a>
+      </td>
+      <td class="Selected">
+        <a href="WINDcast.html"><img src="https://www.wunderground.com/intellicast" alt="WINDcast" class="Thumbnail" /><br />
+        WINDcast</a>
+      </td>
+      <td>
+        <a href="JetStream.html"><img src="http://images.intellicast.com/WxImages/_100w/JetStream/conus.jpg" alt="Jet Stream" class="Thumbnail"/ ><br />
+        Jet Stream</a>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=39&longitude=-97&zoomLevel=4&opacity=1&basemap=0014&layers=0055');">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_temps.gif" alt="Temperatures"  />
+            Temperatures
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="../../Travel/Weather/Snow/Default.html">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_snow.jpg" alt="Ski and Snow"  />
+            Ski &amp; Snow
+          </a>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="FocusIcon">
+          <a href="http://96.8.93.198/Local/Weather.aspx">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_weather.gif" alt="Local Weather"  />
+            Local Weather
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="../../Local/WxMap.html">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_wximap.jpg" alt="Interactive Weather Map"  />
+            Interactive Weather
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=39&longitude=-97&zoomLevel=4&opacity=1&basemap=0014&layers=0039');">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_radar.gif" alt="Current Radar"  />
+            Current Radar
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=39&longitude=-97&zoomLevel=4&opacity=1&basemap=0014&layers=0040');">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_satellite.jpg" alt="Satellite Weather"  />
+            Satellite Weather
+          </a>
+        </div>
+      </td>
+      <td>
+        <div class="FocusIcon">
+          <a href="https://www.wunderground.com/hurricane">
+            <img src="http://images.intellicast.com/App_Images/thx_header.gif" alt="Image Header" />
+            <img src="http://images.intellicast.com/App_Images/thx_storm.gif" alt="Storm Tracking"  />
+            Storm Tracking
+          </a>
+        </div>
+      </td>
+    </tr>
+  </table>    
+</div> 
+
+
+
+<script type="text/javascript">
+  /*
+  Galleria v 1.2.5 2011-08-03
+  http://galleria.aino.se
+
+  Copyright (c) 2011, Aino
+  Licensed under the MIT license.
+  */
+(function(e){var l=this,n=l.document,H=e(n),t=e(l),A=!0,B=3E4,C=!1,x=navigator.userAgent.toLowerCase(),I=l.location.hash.replace(/#\//,""),m=function(){var a=3,b=n.createElement("div"),d=b.getElementsByTagName("i");do b.innerHTML="<\!--[if gt IE "+ ++a+"]><i></i><![endif]--\>";while(d[0]);return a>4?a:void 0}(),u=function(){return{html:n.documentElement,body:n.body,head:n.getElementsByTagName("head")[0],title:n.title}},J=function(){var a=[];e.each("data ready thumbnail loadstart loadfinish image play pause progress fullscreen_enter fullscreen_exit idle_enter idle_exit rescale lightbox_open lightbox_close lightbox_image".split(" "),
+function(b,d){a.push(d);/_/.test(d)&&a.push(d.replace(/_/g,""))});return a}(),K=function(a){var b;if(typeof a!=="object")return a;e.each(a,function(d,c){/^[a-z]+_/.test(d)&&(b="",e.each(d.split("_"),function(a,c){b+=a>0?c.substr(0,1).toUpperCase()+c.substr(1):c}),a[b]=c,delete a[d])});return a},D=function(a){return e.inArray(a,J)>-1?Galleria[a.toUpperCase()]:a},v={trunk:{},add:function(a,b,d,c){c=c||!1;this.clear(a);if(c)var e=b,b=function(){e();v.add(a,b,d)};this.trunk[a]=l.setTimeout(b,d)},clear:function(a){var b=
+function(a){l.clearTimeout(this.trunk[a]);delete this.trunk[a]},d;if(a&&a in this.trunk)b.call(v,a);else if(typeof a==="undefined")for(d in this.trunk)this.trunk.hasOwnProperty(d)&&b.call(v,d)}},z=[],y=[],L=!1,s=!1,M=[],E=function(a){Galleria.theme=a;e.each(M,function(a,d){d._init.call(d)})},f=function(){return{array:function(a){return Array.prototype.slice.call(a,0)},create:function(a,b){var d=n.createElement(b||"div");d.className=a;return d},getScriptPath:function(a){a=a||e("script:last").attr("src");
+a=a.split("../../index.html");if(a.length==1)return"";a.pop();return a.join("../../index.html")+"/"},animate:function(){var a=function(a){var b="transition WebkitTransition MozTransition OTransition".split(" "),c;if(l.opera)return!1;for(c=0;b[c];c++)if(typeof a[b[c]]!=="undefined")return b[c];return!1}((n.body||n.documentElement).style),b={MozTransition:"transitionend",OTransition:"oTransitionEnd",WebkitTransition:"webkitTransitionEnd",transition:"transitionend"}[a],d={_default:[0.25,0.1,0.25,1],galleria:[0.645,0.045,0.355,1],
+galleriaIn:[0.55,0.085,0.68,0.53],galleriaOut:[0.25,0.46,0.45,0.94],ease:[0.25,0,0.25,1],linear:[0.25,0.25,0.75,0.75],"ease-in":[0.42,0,1,1],"ease-out":[0,0,0.58,1],"ease-in-out":[0.42,0,0.58,1]},c=function(a,b,c){var d={},c=c||"transition";e.each("webkit moz ms o".split(" "),function(){d["-"+this+"-"+c]=b});a.css(d)},i=function(a){c(a,"none","transition");Galleria.WEBKIT&&Galleria.TOUCH&&(c(a,"translate3d(0,0,0)","transform"),a.data("revert")&&(a.css(a.data("revert")),a.data("revert",null)))},j,
+h,g,k,p,w,F;return function(o,q,r){r=e.extend({duration:400,complete:function(){},stop:!1},r);o=e(o);r.duration?a?(r.stop&&(o.unbind(b),i(o)),j=!1,e.each(q,function(a,b){F=o.css(a);f.parseValue(F)!=f.parseValue(b)&&(j=!0);o.css(a,F)}),j?(h=[],g=r.easing in d?d[r.easing]:d._default,k=" "+r.duration+"ms cubic-bezier("+g.join(",")+")",l.setTimeout(function(){o.one(b,function(a){return function(){i(a);r.complete.call(a[0])}}(o));if(Galleria.WEBKIT&&Galleria.TOUCH&&(p={},w=[0,0,0],e.each(["left","top"],
+function(a,b){b in q&&(w[a]=f.parseValue(q[b])-f.parseValue(o.css(b))+"px",p[b]=q[b],delete q[b])}),w[0]||w[1]))o.data("revert",p),h.push("-webkit-transform"+k),c(o,"translate3d("+w.join(",")+")","transform");e.each(q,function(a){h.push(a+k)});c(o,h.join(","));o.css(q)},1)):l.setTimeout(function(){r.complete.call(o[0])},r.duration)):o.animate(q,r):(o.css(q),r.complete.call(o[0]))}}(),removeAlpha:function(a){if(m<9&&a){var b=a.style,a=(a=a.currentStyle)&&a.filter||b.filter||"";if(/alpha/.test(a))b.filter=
+a.replace(/alpha\([^)]*\)/i,"")}},forceStyles:function(a,b){a=e(a);a.attr("style")&&a.data("styles",a.attr("style")).removeAttr("style");a.css(b)},revertStyles:function(){e.each(f.array(arguments),function(a,b){b=e(b);b.removeAttr("style");b.attr("style","");b.data("styles")&&b.attr("style",b.data("styles")).data("styles",null)})},moveOut:function(a){f.forceStyles(a,{position:"absolute",left:-1E4})},moveIn:function(){f.revertStyles.apply(f,f.array(arguments))},elem:function(a){return a instanceof
+e?{$:a,dom:a[0]}:{$:e(a),dom:a}},hide:function(a,b,d){var d=d||function(){},c=f.elem(a),e=c.$,a=c.dom;e.data("opacity")||e.data("opacity",e.css("opacity"));c={opacity:0};b?f.animate(a,c,{duration:b,complete:m<9&&a?function(){f.removeAlpha(a);a.style.visibility="hidden";d.call(a)}:d,stop:!0}):m<9&&a?(f.removeAlpha(a),a.style.visibility="hidden"):e.css(c)},show:function(a,b,d){var d=d||function(){},c=f.elem(a),e=c.$,a=c.dom,j={opacity:parseFloat(e.data("opacity"))||1};if(b){if(m<9)e.css("opacity",0),
+a.style.visibility="visible";f.animate(a,j,{duration:b,complete:m<9&&a?function(){j.opacity==1&&f.removeAlpha(a);d.call(a)}:d,stop:!0})}else m<9&&j.opacity==1&&a?(f.removeAlpha(a),a.style.visibility="visible"):e.css(j)},optimizeTouch:function(){var a,b,d,c,f={},j=function(a){a.preventDefault();f=e.extend({},a,!0)},h=function(){this.evt=f},g=function(){this.handler.call(a,this.evt)};return function(k){e(k).bind("touchend",function(k){a=k.target;for(c=!0;a.parentNode&&a!=k.currentTarget&&c;)b=e(a).data("events"),
+d=e(a).data("fakes"),b&&"click"in b?(c=!1,k.preventDefault(),e(a).click(j).click(),b.click.pop(),e.each(b.click,h),e(a).data("fakes",b.click),delete b.click):d&&(c=!1,k.preventDefault(),e.each(d,g)),a=a.parentNode})}}(),addTimer:function(){v.add.apply(v,f.array(arguments));return this},clearTimer:function(){v.clear.apply(v,f.array(arguments));return this},wait:function(a){var a=e.extend({until:function(){return!1},success:function(){},error:function(){Galleria.raise("Could not complete wait function.")},
+timeout:3E3},a),b=f.timestamp(),d,c,i=function(){c=f.timestamp();d=c-b;if(a.until(d))return a.success(),!1;if(c>=b+a.timeout)return a.error(),!1;l.setTimeout(i,10)};l.setTimeout(i,10)},toggleQuality:function(a,b){if(!(m!==7&&m!==8)&&a)typeof b==="undefined"&&(b=a.style.msInterpolationMode==="nearest-neighbor"),a.style.msInterpolationMode=b?"bicubic":"nearest-neighbor"},insertStyleTag:function(a){var b=n.createElement("style");u().head.appendChild(b);b.styleSheet?b.styleSheet.cssText=a:(a=n.createTextNode(a),
+b.appendChild(a))},loadScript:function(a,b){var d=!1,c=e("<script>").attr({src:a,async:!0}).get(0);c.onload=c.onreadystatechange=function(){if(!d&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"))d=!0,c.onload=c.onreadystatechange=null,typeof b==="function"&&b.call(this,this)};u().head.appendChild(c)},parseValue:function(a){return typeof a==="number"?a:typeof a==="string"?(a=a.match(/\-?\d|\./g))&&a.constructor===Array?a.join("")*1:0:0},timestamp:function(){return(new Date).getTime()},
+loadCSS:function(a,b,d){var c,i=!1,j;e("link[rel=stylesheet]").each(function(){if(RegExp(a).test(this.href))return c=this,!1});typeof b==="function"&&(d=b,b=void 0);d=d||function(){};if(c)return d.call(c,c),c;j=n.styleSheets.length;A&&(a+="?"+f.timestamp());e("#"+b).length?(e("#"+b).attr("href",a),j--,i=!0):(c=e("<link>").attr({rel:"stylesheet",href:a,id:b}).get(0),l.setTimeout(function(){var b=e('link[rel="stylesheet"], style');b.length?b.get(0).parentNode.insertBefore(c,b[0]):u().head.appendChild(c);
+m?j>=31?Galleria.raise("You have reached the browser stylesheet limit (31)",!0):c.onreadystatechange=function(){if(!i&&(!this.readyState||this.readyState==="loaded"||this.readyState==="complete"))i=!0}:/file:\/\//i.test(a)?i=!0:e.ajax({url:a,success:function(){i=!0},error:function(a){a.isRejected()&&Galleria.WEBKIT&&(i=!0)}})},10));typeof d==="function"&&f.wait({until:function(){return i&&n.styleSheets.length>j},success:function(){l.setTimeout(function(){d.call(c,c)},100)},error:function(){Galleria.raise("Theme CSS could not load",
+!0)},timeout:1E4});return c}}}(),G=function(){var a=function(a,d,c,i){var j=this.getOptions("easing"),h=this.getStageWidth(),g={left:h*(a.rewind?-1:1)},k={left:0};if(c)g.opacity=0,k.opacity=1;e(a.next).css(g);f.animate(a.next,k,{duration:a.speed,complete:function(a){return function(){d();a.css({left:0})}}(e(a.next).add(a.prev)),queue:!1,easing:j});if(i)a.rewind=!a.rewind;if(a.prev){g={left:0};k={left:h*(a.rewind?1:-1)};if(c)g.opacity=1,k.opacity=0;e(a.prev).css(g);f.animate(a.prev,k,{duration:a.speed,
+queue:!1,easing:j,complete:function(){e(this).css("opacity",0)}})}};return{fade:function(a,d){e(a.next).css("opacity",0).show();f.animate(a.next,{opacity:1},{duration:a.speed,complete:d});a.prev&&(e(a.prev).css("opacity",1).show(),f.animate(a.prev,{opacity:0},{duration:a.speed}))},flash:function(a,d){e(a.next).css("opacity",0);a.prev?f.animate(a.prev,{opacity:0},{duration:a.speed/2,complete:function(){f.animate(a.next,{opacity:1},{duration:a.speed,complete:d})}}):f.animate(a.next,{opacity:1},{duration:a.speed,
+complete:d})},pulse:function(a,d){a.prev&&e(a.prev).hide();e(a.next).css("opacity",0).show();f.animate(a.next,{opacity:1},{duration:a.speed,complete:d})},slide:function(b,d){a.apply(this,f.array(arguments))},fadeslide:function(b,d){a.apply(this,f.array(arguments).concat([!0]))},doorslide:function(b,d){a.apply(this,f.array(arguments).concat([!1,!0]))}}}();Galleria=function(){var a=this;this._theme=void 0;this._options={};this._playing=!1;this._playtime=5E3;this._active=null;this._queue={length:0};
+this._data=[];this._dom={};this._thumbnails=[];this._layers=[];this._firstrun=this._initialized=!1;this._stageHeight=this._stageWidth=0;this._target=void 0;this._id=Math.random();e.each("container stage images image-nav image-nav-left image-nav-right info info-text info-title info-description thumbnails thumbnails-list thumbnails-container thumb-nav-left thumb-nav-right loader counter tooltip".split(" "),function(b,c){a._dom[c]=f.create("galleria-"+c)});e.each("current total".split(" "),function(b,
+c){a._dom[c]=f.create("galleria-"+c,"span")});var b=this._keyboard={keys:{UP:38,DOWN:40,LEFT:37,RIGHT:39,RETURN:13,ESCAPE:27,BACKSPACE:8,SPACE:32},map:{},bound:!1,press:function(c){var d=c.keyCode||c.which;d in b.map&&typeof b.map[d]==="function"&&b.map[d].call(a,c)},attach:function(a){var c,d;for(c in a)a.hasOwnProperty(c)&&(d=c.toUpperCase(),d in b.keys?b.map[b.keys[d]]=a[c]:b.map[d]=a[c]);if(!b.bound)b.bound=!0,H.bind("keydown",b.press)},detach:function(){b.bound=!1;b.map={};H.unbind("keydown",
+b.press)}},d=this._controls={0:void 0,1:void 0,active:0,swap:function(){d.active=d.active?0:1},getActive:function(){return d[d.active]},getNext:function(){return d[1-d.active]}},c=this._carousel={next:a.$("thumb-nav-right"),prev:a.$("thumb-nav-left"),width:0,current:0,max:0,hooks:[],update:function(){var b=0,d=0,f=[0];e.each(a._thumbnails,function(a,c){c.ready&&(b+=c.outerWidth||e(c.container).outerWidth(!0),f[a+1]=b,d=Math.max(d,c.outerHeight||e(c.container).outerHeight(!0)))});a.$("thumbnails").css({width:b,
+height:d});c.max=b;c.hooks=f;c.width=a.$("thumbnails-list").width();c.setClasses();a.$("thumbnails-container").toggleClass("galleria-carousel",b>c.width);c.width=a.$("thumbnails-list").width()},bindControls:function(){var b;c.next.bind("click",function(d){d.preventDefault();if(a._options.carouselSteps==="auto")for(b=c.current;b<c.hooks.length;b++){if(c.hooks[b]-c.hooks[c.current]>c.width){c.set(b-2);break}}else c.set(c.current+a._options.carouselSteps)});c.prev.bind("click",function(d){d.preventDefault();
+if(a._options.carouselSteps==="auto")for(b=c.current;b>=0;b--)if(c.hooks[c.current]-c.hooks[b]>c.width){c.set(b+2);break}else{if(b===0){c.set(0);break}}else c.set(c.current-a._options.carouselSteps)})},set:function(a){for(a=Math.max(a,0);c.hooks[a-1]+c.width>=c.max&&a>=0;)a--;c.current=a;c.animate()},getLast:function(a){return(a||c.current)-1},follow:function(a){if(a===0||a===c.hooks.length-2)c.set(a);else{for(var b=c.current;c.hooks[b]-c.hooks[c.current]<c.width&&b<=c.hooks.length;)b++;a-1<c.current?
+c.set(a-1):a+2>b&&c.set(a-b+c.current+2)}},setClasses:function(){c.prev.toggleClass("disabled",!c.current);c.next.toggleClass("disabled",c.hooks[c.current]+c.width>=c.max)},animate:function(){c.setClasses();var b=c.hooks[c.current]*-1;isNaN(b)||f.animate(a.get("thumbnails"),{left:b},{duration:a._options.carouselSpeed,easing:a._options.easing,queue:!1})}},i=this._tooltip={initialized:!1,open:!1,init:function(){i.initialized=!0;f.insertStyleTag(".galleria-tooltip{padding:3px 8px;max-width:50%;background:#ffe;color:#000;z-index:3;position:absolute;font-size:11px;line-height:1.3opacity:0;box-shadow:0 0 2px rgba(0,0,0,.4);-moz-box-shadow:0 0 2px rgba(0,0,0,.4);-webkit-box-shadow:0 0 2px rgba(0,0,0,.4);}");
+a.$("tooltip").css("opacity",0.8);f.hide(a.get("tooltip"))},move:function(b){var c=a.getMousePosition(b).x,b=a.getMousePosition(b).y,d=a.$("tooltip"),e=b,f=d.outerHeight(!0)+1,i=d.outerWidth(!0),g=f+15,i=a.$("container").width()-i-2,f=a.$("container").height()-f-2;!isNaN(c)&&!isNaN(e)&&(c+=10,e-=30,c=Math.max(0,Math.min(i,c)),e=Math.max(0,Math.min(f,e)),b<g&&(e=g),d.css({left:c,top:e}))},bind:function(b,c){if(!Galleria.TOUCH){i.initialized||i.init();var d=function(b,c){i.define(b,c);e(b).hover(function(){f.clearTimer("switch_tooltip");
+a.$("container").unbind("mousemove",i.move).bind("mousemove",i.move).trigger("mousemove");i.show(b);Galleria.utils.addTimer("tooltip",function(){a.$("tooltip").stop().show().animate({opacity:1});i.open=!0},i.open?0:500)},function(){a.$("container").unbind("mousemove",i.move);f.clearTimer("tooltip");a.$("tooltip").stop().animate({opacity:0},200,function(){a.$("tooltip").hide();f.addTimer("switch_tooltip",function(){i.open=!1},1E3)})})};typeof c==="string"?d(b in a._dom?a.get(b):b,c):e.each(b,function(b,
+c){d(a.get(b),c)})}},show:function(b){var b=e(b in a._dom?a.get(b):b),c=b.data("tt"),d=function(a){l.setTimeout(function(a){return function(){i.move(a)}}(a),10);b.unbind("mouseup",d)};if(c=typeof c==="function"?c():c)a.$("tooltip").html(c.replace(/\s/,"&nbsp;")),b.bind("mouseup",d)},define:function(b,c){if(typeof c!=="function")var d=c,c=function(){return d};b=e(b in a._dom?a.get(b):b).data("tt",c);i.show(b)}},j=this._fullscreen={scrolled:0,crop:a._options.imageCrop,active:!1,keymap:a._keyboard.map,
+enter:function(b){j.active=!0;f.hide(a.getActiveImage());a.$("container").addClass("fullscreen");j.scrolled=t.scrollTop();f.forceStyles(a.get("container"),{position:"fixed",top:0,left:0,width:"100%",height:"100%",zIndex:1E4});var c={height:"100%",overflow:"hidden",margin:0,padding:0},d=a.getData();f.forceStyles(u().html,c);f.forceStyles(u().body,c);j.keymap=e.extend({},a._keyboard.map);a.attachKeyboard({escape:a.exitFullscreen,right:a.next,left:a.prev});if(a._options.fullscreenCrop!==void 0)a._options.imageCrop=
+a._options.fullscreenCrop;if(d&&d.big&&d.image!==d.big){var c=new Galleria.Picture,i=c.isCached(d.big),g=a.getIndex(),h=a._thumbnails[g];a.trigger({type:Galleria.LOADSTART,cached:i,rewind:!1,index:g,imageTarget:a.getActiveImage(),thumbTarget:h});c.load(d.big,function(b){a._scaleImage(b,{complete:function(b){a.trigger({type:Galleria.LOADFINISH,cached:i,index:g,rewind:!1,imageTarget:b.image,thumbTarget:h});var c=a._controls.getActive().image;c&&e(c).width(b.image.width).height(b.image.height).attr("style",
+e(b.image).attr("style")).attr("src",b.image.src)}})})}a.rescale(function(){f.addTimer("fullscreen_enter",function(){f.show(a.getActiveImage());typeof b==="function"&&b.call(a)},100);a.trigger(Galleria.FULLSCREEN_ENTER)});t.resize(function(){j.scale()})},scale:function(){a.rescale()},exit:function(b){j.active=!1;f.hide(a.getActiveImage());a.$("container").removeClass("fullscreen");f.revertStyles(a.get("container"),u().html,u().body);l.scrollTo(0,j.scrolled);a.detachKeyboard();a.attachKeyboard(j.keymap);
+if(a._options.fullscreenCrop!==void 0)a._options.imageCrop=j.crop;a.rescale(function(){f.addTimer("fullscreen_exit",function(){f.show(a.getActiveImage());typeof b==="function"&&b.call(a)},50);a.trigger(Galleria.FULLSCREEN_EXIT)});t.unbind("resize",j.scale)}},h=this._idle={trunk:[],bound:!1,add:function(a,b){if(a){h.bound||h.addEvent();var a=e(a),c={},d;for(d in b)b.hasOwnProperty(d)&&(c[d]=a.css(d));a.data("idle",{from:c,to:b,complete:!0,busy:!1});h.addTimer();h.trunk.push(a)}},remove:function(b){b=
+jQuery(b);e.each(h.trunk,function(c,d){d.length&&!d.not(b).length&&(a._idle.show(b),a._idle.trunk.splice(c,1))});h.trunk.length||(h.removeEvent(),f.clearTimer("idle"))},addEvent:function(){h.bound=!0;a.$("container").bind("mousemove click",h.showAll)},removeEvent:function(){h.bound=!1;a.$("container").unbind("mousemove click",h.showAll)},addTimer:function(){f.addTimer("idle",function(){a._idle.hide()},a._options.idleTime)},hide:function(){a._options.idleMode&&(a.trigger(Galleria.IDLE_ENTER),e.each(h.trunk,
+function(b,c){var d=c.data("idle");if(d)c.data("idle").complete=!1,f.animate(c,d.to,{duration:a._options.idleSpeed})}))},showAll:function(){f.clearTimer("idle");e.each(a._idle.trunk,function(b,c){a._idle.show(c)})},show:function(b){var c=b.data("idle");if(!c.busy&&!c.complete)c.busy=!0,a.trigger(Galleria.IDLE_EXIT),f.clearTimer("idle"),f.animate(b,c.from,{duration:a._options.idleSpeed/2,complete:function(){e(this).data("idle").busy=!1;e(this).data("idle").complete=!0}});h.addTimer()}},g=this._lightbox=
+{width:0,height:0,initialized:!1,active:null,image:null,elems:{},keymap:!1,init:function(){a.trigger(Galleria.LIGHTBOX_OPEN);if(!g.initialized){g.initialized=!0;var b={},c=a._options,d="",c={overlay:"position:fixed;display:none;opacity:"+c.overlayOpacity+";filter:alpha(opacity="+c.overlayOpacity*100+");top:0;left:0;width:100%;height:100%;background:"+c.overlayBackground+";z-index:99990",box:"position:fixed;display:none;width:400px;height:400px;top:50%;left:50%;margin-top:-200px;margin-left:-200px;z-index:99991",
+shadow:"position:absolute;background:#000;width:100%;height:100%;",content:"position:absolute;background-color:#fff;top:10px;left:10px;right:10px;bottom:10px;overflow:hidden",info:"position:absolute;bottom:10px;left:10px;right:10px;color:#444;font:11px/13px arial,sans-serif;height:13px",close:"position:absolute;top:10px;right:10px;height:20px;width:20px;background:#fff;text-align:center;cursor:pointer;color:#444;font:16px/22px arial,sans-serif;z-index:99999",image:"position:absolute;top:10px;left:10px;right:10px;bottom:30px;overflow:hidden;display:block;",
+prevholder:"position:absolute;width:50%;top:0;bottom:40px;cursor:pointer;",nextholder:"position:absolute;width:50%;top:0;bottom:40px;right:-1px;cursor:pointer;",prev:"position:absolute;top:50%;margin-top:-20px;height:40px;width:30px;background:#fff;left:20px;display:none;text-align:center;color:#000;font:bold 16px/36px arial,sans-serif",next:"position:absolute;top:50%;margin-top:-20px;height:40px;width:30px;background:#fff;right:20px;left:auto;display:none;font:bold 16px/36px arial,sans-serif;text-align:center;color:#000",
+title:"float:left",counter:"float:right;margin-left:8px;"},i={};m===8&&(c.nextholder+="background:#000;filter:alpha(opacity=0);",c.prevholder+="background:#000;filter:alpha(opacity=0);");e.each(c,function(a,b){d+=".galleria-lightbox-"+a+"{"+b+"}"});f.insertStyleTag(d);e.each("overlay box content shadow title info close prevholder prev nextholder next counter image".split(" "),function(c,d){a.addElement("lightbox-"+d);b[d]=g.elems[d]=a.get("lightbox-"+d)});g.image=new Galleria.Picture;e.each({box:"shadow content close prevholder nextholder",
+info:"title counter",content:"info image",prevholder:"prev",nextholder:"next"},function(a,b){var c=[];e.each(b.split(" "),function(a,b){c.push("lightbox-"+b)});i["lightbox-"+a]=c});a.append(i);e(b.image).append(g.image.container);e(u().body).append(b.overlay,b.box);f.optimizeTouch(b.box);(function(a){return a.hover(function(){e(this).css("color","#bbb")},function(){e(this).css("color","#444")})})(e(b.close).bind("click",g.hide).html("&#215;"));e.each(["Prev","Next"],function(a,c){var d=e(b[c.toLowerCase()]).html(/v/.test(c)?
+"&#8249;&nbsp;":"&nbsp;&#8250;"),f=e(b[c.toLowerCase()+"holder"]);f.bind("click",function(){g["show"+c]()});m<8||Galleria.TOUCH?d.show():f.hover(function(){d.show()},function(){d.stop().fadeOut(200)})});e(b.overlay).bind("click",g.hide);if(Galleria.IPAD)a._options.lightboxTransitionSpeed=0}},rescale:function(b){var c=Math.min(t.width()-40,g.width),d=Math.min(t.height()-60,g.height),d=Math.min(c/g.width,d/g.height),c=Math.round(g.width*d)+40,d=Math.round(g.height*d)+60,c={width:c,height:d,"margin-top":Math.ceil(d/
+2)*-1,"margin-left":Math.ceil(c/2)*-1};b?e(g.elems.box).css(c):e(g.elems.box).animate(c,{duration:a._options.lightboxTransitionSpeed,easing:a._options.easing,complete:function(){var b=g.image,c=a._options.lightboxFadeSpeed;a.trigger({type:Galleria.LIGHTBOX_IMAGE,imageTarget:b.image});e(b.container).show();f.show(b.image,c);f.show(g.elems.info,c)}})},hide:function(){g.image.image=null;t.unbind("resize",g.rescale);e(g.elems.box).hide();f.hide(g.elems.info);a.detachKeyboard();a.attachKeyboard(g.keymap);
+g.keymap=!1;f.hide(g.elems.overlay,200,function(){e(this).hide().css("opacity",a._options.overlayOpacity);a.trigger(Galleria.LIGHTBOX_CLOSE)})},showNext:function(){g.show(a.getNext(g.active))},showPrev:function(){g.show(a.getPrev(g.active))},show:function(b){g.active=b=typeof b==="number"?b:a.getIndex();g.initialized||g.init();if(!g.keymap)g.keymap=e.extend({},a._keyboard.map),a.attachKeyboard({escape:g.hide,right:g.showNext,left:g.showPrev});t.unbind("resize",g.rescale);var c=a.getData(b),d=a.getDataLength();
+f.hide(g.elems.info);g.image.load(c.big||c.image,function(a){g.width=a.original.width;g.height=a.original.height;e(a.image).css({width:"100.5%",height:"100.5%",top:0,zIndex:99998});f.hide(a.image);g.elems.title.innerHTML=c.title||"";g.elems.counter.innerHTML="Image "+b+1+" of "+d;t.resize(g.rescale);g.rescale()});e(g.elems.overlay).show();e(g.elems.box).show()}};return this};Galleria.prototype={constructor:Galleria,init:function(a,b){b=K(b);this._original={target:a,options:b,data:null};this._target=this._dom.target=
+a.nodeName?a:e(a).get(0);y.push(this);if(this._target){this._options={autoplay:!1,carousel:!0,carouselFollow:!0,carouselSpeed:400,carouselSteps:"auto",clicknext:!1,dataConfig:function(){return{}},dataSelector:"img",dataSource:this._target,debug:void 0,dummy:void 0,easing:"galleria",extend:function(){},fullscreenCrop:void 0,fullscreenDoubleTap:!0,fullscreenTransition:void 0,height:"auto",idleMode:!0,idleTime:3E3,idleSpeed:200,imageCrop:!1,imageMargin:0,imagePan:!1,imagePanSmoothness:12,imagePosition:"50%",
+imageTimeout:void 0,initialTransition:void 0,keepSource:!1,layerFollow:!0,lightbox:!1,lightboxFadeSpeed:200,lightboxTransitionSpeed:200,linkSourceImages:!0,maxScaleRatio:void 0,minScaleRatio:void 0,overlayOpacity:0.85,overlayBackground:"#0b0b0b",pauseOnInteraction:!0,popupLinks:!1,preload:2,queue:!0,show:0,showInfo:!0,showCounter:!0,showImagenav:!0,swipe:!0,thumbCrop:!0,thumbEventType:"click",thumbFit:!0,thumbMargin:0,thumbQuality:"auto",thumbnails:!0,touchTransition:void 0,transition:"fade",transitionInitial:void 0,
+transitionSpeed:400,useCanvas:!1,width:"auto"};this._options.initialTransition=this._options.initialTransition||this._options.transitionInitial;b&&b.debug===!1&&(A=!1);if(b&&typeof b.imageTimeout==="number")B=b.imageTimeout;if(b&&typeof b.dummy==="string")C=b.dummy;e(this._target).children().hide();typeof Galleria.theme==="object"?this._init():M.push(this);return this}else Galleria.raise("Target not found.",!0)},_init:function(){var a=this;if(this._initialized)return Galleria.raise("Init failed: Gallery instance already initialized."),
+this;this._initialized=!0;if(!Galleria.theme)return Galleria.raise("Init failed: No theme found."),this;e.extend(!0,this._options,Galleria.theme.defaults,this._original.options);(function(a){"getContext"in a&&(s=s||{elem:a,context:a.getContext("2d"),cache:{},length:0})})(n.createElement("canvas"));this.bind(Galleria.DATA,function(){this._original.data=this._data;this.get("total").innerHTML=this.getDataLength();var b=this.$("container"),d={width:0,height:0},j=function(){return a.$("stage").height()};
+f.wait({until:function(){e.each(["width","height"],function(e,g){d[g]=a._options[g]&&typeof a._options[g]==="number"?a._options[g]:Math.max(f.parseValue(b.css(g)),f.parseValue(a.$("target").css(g)),b[g](),a.$("target")[g]());b[g](d[g])});return j()&&d.width&&d.height>10},success:function(){Galleria.WEBKIT?l.setTimeout(function(){a._run()},1):a._run()},error:function(){j()?Galleria.raise("Could not extract sufficient width/height of the gallery container. Traced measures: width:"+d.width+"px, height: "+
+d.height+"px.",!0):Galleria.raise("Could not extract a stage height from the CSS. Traced height: "+j()+"px.",!0)},timeout:2E3})});this.append({"info-text":["info-title","info-description"],info:["info-text"],"image-nav":["image-nav-right","image-nav-left"],stage:["images","loader","counter","image-nav"],"thumbnails-list":["thumbnails"],"thumbnails-container":["thumb-nav-left","thumbnails-list","thumb-nav-right"],container:["stage","thumbnails-container","info","tooltip"]});f.hide(this.$("counter").append("Image ",this.get("current"),
+" of ",this.get("total")));this.setCounter("&#8211;");f.hide(a.get("tooltip"));this.$("container").addClass(Galleria.TOUCH?"touch":"notouch");e.each(Array(2),function(b){var d=new Galleria.Picture;e(d.container).css({position:"absolute",top:0,left:0}).prepend(a._layers[b]=e(f.create("galleria-layer")).css({position:"absolute",top:0,left:0,right:0,bottom:0,zIndex:2})[0]);a.$("images").append(d.container);a._controls[b]=d});this.$("images").css({position:"relative",top:0,left:0,width:"100%",height:"100%"});
+this.$("thumbnails, thumbnails-list").css({overflow:"hidden",position:"relative"});this.$("image-nav-right, image-nav-left").bind("click",function(b){a._options.clicknext&&b.stopPropagation();a._options.pauseOnInteraction&&a.pause();b=/right/.test(this.className)?"next":"prev";a[b]()});e.each(["info","counter","image-nav"],function(b,d){a._options["show"+d.substr(0,1).toUpperCase()+d.substr(1).replace(/-/,"")]===!1&&f.moveOut(a.get(d.toLowerCase()))});this.load();if(!this._options.keep_source&&!m)this._target.innerHTML=
+"";this.get("errors")&&this.appendChild("target","errors");this.appendChild("target","container");if(this._options.carousel){var b=0,d=this._options.show;this.bind(Galleria.THUMBNAIL,function(){this.updateCarousel();++b==this.getDataLength()&&typeof d=="number"&&d>0&&this._carousel.follow(d)})}this._options.swipe&&(function(b){var d=[0,0],e=[0,0],h=!1,g=0,k,p={start:"touchstart",move:"touchmove",stop:"touchend"},l=function(a){a.originalEvent.touches&&a.originalEvent.touches.length>1||(k=a.originalEvent.touches?
+a.originalEvent.touches[0]:a,e=[k.pageX,k.pageY],d[0]||(d=e),Math.abs(d[0]-e[0])>10&&a.preventDefault())},m=function(k){b.unbind(p.move,l);k.originalEvent.touches&&k.originalEvent.touches.length||h?h=!h:(f.timestamp()-g<1E3&&Math.abs(d[0]-e[0])>30&&Math.abs(d[1]-e[1])<100&&(k.preventDefault(),a[d[0]>e[0]?"next":"prev"]()),d=e=[0,0])};b.bind(p.start,function(a){a.originalEvent.touches&&a.originalEvent.touches.length>1||(k=a.originalEvent.touches?a.originalEvent.touches[0]:a,g=f.timestamp(),d=e=[k.pageX,
+k.pageY],b.bind(p.move,l).one(p.stop,m))})}(a.$("images")),this._options.fullscreenDoubleTap&&this.$("stage").bind("touchstart",function(){var b,d,e,f,g,k;return function(p){k=Galleria.utils.timestamp();d=(p.originalEvent.touches?p.originalEvent.touches[0]:p).pageX;e=(p.originalEvent.touches?p.originalEvent.touches[0]:p).pageY;k-b<500&&d-f<20&&e-g<20?(a.toggleFullscreen(),p.preventDefault(),a.$("stage").unbind("touchend",arguments.callee)):(b=k,f=d,g=e)}}()));f.optimizeTouch(this.get("container"));
+return this},_createThumbnails:function(){this.get("total").innerHTML=this.getDataLength();var a,b,d,c,i,j=this,h=this._options,g=function(){var a=j.$("thumbnails").find(".active");return!a.length?!1:a.find("img").attr("src")}(),k=typeof h.thumbnails==="string"?h.thumbnails.toLowerCase():null,p=function(a){return n.defaultView&&n.defaultView.getComputedStyle?n.defaultView.getComputedStyle(d.container,null)[a]:i.css(a)},w=function(a,b,c){return function(){e(c).append(a);j.trigger({type:Galleria.THUMBNAIL,
+thumbTarget:a,index:b})}},m=function(a){h.pauseOnInteraction&&j.pause();var b=e(a.currentTarget).data("index");j.getIndex()!==b&&j.show(b);a.preventDefault()},o=function(a){a.scale({width:a.data.width,height:a.data.height,crop:h.thumbCrop,margin:h.thumbMargin,canvas:h.useCanvas,complete:function(a){var b=["left","top"],c,d;e.each(["Width","Height"],function(f,g){c=g.toLowerCase();if((h.thumbCrop!==!0||h.thumbCrop===c)&&h.thumbFit)d={},d[c]=a[c],e(a.container).css(d),d={},d[b[f]]=0,e(a.image).css(d);
+a["outer"+g]=e(a.container)["outer"+g](!0)});f.toggleQuality(a.image,h.thumbQuality===!0||h.thumbQuality==="auto"&&a.original.width<a.width*3);j.trigger({type:Galleria.THUMBNAIL,thumbTarget:a.image,index:a.data.order})}})};this._thumbnails=[];this.$("thumbnails").empty();for(a=0;this._data[a];a++)c=this._data[a],h.thumbnails===!0?(d=new Galleria.Picture(a),b=c.thumb||c.image,this.$("thumbnails").append(d.container),i=e(d.container),d.data={width:f.parseValue(p("width")),height:f.parseValue(p("height")),
+order:a},h.thumbFit&&h.thumbCrop!==!0?i.css({width:0,height:0}):i.css({width:d.data.width,height:d.data.height}),d.load(b,o),h.preload==="all"&&d.preload(c.image)):k==="empty"||k==="numbers"?(d={container:f.create("galleria-image"),image:f.create("img","span"),ready:!0},k==="numbers"&&e(d.image).text(a+1),this.$("thumbnails").append(d.container),l.setTimeout(w(d.image,a,d.container),50+a*20)):d={container:null,image:null},e(d.container).add(h.keepSource&&h.linkSourceImages?c.original:null).data("index",
+a).bind(h.thumbEventType,m),g===b&&e(d.container).addClass("active"),this._thumbnails.push(d)},_run:function(){var a=this;a._createThumbnails();f.wait({until:function(){Galleria.OPERA&&a.$("stage").css("display","inline-block");a._stageWidth=a.$("stage").width();a._stageHeight=a.$("stage").height();return a._stageWidth&&a._stageHeight>50},success:function(){z.push(a);f.show(a.get("counter"));a._options.carousel&&a._carousel.bindControls();if(a._options.autoplay){a.pause();if(typeof a._options.autoplay===
+"number")a._playtime=a._options.autoplay;a.trigger(Galleria.PLAY);a._playing=!0}a._firstrun?typeof a._options.show==="number"&&a.show(a._options.show):(a._firstrun=!0,a._options.clicknext&&!Galleria.TOUCH&&(e.each(a._data,function(a,d){delete d.link}),a.$("stage").css({cursor:"pointer"}).bind("click",function(){a._options.pauseOnInteraction&&a.pause();a.next()})),Galleria.History&&Galleria.History.change(function(b){isNaN(b)?l.history.go(-1):a.show(b,void 0,!0)}),e.each(Galleria.ready.callbacks,function(){this.call(a,
+a._options)}),a.trigger(Galleria.READY),Galleria.theme.init.call(a,a._options),a._options.extend.call(a,a._options),/^[0-9]{1,4}$/.test(I)&&Galleria.History?a.show(I,void 0,!0):a._data[a._options.show]&&a.show(a._options.show))},error:function(){Galleria.raise("Stage width or height is too small to show the gallery. Traced measures: width:"+a._stageWidth+"px, height: "+a._stageHeight+"px.",!0)}})},load:function(a,b,d){var c=this;this._data=[];this._thumbnails=[];this.$("thumbnails").empty();typeof b===
+"function"&&(d=b,b=null);a=a||this._options.dataSource;b=b||this._options.dataSelector;d=d||this._options.dataConfig;/^function Object/.test(a.constructor)&&(a=[a]);if(a.constructor===Array)return this.validate(a)?(this._data=a,this._parseData().trigger(Galleria.DATA)):Galleria.raise("Load failed: JSON Array not valid."),this;e(a).find(b).each(function(a,b){var b=e(b),f={},g=b.parent(),k=g.attr("href"),g=g.attr("rel");if(k)f.image=f.big=k;if(g)f.big=g;c._data.push(e.extend({title:b.attr("title")||
+"",thumb:b.attr("src"),image:b.attr("src"),big:b.attr("src"),description:b.attr("alt")||"",link:b.attr("longdesc"),original:b.get(0)},f,d(b)))});this.getDataLength()?this.trigger(Galleria.DATA):Galleria.raise("Load failed: no data found.");return this},_parseData:function(){var a=this;e.each(this._data,function(b,d){if("thumb"in d===!1)a._data[b].thumb=d.image;if(!1 in d)a._data[b].big=d.image});return this},splice:function(){Array.prototype.splice.apply(this._data,f.array(arguments));return this._parseData()._createThumbnails()},
+push:function(){Array.prototype.push.apply(this._data,f.array(arguments));return this._parseData()._createThumbnails()},_getActive:function(){return this._controls.getActive()},validate:function(){return!0},bind:function(a,b){a=D(a);this.$("container").bind(a,this.proxy(b));return this},unbind:function(a){a=D(a);this.$("container").unbind(a);return this},trigger:function(a){a=typeof a==="object"?e.extend(a,{scope:this}):{type:D(a),scope:this};this.$("container").trigger(a);return this},addIdleState:function(a,
+b){this._idle.add.apply(this._idle,f.array(arguments));return this},removeIdleState:function(a){this._idle.remove.apply(this._idle,f.array(arguments));return this},enterIdleMode:function(){this._idle.hide();return this},exitIdleMode:function(){this._idle.showAll();return this},enterFullscreen:function(a){this._fullscreen.enter.apply(this,f.array(arguments));return this},exitFullscreen:function(a){this._fullscreen.exit.apply(this,f.array(arguments));return this},toggleFullscreen:function(a){this._fullscreen[this.isFullscreen()?
+"exit":"enter"].apply(this,f.array(arguments));return this},bindTooltip:function(a,b){this._tooltip.bind.apply(this._tooltip,f.array(arguments));return this},defineTooltip:function(a,b){this._tooltip.define.apply(this._tooltip,f.array(arguments));return this},refreshTooltip:function(a){this._tooltip.show.apply(this._tooltip,f.array(arguments));return this},openLightbox:function(){this._lightbox.show.apply(this._lightbox,f.array(arguments));return this},closeLightbox:function(){this._lightbox.hide.apply(this._lightbox,
+f.array(arguments));return this},getActiveImage:function(){return this._getActive().image||void 0},getActiveThumb:function(){return this._thumbnails[this._active].image||void 0},getMousePosition:function(a){return{x:a.pageX-this.$("container").offset().left,y:a.pageY-this.$("container").offset().top}},addPan:function(a){if(this._options.imageCrop!==!1){var a=e(a||this.getActiveImage()),b=this,d=a.width()/2,c=a.height()/2,i=parseInt(a.css("left"),10),j=parseInt(a.css("top"),10),h=i||0,g=j||0,k=0,p=
+0,l=!1,n=f.timestamp(),o=0,q=0,r=function(b,c,d){if(b>0&&(q=Math.round(Math.max(b*-1,Math.min(0,c))),o!==q))if(o=q,m===8)a.parent()["scroll"+d](q*-1);else b={},b[d.toLowerCase()]=q,a.css(b)},N=function(a){if(!(f.timestamp()-n<50))l=!0,d=b.getMousePosition(a).x,c=b.getMousePosition(a).y};m===8&&(a.parent().scrollTop(g*-1).scrollLeft(h*-1),a.css({top:0,left:0}));this.$("stage").unbind("mousemove",N).bind("mousemove",N);f.addTimer("pan",function(){l&&(k=a.width()-b._stageWidth,p=a.height()-b._stageHeight,
+i=d/b._stageWidth*k*-1,j=c/b._stageHeight*p*-1,h+=(i-h)/b._options.imagePanSmoothness,g+=(j-g)/b._options.imagePanSmoothness,r(p,g,"Top"),r(k,h,"Left"))},50,!0);return this}},proxy:function(a,b){if(typeof a!=="function")return function(){};b=b||this;return function(){return a.apply(b,f.array(arguments))}},removePan:function(){this.$("stage").unbind("mousemove");f.clearTimer("pan");return this},addElement:function(a){var b=this._dom;e.each(f.array(arguments),function(a,c){b[c]=f.create("galleria-"+
+c)});return this},attachKeyboard:function(a){this._keyboard.attach.apply(this._keyboard,f.array(arguments));return this},detachKeyboard:function(){this._keyboard.detach.apply(this._keyboard,f.array(arguments));return this},appendChild:function(a,b){this.$(a).append(this.get(b)||b);return this},prependChild:function(a,b){this.$(a).prepend(this.get(b)||b);return this},remove:function(a){this.$(f.array(arguments).join(",")).remove();return this},append:function(a){var b,d;for(b in a)if(a.hasOwnProperty(b))if(a[b].constructor===
+Array)for(d=0;a[b][d];d++)this.appendChild(b,a[b][d]);else this.appendChild(b,a[b]);return this},_scaleImage:function(a,b){var a=a||this._controls.getActive(),d,c=function(a){e(a.container).children(":first").css({top:Math.max(0,f.parseValue(a.image.style.top)),left:Math.max(0,f.parseValue(a.image.style.left)),width:f.parseValue(a.image.width),height:f.parseValue(a.image.height)})},b=e.extend({width:this._stageWidth,height:this._stageHeight,crop:this._options.imageCrop,max:this._options.maxScaleRatio,
+min:this._options.minScaleRatio,margin:this._options.imageMargin,position:this._options.imagePosition},b);this._options.layerFollow&&this._options.imageCrop!==!0?typeof b.complete=="function"?(d=b.complete,b.complete=function(){d.call(a,a);c(a)}):b.complete=c:e(a.container).children(":first").css({top:0,left:0});a.scale(b);return this},updateCarousel:function(){this._carousel.update();return this},rescale:function(a,b,d){var c=this;typeof a==="function"&&(d=a,a=void 0);var e=function(){c._stageWidth=
+a||c.$("stage").width();c._stageHeight=b||c.$("stage").height();c._scaleImage();c._options.carousel&&c.updateCarousel();c.trigger(Galleria.RESCALE);typeof d==="function"&&d.call(c)};Galleria.WEBKIT&&!a&&!b?f.addTimer("scale",e,10):e.call(c);return this},refreshImage:function(){this._scaleImage();this._options.imagePan&&this.addPan();return this},show:function(a,b,d){if(!(a===!1||!this._options.queue&&this._queue.stalled))if(a=Math.max(0,Math.min(parseInt(a,10),this.getDataLength()-1)),b=typeof b!==
+"undefined"?!!b:a<this.getIndex(),!d&&Galleria.History)Galleria.History.set(a.toString());else return this._active=a,Array.prototype.push.call(this._queue,{index:a,rewind:b}),this._queue.stalled||this._show(),this},_show:function(){var a=this,b=this._queue[0],d=this.getData(b.index);if(d){var c=this.isFullscreen()&&"big"in d?d.big:d.image,i=this._controls.getActive(),j=this._controls.getNext(),h=j.isCached(c),g=this._thumbnails[b.index],k=function(b,c,d,g,h){return function(){a._queue.stalled=!1;
+f.toggleQuality(c.image,a._options.imageQuality);a._layers[a._controls.active].innerHTML="";e(d.container).css({zIndex:0,opacity:0}).show();e(c.container).css({zIndex:1}).show();a._controls.swap();a._options.imagePan&&a.addPan(c.image);(b.link||a._options.lightbox)&&e(c.image).css({cursor:"pointer"}).bind("mouseup",function(){b.link?a._options.popupLinks?l.open(b.link,"_blank"):l.location.href=b.link:a.openLightbox()});Array.prototype.shift.call(a._queue);a._queue.length&&a._show();a._playCheck();
+a.trigger({type:Galleria.IMAGE,index:g.index,imageTarget:c.image,thumbTarget:h.image})}}(d,j,i,b,g);this._options.carousel&&this._options.carouselFollow&&this._carousel.follow(b.index);if(this._options.preload){var p,m,n=this.getNext(),o;try{for(m=this._options.preload;m>0;m--)p=new Galleria.Picture,o=a.getData(n),p.preload(this.isFullscreen()&&"big"in o?o.big:o.image),n=a.getNext(n)}catch(q){}}f.show(j.container);e(a._thumbnails[b.index].container).addClass("active").siblings(".active").removeClass("active");
+a.trigger({type:Galleria.LOADSTART,cached:h,index:b.index,rewind:b.rewind,imageTarget:j.image,thumbTarget:g.image});j.load(c,function(c){e(a._layers[1-a._controls.active]).html(d.layer||"").hide();a._scaleImage(c,{complete:function(c){"image"in i&&f.toggleQuality(i.image,!1);f.toggleQuality(c.image,!1);a._queue.stalled=!0;a.removePan();a.setInfo(b.index);a.setCounter(b.index);d.layer&&e(a._layers[1-a._controls.active]).show();a.trigger({type:Galleria.LOADFINISH,cached:h,index:b.index,rewind:b.rewind,
+imageTarget:c.image,thumbTarget:a._thumbnails[b.index].image});var g=a._options.transition;e.each({initial:i.image===null,touch:Galleria.TOUCH,fullscreen:a.isFullscreen()},function(b,c){if(c&&a._options[b+"Transition"]!==void 0)return g=a._options[b+"Transition"],!1});g in G===!1?k():G[g].call(a,{prev:i.container,next:c.container,rewind:b.rewind,speed:a._options.transitionSpeed||400},k)}})})}},getNext:function(a){a=typeof a==="number"?a:this.getIndex();return a===this.getDataLength()-1?0:a+1},getPrev:function(a){a=
+typeof a==="number"?a:this.getIndex();return a===0?this.getDataLength()-1:a-1},next:function(){this.getDataLength()>1&&this.show(this.getNext(),!1);return this},prev:function(){this.getDataLength()>1&&this.show(this.getPrev(),!0);return this},get:function(a){return a in this._dom?this._dom[a]:null},getData:function(a){return a in this._data?this._data[a]:this._data[this._active]},getDataLength:function(){return this._data.length},getIndex:function(){return typeof this._active==="number"?this._active:
+!1},getStageHeight:function(){return this._stageHeight},getStageWidth:function(){return this._stageWidth},getOptions:function(a){return typeof a==="undefined"?this._options:this._options[a]},setOptions:function(a,b){typeof a==="object"?e.extend(this._options,a):this._options[a]=b;return this},play:function(a){this._playing=!0;this._playtime=a||this._playtime;this._playCheck();this.trigger(Galleria.PLAY);return this},pause:function(){this._playing=!1;this.trigger(Galleria.PAUSE);return this},playToggle:function(a){return this._playing?
+this.pause():this.play(a)},isPlaying:function(){return this._playing},isFullscreen:function(){return this._fullscreen.active},_playCheck:function(){var a=this,b=0,d=f.timestamp(),c="play"+this._id;if(this._playing){f.clearTimer(c);var e=function(){b=f.timestamp()-d;b>=a._playtime&&a._playing?(f.clearTimer(c),a.next()):a._playing&&(a.trigger({type:Galleria.PROGRESS,percent:Math.ceil(b/a._playtime*100),seconds:Math.floor(b/1E3),milliseconds:b}),f.addTimer(c,e,20))};f.addTimer(c,e,20)}},setPlaytime:function(a){this._playtime=
+a;return this},setIndex:function(a){this._active=a;return this},setCounter:function(a){typeof a==="number"?a++:typeof a==="undefined"&&(a=this.getIndex()+1);this.get("current").innerHTML=a;if(m){var a=this.$("counter"),b=a.css("opacity");parseInt(b,10)===1?f.removeAlpha(a[0]):this.$("counter").css("opacity",b)}return this},setInfo:function(a){var b=this,d=this.getData(a);e.each(["title","description"],function(a,e){var f=b.$("info-"+e);d[e]?f[d[e].length?"show":"hide"]().html(d[e]):f.empty().hide()});
+return this},hasInfo:function(a){var b="title description".split(" "),d;for(d=0;b[d];d++)if(this.getData(a)[b[d]])return!0;return!1},jQuery:function(a){var b=this,d=[];e.each(a.split(","),function(a,c){c=e.trim(c);b.get(c)&&d.push(c)});var c=e(b.get(d.shift()));e.each(d,function(a,d){c=c.add(b.get(d))});return c},$:function(a){return this.jQuery.apply(this,f.array(arguments))}};e.each(J,function(a,b){var d=/_/.test(b)?b.replace(/_/g,""):b;Galleria[b.toUpperCase()]="galleria."+d});e.extend(Galleria,
+{IE9:m===9,IE8:m===8,IE7:m===7,IE6:m===6,IE:m,WEBKIT:/webkit/.test(x),SAFARI:/safari/.test(x),CHROME:/chrome/.test(x),QUIRK:m&&n.compatMode&&n.compatMode==="BackCompat",MAC:/mac/.test(navigator.platform.toLowerCase()),OPERA:!!l.opera,IPHONE:/iphone/.test(x),IPAD:/ipad/.test(x),ANDROID:/android/.test(x),TOUCH:"ontouchstart"in n});Galleria.addTheme=function(a){a.name||Galleria.raise("No theme name specified");a.defaults=typeof a.defaults!=="object"?{}:K(a.defaults);var b=!1,d;typeof a.css==="string"?
+(e("link").each(function(c,e){d=RegExp(a.css);if(d.test(e.href))return b=!0,E(a),!1}),b||e("script").each(function(c,e){d=RegExp("galleria\\."+a.name.toLowerCase()+"\\.");d.test(e.src)&&(b=e.src.replace(/[^\/]*$/,"")+a.css,f.addTimer("css",function(){f.loadCSS(b,"galleria-theme",function(){E(a)})},1))}),b||Galleria.raise("No theme CSS loaded")):E(a);return a};Galleria.loadTheme=function(a,b){var d=z.length,c=l.setTimeout(function(){Galleria.raise("Theme at "+a+" could not load, check theme path.",
+!0)},5E3);Galleria.theme=void 0;f.loadScript(a,function(){l.clearTimeout(c);if(d){var a=[];e.each(Galleria.get(),function(c,d){var f=e.extend(d._original.options,{data_source:d._data},b);d.$("container").remove();var k=new Galleria;k._id=d._id;k.init(d._original.target,f);a.push(k)});z=a}})};Galleria.get=function(a){if(y[a])return y[a];else if(typeof a!=="number")return y;else Galleria.raise("Gallery index "+a+" not found")};Galleria.addTransition=function(a,b){G[a]=b};Galleria.utils=f;Galleria.log=
+function(){return"console"in l&&"log"in l.console?l.console.log:function(){l.alert(f.array(arguments).join(", "))}}();Galleria.ready=function(a){e.each(z,function(b,d){a.call(d,d._options)});Galleria.ready.callbacks.push(a)};Galleria.ready.callbacks=[];Galleria.raise=function(a,b){var d=b?"Fatal error":"Error",c=function(a){var c='<div style="padding:4px;margin:0 0 2px;background:#'+(b?"811":"222")+'";>'+(b?"<strong>"+d+": </strong>":"")+a+"</div>";e.each(y,function(){var a=this.$("errors"),b=this.$("target");
+a.length||(b.css("position","relative"),a=this.addElement("errors").appendChild("target","errors").$("errors").css({color:"#fff",position:"absolute",top:0,left:0,zIndex:1E5}));a.append(c)})};if(A){if(c(a),b)throw Error(d+": "+a);}else b&&!L&&(L=!0,b=!1,c("Image gallery could not load."))};Galleria.version=1.25;Galleria.requires=function(a,b){Galleria.version<a&&Galleria.raise(b||"You need to upgrade Galleria to version "+a+" to use one or more components.",!0)};Galleria.Picture=function(a){this.id=
+a||null;this.image=null;this.container=f.create("galleria-image");e(this.container).css({overflow:"hidden",position:"relative"});this.original={width:0,height:0};this.ready=!1;this.tid=null};Galleria.Picture.prototype={cache:{},show:function(){f.show(this.image)},hide:function(){f.moveOut(this.image)},clear:function(){this.image=null},isCached:function(a){return!!this.cache[a]},preload:function(a){e(new Image).load(function(a,d){return function(){d[a]=a}}(a,this.cache)).attr("src",a)},load:function(a,
+b){this.tid=l.setTimeout(function(a){return function(){Galleria.raise("Image not loaded in "+Math.round(B/1E3)+" seconds: "+a)}}(a),B);this.image=new Image;var d=!1,c=e(this.container),i=e(this.image),j=function(a,b,c){return function(){var d=function(){a.original={height:this.height,width:this.width};a.cache[c]=c;l.clearTimeout(a.tid);typeof b=="function"&&l.setTimeout(function(){b.call(a,a)},1)};!this.width||!this.height?l.setTimeout(function(a){return function(){a.width&&a.height?d.call(a):Galleria.raise("Could not extract width/height from image: "+
+a.src+". Traced measures: width:"+a.width+"px, height: "+a.height+"px.")}}(this),2):d.call(this)}}(this,b,a);c.find("img").remove();i.css("display","block").appendTo(this.container);f.hide(this.image);if(this.cache[a])return this.image.src=a,j.call(this.image),this.container;e(this.image).load(j).error(function(){d?C?e(this).attr("src",C):Galleria.raise("Image not found: "+a):(d=!0,l.setTimeout(function(a,b){return function(){a.attr("src",b+"?"+f.timestamp())}}(e(this),a),50))}).attr("src",a);return this.container},
+scale:function(a){a=e.extend({width:0,height:0,min:void 0,max:void 0,margin:0,complete:function(){},position:"center",crop:!1,canvas:!1},a);if(!this.image)return this.container;var b,d,c=this,i=e(c.container),j;f.wait({until:function(){b=a.width||i.width()||f.parseValue(i.css("width"));d=a.height||i.height()||f.parseValue(i.css("height"));return b&&d},success:function(){var h=(b-a.margin*2)/c.original.width,g=(d-a.margin*2)/c.original.height,i={"true":Math.max(h,g),width:h,height:g,"false":Math.min(h,
+g)}[a.crop.toString()],h="";a.max&&(i=Math.min(a.max,i));a.min&&(i=Math.max(a.min,i));e.each(["width","height"],function(a,b){e(c.image)[b](c[b]=c.image[b]=Math.round(c.original[b]*i))});e(c.container).width(b).height(d);if(a.canvas&&s)s.elem.width=c.width,s.elem.height=c.height,h=c.image.src+":"+c.width+"x"+c.height,c.image.src=s.cache[h]||function(a){s.context.drawImage(c.image,0,0,c.original.width*i,c.original.height*i);try{return j=s.elem.toDataURL(),s.length+=j.length,s.cache[a]=j}catch(b){return c.image.src}}(h);
+var l={},m={},h=function(a,b,d){var g=0;/\%/.test(a)?(a=parseInt(a,10)/100,b=c.image[b]||e(c.image)[b](),g=Math.ceil(b*-1*a+d*a)):g=f.parseValue(a);return g},n={top:{top:0},left:{left:0},right:{left:"100%"},bottom:{top:"100%"}};e.each(a.position.toLowerCase().split(" "),function(a,b){b==="center"&&(b="50%");l[a?"top":"left"]=b});e.each(l,function(a,b){n.hasOwnProperty(b)&&e.extend(m,n[b])});l=l.top?e.extend(l,m):m;l=e.extend({top:"50%",left:"50%"},l);e(c.image).css({position:"absolute",top:h(l.top,
+"height",d),left:h(l.left,"width",b)});c.show();c.ready=!0;a.complete.call(c,c)},error:function(){Galleria.raise("Could not scale image: "+c.image.src)},timeout:1E3});return this}};e.extend(e.easing,{galleria:function(a,b,d,c,e){return(b/=e/2)<1?c/2*b*b*b+d:c/2*((b-=2)*b*b+2)+d},galleriaIn:function(a,b,d,c,e){return c*(b/=e)*b+d},galleriaOut:function(a,b,d,c,e){return-c*(b/=e)*(b-2)+d}});e.fn.galleria=function(a){return this.each(function(){e(this).data("galleria",(new Galleria).init(this,a))})}})(jQuery);
+</script>
+<script type="text/javascript">
+  /* Galleria Icast Theme 2011-10-24 */
+  /* global jQuery, Galleria */
+  Galleria.requires(1.25, 'This version of Icast theme requires Galleria 1.2.5 or later');
+  (function ($) {
+    //var startIndex = '3';
+    Galleria.addTheme({
+      name: 'icast',
+      author: 'Eliot Johnston',
+      defaults: {
+        transition: 'slide',
+        thumbCrop: 'height',
+        width: 600,
+        height: 530,
+        maxScaleRatio: 1,
+        thumbQuality: 'auto',
+        idleMode: false,
+        _toggleInfo: false,
+        show: 0, //parseInt(startIndex),
+        dataConfig: function(){
+          return { description : $('<img src="http://images.intellicast.com/images/legends/WINDcast.gif" alt="" />') };
+        }
+      },
+      init: function (options) {
+        // cache some stuff
+        var info = this.$('info-text'),
+            counter = this.$('counter'),
+            touch = Galleria.TOUCH,
+            click = touch ? 'touchstart' : 'click',
+            css_white = { 'border-color': '#fff', 'background-color': '#fff' },
+            css_active = { 'border-color': '#BBD8FB', 'background-color': '#f3f7fd' };
+        
+        // show loader & counter
+        this.$('loader,counter').show();
+        info.show();
+        
+        // bind some stuff
+        this.bind('thumbnail', function (e) {
+          // change style on thumbnails
+          $(e.thumbTarget).parent().hover(function () {
+            $(this).not('.active').css(css_active);
+          }, function () {
+            $(this).not('.active').css(css_white);
+          });
+          if (e.index === this.getIndex()) {
+            $(e.thumbTarget).css(css_white);
+          }
+        });
+
+        this.bind('loadstart', function (e) {
+          if (!e.cached) {
+            this.$('loader').show();
+          }
+          this.$('info').toggle(this.hasInfo());
+          $(e.thumbTarget).parent().css(css_white).siblings().css(css_white);
+        });
+
+        this.bind('loadfinish', function (e) {
+          this.$('loader').fadeOut(200);
+        });
+      }
+    });
+  } (jQuery));
+</script>
+<script type="text/javascript">
+  (function () {
+    var head = document.getElementsByTagName('head')[0];
+    var css = document.createElement('link');
+    css.setAttribute('rel', 'stylesheet');
+    css.setAttribute('type', 'text/css');
+    css.setAttribute('href', 'http://images.intellicast.com/Styles/galleria.icast_20111109.css');
+    head.appendChild(css);
+  })();
+  jQuery(function ($) {
+    // initialization
+    $('#container').galleria().css('visibility', 'visible');
+    $('#regionList').bind('change', function (e) {
+      document.location.href = window.location.pathname + '?region=' + this.value;
+    });
+  });
+</script>
+
+<div id="PrecipCast">
+  <div class="Chrome"><div class="Title">WINDcast</div></div>
+  <div class="Container">
+    <div class="controls" style="padding:20px;border-bottom:solid 1px #999;">
+      
+      <div>
+        <strong>Region:&nbsp;</strong>
+        <select id="regionList" style="width:150px;">
+            <option value="default">Select...</option>
+          <option value="phx">AZ - Phoenix</option><option value="lax">CA - Los Angeles</option><option value="rdd">CA - Redding</option><option value="sfo">CA - San Francisco</option><option value="den">CO - Denver</option><option value="hfd">CT - Hartford</option><option value="eyw">FL - Key West</option><option value="mco">FL - Orlando</option><option value="tlh">FL - Tallahassee</option><option value="atl">GA - Atlanta</option><option value="ssi">GA - Brunswick</option><option value="dsm">IA - Des Moines</option><option value="boi">ID - Boise</option><option value="lws">ID - Lewiston</option><option value="ord">IL - Chicago</option><option value="ddc">KS - Dodge City</option><option value="top">KS - Topeka</option><option value="cvg">KY - Covington</option><option value="msy">LA - New Orleans</option><option value="bgr">ME - Bangor</option><option value="det">MI - Detroit</option><option value="mnm">MI - Menominee</option><option value="brd">MN - Brainerd</option><option value="stl">MO - Saint Louis</option><option value="mei">MS - Meridian</option><option value="hln">MT - Helena</option><option value="mls">MT - Miles City</option><option value="ilm">NC - Wilmington</option><option value="bis">ND - Bismarck</option><option value="gri">NE - Grand Island</option><option value="abq">NM - Albuquerque</option><option value="dra">NV - Mercury</option><option value="roc">NY - Rochester</option><option value="tul">OK - Tulsa</option><option value="eug">OR - Eugene</option><option value="phl">PA - Philadelphia</option><option value="pir">SD - Pierre</option><option value="tys">TN - Knoxville</option><option value="mem">TN - Memphis</option><option value="bro">TX - Brownsville</option><option value="drt">TX - Del Rio</option><option value="elp">TX - El Paso</option><option value="iah">TX - Houston</option><option value="lbb">TX - Lubbock</option><option value="tyr">TX - Tyler</option><option value="slc">UT - Salt Lake City</option><option value="ric">VA - Richmond</option><option value="rut">VT - Rutland</option><option value="sea">WA - Seattle</option><option value="mgw">WV - Morgantown</option><option value="cpr">WY - Casper</option></select>
+      </div>
+      <div style="margin-top:20px;">
+        <img src="http://images.intellicast.com/App_Images/icon_info2.gif" alt="Info" class="Icon" style="float:left;" />
+        <p style="margin:0 0 0 25px;"><strong>Toggle National and Regional Views</strong><br />
+          Click the blue-button above to toggle between National and Regional views. View persists until toggle back.<br />
+          For adding explicit book-marks to directly access preferred weather maps, visit our <a href="../../Help/Faq.html">FAQ page</a>.</p>
+      </div>
+    </div>
+    <div id="container">
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+        <a href="https://www.wunderground.com/intellicast">
+          <img src="https://www.wunderground.com/intellicast" alt="" />
+        </a>
+      
+    </div>
+  </div>
+</div>
+<div class="Chrome">
+  <div class="Title">Learn about WINDcast</div>
+  <div style="float: right;"><a style="color:#FFF;font-family:'Segoe UI', Tahoma, sans-serif;" href="http://en.wikipedia.org/wiki/Humidity#Humidity_and_air_density" target="_blank">View Detailed Information &raquo;</a></div>
+</div>
+<div id="weathercom" class="Content Container">
+  The Current Wind map shows the current <a href="http://96.8.93.198/Local/Hourly.aspx?chart=Wind">wind speed</a> and direction for the most next 48 hours. Wind direction is determined by the direction from which it originates. For example, a northerly wind blows from the north to the south. Wind is the flow of air that occurs as it is heated by the sun and thus rises. Cool air then occupies the area from which the hot air has moved, creating what could loosely be termed a convection current. Winds are commonly classified by their spatial scale, their speed, the types of forces that cause them, the geographic regions in which they occur, or their effect. 
+</div>   
+
+</div>
+<div id="rightColumn">
+  <div class="adHeader">
+    <div class="title">Advertisements</div>
+    <div class="miniAd"><a href="http://www.aolnews.com/category/nation/" target="_blank" onclick="javascript:linkTracker._trackPageview('../../AOL/Header/www.aolnews.com/category/nation/index.html');"><span>National News</span></a></div>
+  </div>
+  <!-- Old Ads -->
+  
+  <!-- Old Ads -->
+  <!-- New Ads -->
+  <div id="AdPageCounterDiv">
+    <div id="WX_PageCounter">
+      
+    </div>
+  </div>
+  <div>
+    <div id="WX_Top300Variable">
+      
+    </div>
+  </div>
+  <!-- Promo ad for storm/icast mobile -->
+	<div id="promoAd" style="position:relative;">
+    <a href="https://go.onelink.me/RFZA?pid=Intellicast&amp;c=Display" target="_blank">
+			<img style="display:block;" src="http://images.intellicast.com/App_Images/STORM_BANNERS_S7_300X125.jpg" alt="Storm Radar with NOAA Weather" />
+		</a>
+	</div>
+  <div>
+    <div id="WX_Mid300">
+      
+    </div>
+  </div>
+  <div>
+    <div id="WX_Hidden">
+      
+    </div>
+  </div>
+  <div>
+    <div id="WX_Tiles">
+  		<div style="float:left;">
+        <div id="WX_Tile1">
+          
+        </div>
+  		</div>
+  		<div style="float:right;">
+        <div id="WX_Tile2">
+          
+        </div>
+  		</div>
+  	</div>
+  </div>
+  <div>
+    <div id="WX_PaidSearch">
+      
+    </div>
+  </div>
+  <!-- New Ads -->
+</div>
+</div>
+
+		</form>
+	</div>
+
+	
+		<footer class="site-footer">
+			<div class="help-links">
+				<div class="container">
+					<a href="../../About/Default.html">About Us</a>
+					<a href="https://advertising.weather.com/contact/" target="_blank">Advertise with Us</a>
+					<a href="https://www.wunderground.com/about/contact-us">Contact Us</a>
+					
+					<a href="../../Help/Default.html">Help</a>
+					<a href="http://www.aolnews.com/" target="_blank">News</a>
+					<a href="http://www.aboutads.info/choices/" target="_blank" style="background: url(../../../icons.wxug.com/i/misc/adChoices.png) no-repeat right; padding-right: 20px;">Ad Choices</a>
+				</div>
+			</div>
+			<div class="legal-links">
+				<div class="container">
+					<a href="../../About/Terms.html">Terms of Use</a>
+					<a href="../../About/Privacy.html">Privacy Statement</a>
+					<span>&copy;Copyright 2019 TWC Product and Technology, LLC</span>
+					
+					<span>Version 4.6.201311.1</span>
+				</div>
+				<!-- MACHINE NAME: ICAST-WEB2 -->
+			</div>
+		</footer>
+	
+
+	
+	
+	
+  
+	<script type="text/javascript" src="http://images.intellicast.com/Scripts/core_20150225.js"></script>
+
+  <script>
+    var cod = {
+      latitude: '0',
+      longitude: '0',
+      unit: 'F'
+    };
+  </script>
+  <script src="http://images.intellicast.com/Scripts/cod_20150330.js"></script>
+</body>
+
+<!-- Mirrored from 96.8.93.198/National/Wind/WindCast.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jul 2019 21:54:00 GMT -->
+</html>

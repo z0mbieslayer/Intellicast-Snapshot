@@ -1,0 +1,78 @@
+﻿#conditions{width:265px;border-right:solid 1px #999;padding:5px 10px;}
+#hourly{width:173px;}
+#info{border-left:solid 1px #999;background:url(../App_Images/command_view_imap.jpg) no-repeat bottom right;}
+
+#infoData div{float: left;}
+#infoData td{padding:5px 0px 0px 7px;}
+#daily{border-bottom:none;background-color:#eaebec;display:block;}
+#extended img{margin-right:5px;}
+#extended td{font-size:10px;}
+#extended{border-bottom:solid 1px #AAA;border-left:solid 1px #AAA;border-right:solid 1px #AAA;width:100%;}
+#extended span.Hi{font-size:20px;padding:0px;float:none;}
+#extended span.Lo{font-size:18px;padding:0px;float:none;}
+#extended .LeftColumn{vertical-align:top;text-align:center;padding:5px;float:left;}
+#extended .MiddleColumn{vertical-align:top;padding:5px;float:left;}
+#extended .RightColumn{padding:4px;float:left;width:160px;}
+#extended .RightColumn img{border:solid 1px #AAA;}
+#pastObs, #todayHourly, #monthlyClimate, #dailyClimate{width:100%;}
+#pastObs #titles td{font-weight:bold;width:50px;font-size:10px;}
+#pastObs .DateTime{color:#666; padding-left: 5px;}
+#pastObs tr, #todayHourly tr, .TitlesAvgRecord{height:30px;}
+#todayHourly td{text-align:center;}
+#todayHourly #titlesTodayHourly td{font-weight:bold;width:47px;font-size:10px;border-bottom:solid 1px #999;}
+#todayHourly .DateTime{color:#666;font-weight:bold;padding-left:5px;}
+#monthlyClimate a{font-weight:bold;}
+#monthlyClimate td, #dailyClimate td{width:95px;}
+#localLeftColumn{padding: 10px; text-align:center;}
+#localLeftColumn div{margin-bottom:8px;}
+#localWatchWarnings, #weatherAlertsType{padding:10px;}
+#localWatchWarnings td{line-height:20px;width:250px;}
+#regions{width:100%;}
+#regions td{vertical-align:top;border-top:solid 1px #e7f4fc;padding-top:5px;}
+
+#related{color:#900;font-weight:bold;}
+#imap{width:185px;height:100px;padding-left:2px;}
+#forecastHours td{border-bottom:solid 1px #999;}
+#chartFooter a{padding:0px 15px;}
+
+.Empty{width:12px;}
+.Hour{border-top:solid 1px #999;height:47px;}
+.ContainerLink{font-size:10px;background-color:#EAEBEC;border-top:solid 1px #999;text-align:center;padding:2px 3px;white-space:nowrap;}
+.DOW{text-align:center;border-bottom:solid 1px #999;width:100%;height:13px;border-right:solid 1px #999;width:65px;overflow:hidden;cursor:pointer;}
+.FWX{background-color:#fff;border-right:solid 1px #999;border-bottom:solid 1px #999;cursor:pointer;}
+.End{border-right:none;}
+.Weekend{background-color:#feeb8f;}
+.Selected{font-weight:bold;}
+.FWXSelected{background:#DFDFDF url(../App_Images/bg_calendar.gif) repeat-x 0px 2px;border-bottom:solid 1px #dfdfdf;}
+.Month{padding:3px;float:left;}
+.DayNum{padding:3px;float:right;background-color:#fff;border-bottom:solid 1px #999;border-left:solid 1px #999;color:#999;font-weight:bold;}
+.Wx{clear:both;text-align:center;font-size:10px;white-space:nowrap;margin-bottom:5px;}
+.Wx img{margin-top:6px;}
+.Hi{float:left;color:#900;padding-left:4px;font-weight:bold;}
+.Lo{float:right;color:#073f7d;padding:4px 4px 0px 0px;font-weight:bold;}
+.Details{background-color:#dfdfdf;padding:10px;visibility:hidden;display:none;}
+.SubMenu{font-weight:bold;background-color:#EAEBEC;text-align:center;padding:1px 0px;height:15px;line-height:15px;}
+.Gauge{margin:10px 0px;}
+.Gauge td{padding-right:5px;}
+.Meters td{padding-left:11px;line-height:16px;white-space:nowrap;}
+.Meters td div{padding-left:5px;}
+.Sun{background:url(../App_Images/sun.png) no-repeat;}
+.Moon{background:url(../App_Images/moon.png) no-repeat;}
+.Sun,.Moon{width:135px;height:50px;}
+.Sun div,.Moon div{margin:-1px 0px 0px 25px;}
+.Alternate{background-color:#eee;}
+.TitlesAvgRecord td{font-weight:bold;font-size:11px;border-bottom:solid 1px #999;}
+.RowsLocalHistoric td{height:20px;border-top:solid 1px #999;}
+.HeaderGradientDark{background:#fff url(../App_Images/chrome_dark3.gif) repeat-x;}
+.AlertsContainer{width:225px;text-align:center;vertical-align:top;background-color:#EEE;border-right:solid 1px #AAA;}
+.DateTime{white-space:nowrap;}
+.SkiResortStates{float:left;margin-right:150px;}
+
+.Key{width:121px;background-color:#999;border:solid 1px #000;}
+.Key div{overflow:hidden;border-right:solid 1px #000;}
+.Key img{width:121px;height:12px;display:block;}
+
+.ChartLinks{line-height:25px;background:#DFDFDF;height:25px;border-bottom:solid 1px #AAA;border-left:solid 1px #AAA;border-right:solid 1px #AAA;font-size:10px;text-align:center;}
+.ChartLinks a{padding:0px 3px;}
+
+div.Selected{visibility:visible;display:block;font-weight:normal;}

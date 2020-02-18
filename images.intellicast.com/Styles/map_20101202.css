@@ -1,0 +1,19 @@
+﻿#imap{width:100%;}
+#imap tr{vertical-align:top;}
+#content{margin:0px 0px 0px 2px;width:auto;height:100%;min-width:1000px;}
+#mapSearchBox{float:left;margin-top:7px;border:#285E82 solid 1px;height:16px;font-size:10px;color:#999;padding-top:3px;width:204px;margin-top:2px;}
+#mapSearchButton{margin-top:7px;vertical-align:middle;margin-top:2px;cursor:pointer;}
+#mapSearch{margin-bottom:8px;}
+#results{display:none;clear:both;margin-bottom:10px;}
+#saveMap{margin-bottom:10px;margin-top:2px;}
+#savedMaps td{height:18px;line-height:18px;}
+#savedMaps img{vertical-align:middle;margin-bottom:2px;}
+#wxTemp{font-size:24px;font-weight:bold;}
+
+.Forecast{padding:2px 10px; border-top:solid 1px #999;border-bottom:solid 1px #999;background-color:#EEE;height:13px;}
+.Month{padding:3px;float:left;}
+.DayNum{padding:3px;float:right;background-color:#fff;border-bottom:solid 1px #999;border-left:solid 1px #999;color:#999;font-weight:bold;}
+.Wx{clear:both;text-align:center;font-size:10px;white-space:nowrap;margin:8px 0px 4px 0px;}
+.Hi{float:left;color:#900;padding-left:4px;font-weight:bold;}
+.Lo{float:right;color:#073f7d;padding:4px 4px 0px 0px;font-weight:bold;}
+.IMapLink{cursor:pointer;}

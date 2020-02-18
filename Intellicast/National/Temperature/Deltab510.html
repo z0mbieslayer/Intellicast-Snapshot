@@ -1,0 +1,1172 @@
+
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<!-- Mirrored from 96.8.93.198/National/Temperature/Delta.aspx?location=default&region=GRI by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jul 2019 22:31:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head id="ctl00_ctl00_Head1"><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" /><title>
+	Intellicast - Temperature Changes in United States
+</title><meta name="viewport" content="width=device-width,initial-scale=1" /><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="description" content="Intellicast.com: The Authority in Expert Weather" /><meta name="google-site-verification" content="Ty8E9HwyYpwnoH6SWxOoDkwWIpfXZbnXYxSKIJKinLw" /><meta name="google-site-verification" content="OwqzWim3JgPf7WONV8sYyMir93oTT-JmWDKQW-IApCI" /><meta name="verify-v1" content="bwhh8UmywoDXIeujVrNoVWPt5FmUdjfYgs0MgjMjouc=" /><meta name="msvalidate.01" content="2625493FFF704B18B25610DED3DC742E" /><meta name="y_key" content="66d7db7fca59b234" /><meta http-equiv="PICS-Label" content="(PICS-1.1 &quot;http://www.rsac.org/ratingsv01.html&quot; l gen true comment &quot;RSACi North America Server&quot; for &quot;http://www.intellicast.com&quot; on &quot;1998.08.31T21:19-0800&quot; r (n 0 s 0 v 0 l 0))&quot;" /><meta http-equiv="cache-control" content="no-cache" /><meta http-equiv="expires" content="0" /><meta http-equiv="pragma" content="no-cache" /><meta id="ctl00_ctl00_adsmetrics_zone" name="adsmetrics_zone" value="home" /><link rel="shortcut icon" href="../../favicon.ico" type="image/x-icon" /><link rel="icon" href="../../favicon.ico" type="image/x-icon" /><link href="http://web.archive.org/web/20190402115722/http://images.intellicast.com/Styles/normalize.rexive.css" rel="stylesheet" /><link href="http://web.archive.org/web/20190402110827/http://images.intellicast.com/Styles/main_20160121.css" rel="stylesheet" /><link href="http://web.archive.org/web/20190402114148/http://images.intellicast.com/Styles/Stylesheet_20131220.css" rel="stylesheet" />
+
+  <script src="../../../icons.wxug.com/scripts/modernizr/2.8.2/modernizr.min.js"></script>
+  <script src="../../../cdnjs.cloudflare.com/ajax/libs/underscore.js/1.4.4/underscore-min.js"></script>
+  <script src="http://images.intellicast.com/Scripts/ads-sdk-full-v3.js"></script>
+  <script>
+    try { // change delimiters to mustache syntax
+      _.templateSettings.interpolate = /\{\{=([\s\S]+?)\}\}/g;
+      _.templateSettings.evaluate = /\{\{([\s\S]+?)\}\}/g;
+      _.templateSettings.escape = /\{\{-([\s\S]+?)\}\}/g;
+    } catch (e) { /*ignore*/ }
+  </script>
+  <script type="text/javascript">
+    // set global locationId
+    var locationId = '';
+	</script>
+
+	<script type="text/javascript" src="http://images.intellicast.com/Scripts/ads_20170629.js"></script>
+  
+
+	<!-- BEGIN New Ads -->
+	<script src="http://images.intellicast.com/Scripts/Vendor/twc-jquery-1.10.2.min.js"></script>
+	
+  <script src="http://images.intellicast.com/Scripts/ad-v3.js"></script>
+
+
+  <!-- Initialize PCO -->
+	<script>
+	  window.TWC.Configs = {
+	    'dsx': {
+	      'host': '//dsx.weather.com/', //'//dsx01.int.aws.weather.com/',
+	      'apiKey': '7bb1c920-7027-4289-9c96-ae5e263980bc',
+	      'locale': (TWC && TWC.Titan && TWC.Titan.locale) || 'en_US' || 'en_US',
+	      'cmsVersion': 'v1'
+	    },
+	    'image_poc': {
+	      'instart': 0,
+	      'akamai': 0
+	    },
+	    'debug': 1,
+	    'disable_lazyload': 0,
+	    'sunTurbo': {
+	      'baseUrl': 'http://devapi.weather.com',
+	      'apiKey': 'c1ea9f47f6a88b9acb43aba7faf389d4',
+	      'locale': 'en-US' || 'en-us'
+	    }
+	  };
+	  TWC.pco = TWC.initpco(
+				jQuery,
+				{
+				  'page': { locale: 'en-US' },
+				  'ad': {}
+				},
+				null,
+				null,
+				{ "error": "LOCATION_UNAVAILABLE" }
+		);
+	</script>
+
+  <!-- load Tealium -->
+	<script>
+	  // var TWC = TWC || {};
+		// TWC.Events = TWC.Events || {};
+		// TWC.Events.getEvent = TWC.Events.getEvent || function () { return { done: function () {}, resolve: function () {} }; };
+
+		var getScreenSize = function () {
+	    var browserWidth = window.innerWidth || document.body.clientWidth;
+
+	    if (browserWidth < 768) return 'mobile';
+	    if (browserWidth < 1025) return 'tablet';
+	    return 'desktop';
+	  };
+	  var getSaveZipCd = function () {
+	    var e = jQuery;
+	    var t = TWC;
+	    var n = jQuery.jStorage.get("user");
+	    var a = t && t.pco && t.pco.getNodeValue && t.pco.getNodeValue("page", "currentLocation");
+	    var r = a && a.zipCd || n && n.lastVisitedLocation && n.lastVisitedLocation.zipCd || n && n.savedLocations && jQuery.isArray(n.savedLocations) && n.savedLocations[0] && n.savedLocations[0].zipCd || n && n.recentSearchLocations && e.isArray(n.recentSearchLocations) && n.recentSearchLocations[0] && n.recentSearchLocations[0].zipCd || "";
+
+	    return r;
+	  };
+
+	  var getBrowser = function () {
+	    var userAgent = navigator && navigator.userAgent
+	    meta = userAgent && userAgent.match(/chrome|firefox|safari|trident/i);
+
+	    if (meta && jQuery.isArray(meta)) {
+	      switch (meta[0].toLowerCase()) {
+	        case "chrome":
+	          return "twcchrome";
+	        case "firefox":
+	          return "twcff";
+	        case "safari":
+	          return "twcsafari";
+	        case "trident":
+	          return "twcie";
+	        default:
+	          return "twcnative"
+	      }
+	    }
+	  };
+
+		  $(document).ready(function () {
+	      setTimeout(function () {
+	        TWC.Events.getEvent('lotameReady').resolve();
+	      }, 1000);
+
+		    TWC.Events.getEvent('utag_dataReady').done(function () {
+		      utag_data['js_page.positions'] = ['WX_Top300Variable', 'WX_WindowShade', 'WX_Mid300', 'WX_PaidSearch', 'WX_Tile1', 'WX_Tile2', 'WX_BottomLeaderboard'];
+		      // jQuery.ajax({
+		      //   'url': 'https://tags.tiqcdn.com/utag/weather/intellicast/prod/utag.js',
+		      //   'dataType': 'script',
+		      //   'success': void (0),
+		      //   'cache': true
+		      // });
+
+					window.twcMoney = window.twcMoney || {};
+					window.twcMoney.cmd = window.twcMoney.cmd || [];
+					window.twcMoney.cmd.push(function() {
+		        var locale = TWC.Configs.sunTurbo.locale;
+		        var staticAdPositions = utag_data['js_page.positions'];
+		        var zone = utag_data['js_page.zone'];
+		        var custParams = {};
+
+		        var localeA = TWC && TWC.Configs && TWC.Configs.dsx && TWC.Configs.dsx.locale
+		          , amznId = "de_DE" === localeA && "3128" || "1004";
+
+		        var thirdParties = [
+		          {
+		            id: 'amznslots',
+		            amznId: amznId,
+		            async: true,
+		            timeout: 500
+		          },
+		          {
+		            id: 'criteo',
+		            netId: 2305,
+		            timeout: 500,
+		            async: true
+		          },
+		          {
+		            id: 'wfxtg',
+		            acctid: getScreenSize() !== 'mobile' ? '4C2383' : '5B3739',
+		            timeout: 500,
+		            params: {
+		              activeLocation: window.getSaveZipCd() || '30334',
+		            },
+		            async: true,
+		          },
+		          {
+		            id: 'lotame',
+		            clientId: 2215,
+		            async: true,
+		            timeout: 500,
+		            params: {
+		              metrics: TWC.pco.getNodeValue("metrics") || '',
+		              location: {
+		                dmaCd: TWC.pco.getNodeValue("ad", "location").dmaCd || ''
+		              },
+		              adzone: zone,
+		              lang: TWC.pco.getNodeValue("page", "lang") || ''
+		            }
+		          }
+		        ];
+		        var customAdConfig = {
+		          preparePositions: function (requestObj) {
+		            var positions = [
+		              {
+		                "id": "WX_Top300Variable",
+		                "pos": "wx_300var",
+		                "sizes": [
+		                  [300, 600],
+		                  [300, 251],
+											[300, 250],
+		                  [300, 1050],
+		                  [300, 276]
+		                ]
+		              },
+		              {
+		                "id": "WX_WindowShade",
+		                "pos": "wx_ws",
+		                "sizes": [
+		                  [300, 276],
+		                  [728, 91],
+											[728, 90],
+		                  [728, 50],
+		                  [970, 250]
+		                ],
+		                "device": [ "desktop" ]
+		              },
+		              {
+		                "id": "WX_Mid300",
+		                "pos": "wx_mid300",
+		                "sizes": [[300, 251], [300, 250], [320, 300]]
+		              },
+		              {
+		                "id": "WX_PaidSearch",
+		                "pos": "wx_pds",
+		                "sizes": [[300, 251], [300, 250]]
+		              },
+		              // {
+		              //    "id": "WX_Tile1",
+		              //    "pos": "wx_t1",
+		              //    "sizes": [[125, 125]]
+		              // },
+		              // {
+		              //   "id": "WX_Tile2",
+		              //   "pos": "wx_t2",
+		              //   "sizes": [[125, 125]]
+		              // },
+		              {
+		                "id": "WX_BottomLeaderboard",
+		                "pos": "wx_botldr",
+		                "sizes": [[728, 91], [728, 90]]
+		              }
+		            ];
+
+		            console.log('========');
+		            console.log(requestObj);
+		            console.log('========');
+
+		            return positions.filter(function (item) {
+		              return requestObj.positions.indexOf(item.id) >= 0;
+		            });
+		          },
+		          getAdUnit: function (locale, deviceType) {
+		            var adUnit = null;
+		            var js_page_ad_unit = utag_data['js_page.ad_unit'].split('../../index.html');
+
+		            adUnit = {
+		              adUnit: js_page_ad_unit[2] || '',
+		              networkCode: '/' + (js_page_ad_unit[1] || '')
+		            };
+
+		            return adUnit;
+		          },
+		          getCustParams: function () {
+		            return {
+		              refurl: "intellicast",
+		              browser: getBrowser(),
+		              cc: TWC.pco.getNodeValue("user", "currentLocation").cntryCd,
+		              ct: TWC.pco.getNodeValue("user", "currentLocation").cityNm,
+		              dma: TWC.pco.getNodeValue("ad", "location").dmaCd,
+		              ent: utag_data["js_page.ent"],
+		              impression_id: TWC.pco.getNodeValue("ad", "impression_id"),
+		              intl: utag_data["js_page.gpr"],
+		              lang: TWC.pco.getNodeValue("page", "lang"),
+		              lat: TWC.pco.getNodeValue("ad", "location").lat,
+		              lon: TWC.pco.getNodeValue("ad", "location").long,
+		              loc: utag_data["js_page.locid"],
+		              ord: utag_data["js_page.ord"],
+		              plat: utag_data["js_page.plat"],
+		              refurl: utag_data["js_page.refurl"],
+		              rmid: utag_data["js_page.rmid"],
+		              st: TWC.pco.getNodeValue("user", "currentLocation").stCd,
+		              zip: utag_data["js_page.zip"],
+		              tf: utag_data["js_page.zone"]
+		            };
+		          }
+		        };
+
+		        var adLocation = TWC.pco.getNodeValue("ad", "location");
+		        var geocode = adLocation.lat + ',' + adLocation.long;//'42.36,-71.06'
+
+		        window.twcMoney.SunDataService.fetchData({ geocode: geocode })
+		          .then(function(result) {
+		            var custParams = result.custParams;
+
+		            console.log('========');
+		            console.log(result);
+		            console.log('========');
+
+		            window.twcMoney.moneyTree({ useLightSpeed: false, locale: locale })
+		              .start({
+		                adZone: zone,
+		                locale: locale,
+		                thirdParties: thirdParties,
+		                custParams: custParams,
+		                pageAdPositions: [],
+		                staticAdPositions: staticAdPositions,
+		                processStatic: true,
+
+		                adConfig: customAdConfig
+		              })
+									.then(function () {
+										window.twcMoney.moneyTree().getBidProcessPromise('lotame')
+										.then(function () {
+											var lotameData = {};
+											var jStorage = JSON.parse(localStorage
+												&& localStorage.jStorage);
+											var lotameRaw = jStorage && jStorage.lotameRaw || {};
+
+											var lot_abbr, lot_id, lotameData;
+											if (lotameData = TWC.pco.getNodeValue("user", "lotame") || {},
+											lotameData.lot_tpid = lotameRaw
+												&& lotameRaw.Profile
+												&& lotameRaw.Profile.tpid || lotameData.lot_tpid,
+											lotameData.lot_pid = lotameRaw
+												&& lotameRaw.Profile
+												&& lotameRaw.Profile.pid || lotameData.lot_pid,
+											lot_abbr = lotameData && lotameData.lot_abbr || "",
+											lot_id = lotameData && lotameData.lot_id || "",
+											audienceLength = lotameRaw
+												&& lotameRaw.Profile
+												&& lotameRaw.Profile.Audiences
+												&& lotameRaw.Profile.Audiences.Audience
+												&& lotameRaw.Profile.Audiences.Audience.length,
+											audienceLength > 0) {
+													lot_abbr = "",
+													lot_id = "";
+													for (var c = 0; c < audienceLength; c++)
+															lot_abbr += lotameRaw.Profile.Audiences.Audience[c].abbr + (c < audienceLength - 1 ? "," : ""),
+															lot_id += lotameRaw.Profile.Audiences.Audience[c].id + (c < audienceLength - 1 ? "," : "");
+
+													lotameData.lot_abbr = lot_abbr,
+													lotameData.lot_id = lot_id
+											}
+
+											TWC.pco.setNodeValue("user", "lotame", lotameData);
+										});
+									});
+		          });
+					});
+		    });
+		  });
+	</script>
+
+  <!-- Optimizely -->
+  <script src="../../../cdn.optimizely.com/js/878051086.js"></script>
+
+  <!-- BEGIN Omniture -->
+
+  <script src="https://www.wunderground.com/intellicast"></script>
+
+  <script type="text/javascript">
+	(function () {
+		var _recentLocations = [];
+
+		_recentLocations.push(1);
+
+		_recentLocations = _recentLocations.join();
+
+		var _brdcrmb = window.location.pathname !== "/" ? window.location.pathname.substring(1).split("../../index.html") : ["Home"];
+		if (_brdcrmb.length > 1) {
+			_brdcrmb.unshift("Home");
+			_brdcrmb[_brdcrmb.length - 1] = _brdcrmb[_brdcrmb.length - 1].substring(0, _brdcrmb[_brdcrmb.length - 1].indexOf("."));
+		}
+		s.pageName = document.title;
+		s.prop2 = s.evar4 = _brdcrmb.join(" > "); // sub section e.g. home > maps > regionmap
+		s.prop6 = s.evar6 = "::"; // city:state:country
+		s.prop8 = s.evar8 = ""; // dma id
+		s.prop9 = s.evar9 = ""; // zip code
+		s.evar23 = ""; // marketing campaigns
+		s.evar24 = window.location.href; // full url
+		//SiteCatalyst Beacon Parameter: event15 Page View Event
+
+		s.prop10 = _recentLocations; // recent locations, number then location id
+		s.prop14 = ""; // intra-page actions
+		s.evar10 = _recentLocations; // saved locations, number then location id
+
+		s.evar11 = ""; // internal search term
+		s.evar12 = ""; // member type (member, non-member)
+		s.evar13 = ""; // weather map layer
+		s.evar14 = ""; // boating map layer
+		s.evar17 = ""; // search type (other or zip)
+		s.evar18 = ""; // search error message
+		/*
+			event7: Membership Signup
+			event8: Sign-Ins
+			event9: Sign-Outs
+		*/
+		var s_code = s.t();
+		if (s_code) document.write(s_code);
+	}());
+  </script>
+
+  <!-- END Omniture -->
+
+  <!-- END New Ads -->
+
+  <script src="http://images.intellicast.com/App_Scripts/icast.storage.min.js"></script>
+	<script src="http://images.intellicast.com/App_Scripts/jquery-autocomplete.min.js"></script>
+
+	
+	
+
+  <meta name="description" content="The Temperature 24-Hour Deltas image show the change in temperature in the past 24 hours." />
+  <meta name="keywords" content="weather, radar, satellite, local, national, global, storm, rain, snow, temperature" />
+
+<!-- New Ads -->
+<style type="text/css">
+  .img-link{display:block;margin:10px 0;}
+  .img-link img{border:none;display:block;}
+</style>
+<!-- New Ads -->
+
+	<!-- HTML5 Shim: IE8 support of HTML5 elements -->
+  <!--[if lt IE 9]>
+    <script src="http://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+  <![endif]-->
+</head>
+<body id="ctl00_ctl00_MasterBody">
+	
+
+	<!-- Begin comScore Tag -->
+	<script type="text/javascript">var _comscore = _comscore || []; _comscore.push({ c1: "2", c2: "9576127", c3: "", c4: window.location.href }); (function () { var s = document.createElement("script"), el = document.getElementsByTagName("script")[0]; s.async = true; s.src = (document.location.protocol == "https:" ? "https://sb" : "http://b") + ".scorecardresearch.com/beacon.js"; el.parentNode.insertBefore(s, el); })();</script>
+	<noscript><img src="http://b.scorecardresearch.com/p?c1=2&amp;c2=9576127&amp;c3=&amp;c4=www.intellicast.com/National/Temperature/Delta.aspx?location=default&amp;region=GRI&amp;c5=&amp;c6=&amp;c15=&amp;cv=2.0&amp;cj=1" alt="" style="position:absolute;top:-1000px;" /></noscript>
+	<!-- End comScore Tag -->
+
+	<header id="header" class="site-header">
+		<div class="container">
+			<div class="row">
+				<div class="logo-wrapper">
+					<a href="../../index.html" class="logo">
+						<span class="sr-only">Intellicast.com</span>
+						<span class="slogan">The Authority in Expert Weather</span>
+					</a>
+				</div>
+				<div class="user-tools">
+					<div class="constants" style="width:60%;float:right;">
+						
+            
+						<a class="alerts" href="../../Storm/Severe/Bulletins.html"><i class="icon"></i>Alerts</a>
+						<a class="hurricane""" href="https://www.wunderground.com/hurricane"><i class="icon"></i>Hurricanes</a>
+						<a class="help" href="../../Help/Default.html"><i class="icon"></i>Help</a>
+						
+					</div>
+					<div class="inav-flyout toggle-target">
+						
+							<a href="../../Default.html">Sign-In to Add to iNav</a>
+						
+					</div>
+					<form method="get" action="http://96.8.93.198/Local/Default.aspx" class="ui-front location-search">
+						<input tabindex="1" class="blurred" id="locSearch" name="query" type="text" value="Enter City, State, Country or U.S. Zip code" autocomplete="off" />
+					</form>
+				</div>
+			</div>
+			<div class="row">
+				<div class="site-nav">
+					<ul class="nav">
+						<li><a href="http://96.8.93.198/Local/Weather.aspx" class="toggle-btn">Local</a>
+							<ul>
+								<li><a href="http://96.8.93.198/Local/Default.aspx">Find A Location</a></li>
+								<li><a href="http://96.8.93.198/Local/Weather.aspx">Weather Report</a></li>
+								<li><a href="../../Local/WxMap.html">Interactive Weather Map</a></li>
+								<li><a href="http://96.8.93.198/Local/Forecast.aspx">Extended Forecast</a></li>
+								<li><a href="http://96.8.93.198/Local/Hourly.aspx">Hourly Forecast</a></li>
+								<li><a href="http://96.8.93.198/Local/Observation.aspx">Past Observations</a></li>
+								<li><a href="http://96.8.93.198/Local/ObservationsSummary.aspx">Past Observations Summary</a></li>
+								<li><a href="http://96.8.93.198/Local/History.aspx">Historic Averages</a></li>
+							</ul>
+						</li>
+						<li><a href="../../Local/WxMap.html" class="toggle-btn">Interactive</a>
+							<ul>
+								<li><a href="../../Video/Player.html">Videos</a></li>
+                <li><a href="../../Local/WxMap.html">Interactive Weather Map</a></li>
+								
+								<li><a href="http://96.8.93.198/Local/WxMapSm.aspx">Interactive Map (Small)</a></li>
+								
+							</ul>
+						</li>
+						<li><a href="../Default.html" class="toggle-btn">National</a>
+							<ul>
+								<li><a href="../Default.html">National Home</a></li>
+								<li><a href="../Weather.html">Current Weather</a></li>
+								<li><a href="../ForecastToday.html">Today's Forecast</a></li>
+								<li><a href="../ForecastTomorrow.html">Tomorrow's Forecast</a></li>
+								<li><a href="../Radar/Default.html">Radar<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Radar/Current.html">Current Radar</a></li>
+										<li><a href="../Radar/Forecast.html">Forecast Radar</a></li>
+										<li><a href="../Radar/Summary.html">Radar Summary</a></li>
+										<li><a href="../Radar/Yesterday.html">Yesterday's Radar Loop</a></li>
+										<li><a href="../Radar/OneKM.html">1Km Radar</a></li>
+										<li><a href="../Radar/Metro.html">Metro Radar</a></li>
+									</ul>
+								</li>
+								<li><a href="../Nexrad/Default.html">Nexrad<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Nexrad/BaseReflectivity.html">Base Reflectivity</a></li>
+										<li><a href="../Nexrad/RadialVelocity.html">Radial Velocity</a></li>
+									</ul>
+								</li>
+								<li><a href="../Surface/Default.html">Surface Analysis<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Surface/Current.html">Current Surface Analysis</a></li>
+										<li><a href="../Surface/Mixed.html">Mixed Surface Analysis</a></li>
+										<li><a href="../Surface/Forecast12.html">12-Hour Surface Forecast</a></li>
+										<li><a href="../Surface/Forecast24.html">24-Hour Surface Forecast</a></li>
+										<li><a href="../Surface/Forecast36.html">36-Hour Surface Forecast</a></li>
+										<li><a href="../Surface/Forecast48.html">48-Hour Surface Forecast</a></li>
+									</ul>
+								</li>
+								<li><a href="../Satellite/Default.html">Satellite<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Satellite/Infrared.html">National Infrared Satellite</a></li>
+										<li><a href="../Satellite/Regional.html">Regional Infrared Satellite</a></li>
+										<li><a href="../Satellite/Visible.html">Visible Satellite</a></li>
+										<li><a href="../Satellite/WaterVapor.html">Water Vapor</a></li>
+									</ul>
+								</li>
+								<li><a href="Default.html">Temperature<i class="caret"></i></a>
+									<ul>
+										<li><a href="Current.html">Current Temperatures</a></li>
+										<li><a href="HighToday.html">High Temperatures Today</a></li>
+										<li><a href="HighTomorrow.html">High Temperatures Tomorrow</a></li>
+										<li><a href="LowTomorrow.html">Low Temperatures Tomorrow</a></li>
+										<li><a href="TEMPcast.html">TEMPcast</a></li>
+										<li><a href="WindChill.html">Wind Chill</a></li>
+										<li><a href="Extreme.html">Feels Like Temps</a></li>
+										<li><a href="Departure.html">Temp Departure</a></li>
+										<li><a href="Departure10.html">10 Day Temp Departure</a></li>
+										<li><a href="Departure30.html">30 Day Temp Departure</a></li>
+										<li><a href="Departure90.html">90 Day Temp Departure</a></li>
+										<li><a href="FrostFreeze.html">Frost &amp; Freeze</a></li>
+										<li><a href="FirstLastFreeze.html">First &amp; Last Freeze</a></li>
+										<li><a href="Delta.html">24hr Deltas</a></li>
+									</ul>
+								</li>
+								<li><a href="../Outdoors/Default.html">Outdoors<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Outdoors/SOLARcast.html">SOLARcast</a></li>
+										<li><a href="../Outdoors/Summer.html">Summer Fun</a></li>
+										<li><a href="../Outdoors/Gardening.html">Gardening</a></li>
+										<li><a href="../Outdoors/Watering.html">Plant Watering</a></li>
+										<li><a href="../Outdoors/Painting.html">Painting</a></li>
+										<li><a href="../Outdoors/Golfing.html">Golfing</a></li>
+										<li><a href="../Outdoors/Turf.html">Golf Turf Conditions</a></li>
+										<li><a href="../Outdoors/UltraViolet.html">UV Report</a></li>
+										<li><a href="../Outdoors/Sky.html">Sky Watch</a></li>
+									</ul>
+								</li>
+								<li><a href="../Precipitation/Default.html">Precipitation<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Precipitation/PrecipCast.html">PRECIPcast</a></li>
+										<li><a href="../Precipitation/RainCast.html">RAINcast</a></li>
+										<li><a href="../Precipitation/PopCast.html">POPcast</a></li>
+										<li><a href="../Precipitation/Estimated.html">Estimated Rainfall</a></li>
+										<li><a href="../Precipitation/Daily.html">Daily Precipitation</a></li>
+										<li><a href="../Precipitation/Weekly.html">Weekly Precipitation</a></li>
+										<li><a href="../Precipitation/Departure10.html">10 Day Precip Departure</a></li>
+										<li><a href="../Precipitation/Departure30.html">30 Day Precip Departure</a></li>
+										<li><a href="../Precipitation/Departure90.html">90 Day Precip Departure</a></li>
+									</ul>
+								</li>
+								<li><a href="../Wind/Default.html">Wind<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Wind/Current.html">Current Winds</a></li>
+										<li><a href="../Wind/WINDcast.html">WINDcast</a></li>
+										<li><a href="../Wind/JetStream.html">Jet Stream</a></li>
+									</ul>
+								</li>
+								<li><a href="../Humidity/Default.html">Humidity<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Humidity/Current.html">Current Humidity</a></li>
+										<li><a href="../Humidity/IndoorRelative.html">Indoor Relative Humidity</a></li>
+										<li><a href="../Humidity/HUMIDITYcast.html">HUMIDITYcast</a></li>
+										<li><a href="../Humidity/FOGcast.html">FOGcast</a></li>
+										<li><a href="../Humidity/DewPoint.html">Dew Point</a></li>
+									</ul>
+								</li>
+								<li><a href="../Analysis/Default.html">Analysis Charts<i class="caret"></i></a>
+									<ul>
+										<li><a href="../Analysis/SuperFax.html">WSI SuperFax</a></li>
+										<li><a href="../Analysis/UpperAir300.html">300MB Upper Air</a></li>
+										<li><a href="../Analysis/UpperAir500.html">500MB Upper Air</a></li>
+										<li><a href="../Analysis/UpperAir850.html">850MB Upper Air</a></li>
+										<li><a href="../Analysis/Difax24.html">24hr Difax</a></li>
+										<li><a href="../Analysis/Difax48.html">48hr Difax</a></li>
+										<li><a href="../Analysis/Difax72.html">72hr Difax</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../../Global/Default.html" class="toggle-btn">Global</a>
+							<ul>
+								<li><a href="../../Global/Default.html">Global Home</a></li>
+								<li><a href="../../Global/Humidity.html">Relative Humidity</a></li>
+								<li><a href="../../Global/Surface.html">Surface Analysis</a></li>
+								<li><a href="../../Global/Satellite/Default.html">Satellite<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Satellite/Current.html">Current Satellite</a></li>
+										<li><a href="../../Global/Satellite/Infrared.html">Infrared Satellite</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Global/Temperature/Default.html">Temperature<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Temperature/Current.html">Current Temperatures</a></li>
+										<li><a href="../../Global/Temperature/Minimum.html">Minimum Temperatures</a></li>
+										<li><a href="../../Global/Temperature/Maximum.html">Maximum Temperatures</a></li>
+										<li><a href="../../Global/Temperature/Sunshine.html">Sunshine</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Global/Precipitation/Default.html">Precipitation<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Precipitation/Current.html">Current Precipitation</a></li>
+										<li><a href="../../Global/Precipitation/ForecastAM.html">AM Precipitation Forecast</a></li>
+										<li><a href="../../Global/Precipitation/ForecastPM.html">PM Precipitation Forecast</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Global/Wind/Default.html">Wind<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Global/Wind/Current.html">Current Winds</a></li>
+										<li><a href="../../Global/Wind/Forecast.html">Forecast Winds</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../../Storm/Default.html" class="toggle-btn">Storms</a>
+							<ul>
+								<li><a href="../../Storm/Default.html">Storm Home</a></li>
+								<li><a href="../../Storm/Severe/Default.html">Severe Weather<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Storm/Severe/Bulletins.html">Weather Alerts</a></li>
+										<li><a href="../../Storm/Severe/WatchesWarnings.html">Watches &amp; Warnings</a></li>
+										<li><a href="../../Storm/Severe/OneKM.html">1Km Storm Watch</a></li>
+										<li><a href="../../Storm/Severe/Metro.html">Metro Storm Watch</a></li>
+										<li><a href="../../Storm/Severe/OutlookToday.html">Severe Outlook Today</a></li>
+										<li><a href="../../Storm/Severe/OutlookTomorrow.html">Severe Outlook Tomorrow</a></li>
+										<li><a href="../../Storm/Severe/Lightning.html">Lightning Strikes</a></li>
+										<li><a href="../../Storm/Severe/ThunderCast.html">THUNDERcast</a></li>
+										<li><a href="../../Storm/Severe/WaterVapor.html">Water Vapor</a></li>
+									</ul>
+								</li>
+								<li><a href="https://www.wunderground.com/hurricane">Hurricane<i class="caret"></i></a>
+									<ul>
+										<li><a href="https://www.wunderground.com/hurricane">Active Track</a></li>
+										<li><a href="../../Storm/Hurricane/TropicalWinds24.html">24hr Tropical Winds</a></li>
+										<li><a href="../../Storm/Hurricane/TropicalWinds48.html">48hr Tropical Winds</a></li>
+										<li><a href="../../Storm/Hurricane/TropicalWinds72.html">72hr Tropical Winds</a></li>
+										<li><a href="../../Storm/Hurricane/AtlanticAnalysis.html">Atlantic Analysis</a></li>
+										<li><a href="../../Storm/Hurricane/AtlanticSatellite.html">Atlantic Satellite</a></li>
+										<li><a href="../../Storm/Hurricane/AtlanticForecast.html">Atlantic Forecast</a></li>
+										<li><a href="../../Storm/Hurricane/CaribbeanSatellite.html">Caribbean Satellite</a></li>
+										<li><a href="../../Storm/Hurricane/PacificAnalysis.html">Pacific Analysis</a></li>
+										<li><a href="../../Storm/Hurricane/PacificSatellite.html">Pacific Satellite</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Storm/Summary/Default.html">Season Summaries<i class="caret"></i></a>
+									<ul>
+                    <li><a href="../../Storm/Summary/Hurricane2015.html">2015 Hurricane Summary</a></li>
+                    <li><a href="../../Storm/Summary/Hurricane2014.html">2014 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2013.html">2013 Hurricane Summary</a></li>
+                    <li><a href="../../Storm/Summary/Hurricane2012.html">2012 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2011.html">2011 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2010.html">2010 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2009.html">2009 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2008.html">2008 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2007.html">2007 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2006.html">2006 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2005.html">2005 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2004.html">2004 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2003.html">2003 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2002.html">2002 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2001.html">2001 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane2000.html">2000 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane1999.html">1999 Hurricane Summary</a></li>
+										<li><a href="../../Storm/Summary/Hurricane1998.html">1998 Hurricane Summary</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../../Health/Default.html" class="toggle-btn">Health</a>
+							<ul>
+								<li><a href="../../Health/Default.html">Health Home</a></li>
+								<li><a href="../../Health/AchesPains.html">Aches &amp; Pains</a></li>
+								<li><a href="../../Health/Air.html">Air Stagnation</a></li>
+								<li><a href="../../Health/Attentiveness.html">Attentiveness</a></li>
+								<li><a href="../../Health/BadHairDay.html">Bad Hair Day</a></li>
+								<li><a href="../../Health/Influenza.html">Influenza Report</a></li>
+								<li><a href="../../Health/Labor.html">Labor Index</a></li>
+								<li><a href="../../Health/Mood.html">Mood Index</a></li>
+								<li><a href="../../Health/Reflex.html">Reflex Times</a></li>
+								<li><a href="../../Health/Respiratory.html">Respiratory Distress</a></li>
+							</ul>
+						</li>
+						<li><a href="../../Travel/Default.html" class="toggle-btn">Travel</a>
+							<ul>
+								<li><a href="../../Travel/Default.html">Travel Home</a></li>
+								<li><a href="../../Travel/Risk.html">Delay Risk</a></li>
+								<li><a href="../../Travel/Outlook.html">Outlook</a></li>
+								<li><a href="../../Travel/Flying/Default.html">Airport Delays</a></li>
+								<li><a href="../../Travel/Library/Browse.html">Climate Guides</a></li>
+								<li><a href="../../Travel/Driving/Road.html">Driving<i class="caret"></i></a>
+									<ul>
+										<li><a href="../../Travel/Driving/Highways.html">Highway Conditions</a></li>
+										<li><a href="../../Travel/Driving/Road.html">Roadway Conditions</a></li>
+										<li><a href="../../Travel/Driving/TopUpTopDown.html">Top Up Top Down</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Travel/Weather/Snow/Default.html">Ski &amp; Snow<i class="caret"></i></a>
+									<ul>
+										<li><a href="javascript:internalPageLink('/Local/WxMap.aspx?latitude=39&longitude=-97&zoomLevel=4&opacity=1&basemap=0014&layers=0053');">Interactive Snow Cover</a></li>
+										<li><a href="../../Travel/Weather/Snow/Ski.html">Ski Conditions</a></li>
+										<li><a href="../../Travel/Weather/Snow/Cover.html">Snow Cover</a></li>
+										<li><a href="../../Travel/Weather/Snow/SNOWcast.html">SNOWcast</a></li>
+										<li><a href="../../Travel/Weather/Snow/Forecast.html">48hr Snow Forecast</a></li>
+										<li><a href="../../Travel/Weather/Snow/Storm.html">24hr Snow Forecast</a></li>
+									</ul>
+								</li>
+								<li><a href="../../Travel/Weather/Marine/Default.html">Boat &amp; Beach<i class="caret"></i></a>
+									<ul>
+										
+										<li><a href="../../Travel/Weather/Marine/Sailing.html">Great Sailing</a></li>
+										<li><a href="../../Travel/Weather/Marine/Water.html">Water Temperatures</a></li>
+										<li><a href="../../Travel/Weather/Marine/Waves.html">Wave Heights</a></li>
+										<li><a href="../../Travel/Weather/Marine/Forecast.html">Marine Forecast</a></li>
+									</ul>
+								</li>
+							</ul>
+						</li>
+						<li><a href="../ForecastToday.html" class="toggle-btn">Forecast</a>
+							<ul>
+								<li><a href="http://96.8.93.198/Local/Weather.aspx">10-Day Weather Report</a></li>
+								<li><a href="http://96.8.93.198/Local/Hourly.aspx">Hourly</a></li>
+								<li><a href="../Radar/Forecast.html">Radar</a></li>
+								<li><a href="../Surface/Forecast12.html">Surface</a></li>
+								<li><a href="TEMPcast.html">Temperature</a></li>
+								<li><a href="../Precipitation/PrecipCast.html">Precipitation</a></li>
+								<li><a href="../Precipitation/RainCast.html">Rain</a></li>
+								<li><a href="../../Storm/Severe/ThunderCast.html">Thunder</a></li>
+								<li><a href="../Wind/WINDcast.html">Winds</a></li>
+								<li><a href="../Humidity/HUMIDITYcast.html">Humidity</a></li>
+							</ul>
+						</li>
+						<li><a href="../Weather.html" class="toggle-btn">Current</a>
+							<ul>
+								<li><a href="../Radar/Current.html">Radar</a></li>
+								<li><a href="../Surface/Current.html">Surface</a></li>
+								<li><a href="Current.html">Temperatures</a></li>
+								<li><a href="Delta.html">Temperature Changes</a></li>
+								<li><a href="../Precipitation/Estimated.html">Precipitation</a></li>
+								<li><a href="../Wind/Current.html">Winds</a></li>
+								<li><a href="../Humidity/Current.html">Humidity</a></li>
+							</ul>
+						</li>
+						<li><a href="../Radar/Default.html" class="toggle-btn">Radar</a>
+							<ul>
+								<li><a href="../../Local/WxMap.html">Interactive Radar</a></li>
+								<li><a href="../Radar/Current.html">Current Radar</a></li>
+								<li><a href="../Radar/Currente5e7.html?animate=true">Current Loops</a></li>
+								<li><a href="../Radar/Forecast.html">Forecast</a></li>
+								<li><a href="../Radar/OneKM.html">Regional (1Km)</a></li>
+								<li><a href="../Radar/OneKMe5e7.html?animate=true">Regional (1Km) Loop</a></li>
+								<li><a href="../Radar/Metro.html">Metro</a></li>
+								<li><a href="../Radar/Metroe5e7.html?animate=true">Metro Loop</a></li>
+								<li><a href="../Radar/Summary.html">Summary</a></li>
+								<li><a href="../../Local/WxMap.html">Java Radar Loop</a></li>
+							</ul>
+						</li>
+						<li><a href="../Satellite/Default.html" class="toggle-btn">Satellite</a>
+							<ul>
+								<li><a href="../../Global/Satellite/Infrared.html">Global Infrared</a></li>
+								<li><a href="../Satellite/Infrared.html">US National Infrared</a></li>
+								<li><a href="../Satellite/Regional.html">US Regional Infrared</a></li>
+								<li><a href="../../Storm/Hurricane/AtlanticSatellite.html">Atlantic Infrared Satellite</a></li>
+								<li><a href="../../Storm/Hurricane/PacificSatellite.html">Pacific Infrared Satellite</a></li>
+								<li><a href="../../Storm/Hurricane/CaribbeanSatellite.html">Caribbean Infrared Satellite</a></li>
+								<li><a href="../Satellite/Visible.html">Visible Satellite</a></li>
+								<li><a href="../../Global/Satellite/Current.html">Current Satellite</a></li>
+								<li><a href="../Satellite/WaterVapor.html">Water Vapor</a></li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="location-bar clearfix">
+			<div class="container">
+				<div class="row">
+					<div class="user-location">
+						<a class="current-location toggle-btn" href="http://96.8.93.198/Local/Weather.aspx?location=">
+							
+						</a>
+						
+					</div>
+					<div class="uni-time">
+						<strong>Universal Time:</strong>&nbsp;Thursday, 11 Jul 2019, 21:51
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="referral" class="referral-form">
+			<div id="referralForm" style="display:block;">
+				<strong><span style="margin-right:5px;">Send this page to a friend</span>
+        <img src="http://images.intellicast.com/App_Images/btn_close.gif" alt="Close" class="Close" onclick="javascript:$('#referral').toggle();" style="float:right;" /></strong>
+				<div>
+					Your Name:<br />
+					<input type="text" id="FromName" maxlength="50" />
+				</div>
+				<div>
+					Your E-mail Address: <br />
+					<input type="text" id="FromEmail" maxlength="256" />
+				</div>
+				<div>
+					Friend's E-mail Address: <br />
+					<input type="text" id="ToEmail" maxlength="256" />
+				</div>
+				<div>
+					<button type="button" id="ReferralSubmit" onclick="javascript: SendReferral()">Send</button>
+				</div>
+			</div>
+			<div id="referralMessage" style="display:none;">
+				<strong style="text-align:center;">Thank you!<img src="http://images.intellicast.com/App_Images/btn_close.gif" alt="Close" class="Close" onclick="javascript:$('#referral').toggle();" /></strong>
+				<br /><br />
+					Your referral has been sent.<br /><br />
+					<a href="#" onclick="javascript:$('#referralForm').show();$('#referralMessage').hide();">Click here to send another one.</a>
+			</div>
+		</div>
+	</header>
+
+	<div class="main container clearfix" id="content">
+		<form name="aspnetForm" method="post" action="http://96.8.93.198/National/Temperature/Delta.aspx?location=default&amp;region=GRI" id="aspnetForm">
+<div>
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="/wEPDwUKMTE0MzE0NTAzOWRkchQi+10s2Y5H9r8JIP66kZXIUOg=" />
+</div>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="410AD240" />
+</div>
+			
+<div style="clear:both;width:1000px;">
+<div id="leftColumn">
+  
+<div class="pageHeader">
+  <div class="Primary Header" style="float: left;">24hr Deltas</div>
+  <div class="breadcrumb"><a href="../../index.html">Home</a> &raquo; <a href="../index.html">National</a> &raquo; <a href="index.html">Temperature</a> &raquo; 24hr Deltas</div>
+</div>
+<div class="Chrome RelatedTop">
+  <div class="Title">Temperature Maps</div>
+  <ul class="Flyout" style="float:right;margin-top:6px;">
+    <li class="parent" style="cursor:pointer;">
+      <a href="#">More Maps&nbsp;
+        <img src='http://images.intellicast.com/App_Themes/Silver/Images/marker_down.gif' alt="Temperature Arrow" style='margin-bottom: 2px;' />
+      </a>
+      <ul class="children" style="margin-left:-4px;">
+        <li><a href="Delta.html">24hr Deltas</a></li>
+        <li><a href="Departure10.html">10 Day Departure</a></li>
+        <li><a href="Departure30.html">30 Day Departure</a></li>
+        <li><a href="Departure90.html">90 Day Departure</a></li>
+      </ul>
+    </li>
+  </ul>
+</div>
+<div class="Container RelatedContainer">
+  <table class="Related">
+    <tr>
+      <td>
+        <a href="Current.html"><img src="http://images.intellicast.com/WxImages/_100w/CurrentTemps/usa.jpg" alt="Current" class="Thumbnail" /><br />
+        Current</a>
+      </td>
+      <td>
+        <a href="HighToday.html"><img src="http://images.intellicast.com/WxImages/_100w/CustomGraphic/wgfhi.gif" alt="High Today" class="Thumbnail" /><br />
+        High Today</a>
+      </td>
+      <td>
+        <a href="HighTomorrow.html"><img src="http://images.intellicast.com/WxImages/_100w/CustomGraphic/wgfhi1.gif" alt="High Tomorrow" class="Thumbnail"/ ><br />
+        High Tomorrow</a>
+      </td>
+      <td>
+        <a href="LowTomorrow.html"><img src="http://images.intellicast.com/WxImages/_100w/CustomGraphic/wgflo.gif" alt="Low Tomorrow" class="Thumbnail" /><br />
+        Low Tomorrow</a>
+      </td>
+      <td>
+        <a href="TEMPcast.html"><img src="https://www.wunderground.com/intellicast" alt="TEMPcast" class="Thumbnail" /><br />
+        TEMPcast</a>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <a href="WindChill.html"><img src="https://www.wunderground.com/intellicast" alt="Wind Chill" class="Thumbnail" /><br />
+        Wind Chill</a>
+      </td>
+      <td>
+        <a href="Extreme.html"><img src="http://images.intellicast.com/WxImages/_100w/ExtremeTemps/usa.jpg" alt="Feels Like" class="Thumbnail" /><br />
+        Feels Like</a>
+      </td>
+      <td>
+        <a href="Departure.html"><img src="http://images.intellicast.com/WxImages/_100w/TemperatureDeparture/usa.jpg" alt="Temp Departure" class="Thumbnail"/ ><br />
+        Temp Departure</a>
+      </td>
+      <td>
+        <a href="FrostFreeze.html"><img src="http://images.intellicast.com/WxImages/_100w/CustomGraphic/freeze1.gif" alt="Frost and Freeze" class="Thumbnail" /><br />
+        Frost &amp Freeze</a>
+      </td>
+      <td>
+        <a href="FirstLastFreeze.html"><img src="http://images.intellicast.com/WxImages/_100w/FirstandLastFreeze/usa.jpg" alt="First and Last Freeze" class="Thumbnail" /><br />
+        First &amp Last Freeze</a>
+      </td>
+    </tr>
+  </table>    
+</div> 
+
+<div class="Chrome">
+  <div class="Title">Temperature Changes</div>
+</div>
+<div style="border-left:solid .5px #999;">
+  <table id="controls">
+    <tr style="vertical-align: top;">
+      <td>
+        
+          <table style="margin:10px;"><tr style="vertical-align:middle;">
+          <td style="width:60px;"><strong>Region:&nbsp;</strong></td><td><select id="regionList" style="width:150px;" onchange="javascript: document.location.href=window.location.pathname + '?region=' + $(this).val();">
+            <option value="default">United States</option>
+          <option value="phx">AZ - Phoenix</option><option value="lax">CA - Los Angeles</option><option value="rdd">CA - Redding</option><option value="sfo">CA - San Francisco</option><option value="den">CO - Denver</option><option value="hfd">CT - Hartford</option><option value="eyw">FL - Key West</option><option value="mco">FL - Orlando</option><option value="tlh">FL - Tallahassee</option><option value="atl">GA - Atlanta</option><option value="ssi">GA - Brunswick</option><option value="dsm">IA - Des Moines</option><option value="boi">ID - Boise</option><option value="lws">ID - Lewiston</option><option value="ord">IL - Chicago</option><option value="ddc">KS - Dodge City</option><option value="top">KS - Topeka</option><option value="cvg">KY - Covington</option><option value="msy">LA - New Orleans</option><option value="bgr">ME - Bangor</option><option value="det">MI - Detroit</option><option value="mnm">MI - Menominee</option><option value="brd">MN - Brainerd</option><option value="stl">MO - Saint Louis</option><option value="mei">MS - Meridian</option><option value="hln">MT - Helena</option><option value="mls">MT - Miles City</option><option value="ilm">NC - Wilmington</option><option value="bis">ND - Bismarck</option><option value="gri">NE - Grand Island</option><option value="abq">NM - Albuquerque</option><option value="dra">NV - Mercury</option><option value="roc">NY - Rochester</option><option value="tul">OK - Tulsa</option><option value="eug">OR - Eugene</option><option value="phl">PA - Philadelphia</option><option value="pir">SD - Pierre</option><option value="tys">TN - Knoxville</option><option value="mem">TN - Memphis</option><option value="bro">TX - Brownsville</option><option value="drt">TX - Del Rio</option><option value="elp">TX - El Paso</option><option value="iah">TX - Houston</option><option value="lbb">TX - Lubbock</option><option value="tyr">TX - Tyler</option><option value="slc">UT - Salt Lake City</option><option value="ric">VA - Richmond</option><option value="rut">VT - Rutland</option><option value="sea">WA - Seattle</option><option value="mgw">WV - Morgantown</option><option value="cpr">WY - Casper</option></select></td></tr></table>
+       
+      </td>
+      <td style="width:800px;padding: 10px 10px 0px 0px;">
+        
+      </td>
+    </tr>
+    <!-- Check if Singleton -->
+    
+    <tr>
+      <td colspan="2" style="padding:0px 10px 0px 10px;">
+        <div style="float:left;width:580px;">
+          <strong>Toggle National and Regional Views</strong><br />
+          Click the blue-button above to toggle between National/World and Regional views. View persists until toggle back.<br />
+          For adding explicit book-marks to directly access preferred weather maps, <a href="../../Help/Faq.html">click here to visit our FAQ page.</a>
+        </div>
+      </td>
+    </tr>
+  
+  </table>
+</div>
+<div class="Content Container" style="text-align:center;">
+  <div><img style="margin-bottom:-2px;" src="http://images.intellicast.com/images/legends/TempChange.gif" alt="Legend" /></div><div id="ctl00_ctl00_master_body_map_basemap" style="background-repeat: no-repeat; background-position: center;">
+    <div id="ctl00_ctl00_master_body_map_weather" style="background-repeat: no-repeat; background-position: center;">
+      <div id="ctl00_ctl00_master_body_map_counties" style="background-repeat: no-repeat; background-position: center;">
+        <div id="ctl00_ctl00_master_body_map_highways" style="background-repeat: no-repeat; background-position: center;">
+          <div id="ctl00_ctl00_master_body_map_watchboxes" style="background-repeat: no-repeat; background-position: center;">
+            <div id="ctl00_ctl00_master_body_map_cities" style="background-repeat: no-repeat; background-position: center;">
+              <img id="map" src="http://images.intellicast.com/WxImages/TempChange/usa.jpg" alt="" style="visibility: visible;" usemap="#airportsMap" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<map id="airportsMap" name="airportsMap">
+  <area shape="rect" coords="23, 20, 73, 73" href="Deltaf31b.html?location=USWA0395" title="Seattle" alt="Seattle Airports Map" />
+  <area shape="rect" coords="71, 33, 111, 92" href="Delta1ba0.html?location=USID0146" title="Lewiston" alt="Lewiston Airports Map" />
+  <area shape="rect" coords="13, 71, 73, 126" href="Deltaf47e.html?location=USOR0118" title="Eugene" alt="Eugene Airports Map" />
+  <area shape="rect" coords="71, 90, 111, 127" href="Delta2e68.html?location=USID0025" title="Boise" alt="Boise Airports Map" />
+  <area shape="rect" coords="109, 39, 145, 127" href="Deltaf61a.html?location=USMT0163" title="Helena" alt="Helena Airports Map" />
+  <area shape="rect" coords="143, 46, 194, 100" href="Deltadeab.html?location=USMT0229" title="Miles City" alt="Miles City Airports Map" />
+  <area shape="rect" coords="143, 98, 185, 146" href="Deltab1cf.html?location=USWY0030" title="Casper" alt="Casper Airports Map" />
+  <area shape="rect" coords="9, 116, 72, 153" href="Delta166a.html?location=USCA0922" title="Redding" alt="Redding Airports Map" />
+  <area shape="rect" coords="10, 151, 72, 204" href="Deltafe42.html?location=USCA0082" title="San Francisco" alt="San Francisco Airports Map" />
+  <area shape="rect" coords="21, 202, 72, 265" href="Delta8ff9.html?location=USCA0638" title="Los Angeles" alt="Los Angeles Airports Map" />
+  <area shape="rect" coords="60, 169, 134, 227" href="Delta183a.html?location=USNV0059" title="Mercury" alt="Mercury Airports Map" />
+  <area shape="rect" coords="70, 125, 144, 209" href="Delta0eb8.html?location=USUT0225" title="Salt Lake City" alt="Salt Lake City Airports Map" />
+  <area shape="rect" coords="70, 225, 134, 285" href="Delta80a1.html?location=USAZ0166" title="Phoenix" alt="Phoenix Airports Map" />
+  <area shape="rect" coords="142, 144, 205, 216" href="Deltad56f.html?location=USCO0105" title="Denver" alt="Denver Airports Map" />
+  <area shape="rect" coords="132, 207, 176, 248" href="Delta1e7e.html?location=USNM0004" title="Albuquerque" alt="Albuquerque Airports Map" />
+  <area shape="rect" coords="193, 52, 238, 99" href="Deltabe7d.html?location=USND0037" title="Bismarck" alt="Bismark Airports Map" />
+  <area shape="rect" coords="183, 98, 251, 146" href="Deltad22a.html?location=USSD0269" title="Pierre" alt="Pierre Airports Map" />
+  <area shape="rect" coords="203, 144, 251, 175" href="Deltaa1a4.html?location=USNE0207" title="Grand Island" alt="Grand Island Airports Map" />
+  <area shape="rect" coords="236, 49, 295, 115" href="Delta6df0.html?location=USMN0091" title="Brainerd" alt="Brainerd Airports Map" />
+  <area shape="rect" coords="249, 112, 295, 177" href="Delta5bc1.html?location=USIA0231" title="Des Moines" alt="Des Moines Airports Map" />
+  <area shape="rect" coords="235, 174, 275, 199" href="Delta4cce.html?location=USKS0571" title="Topeka" alt="Topeka Airports Map" />
+  <area shape="rect" coords="203, 173, 237, 221" href="Delta7ccd.html?location=USKS0152" title="DodgeCity" alt="Dodge City Airports Map" />
+  <area shape="rect" coords="236, 198, 275, 247" href="Delta1d35.html?location=USOK0537" title="Tulsa" alt="Tulsa Airports Map" />
+  <area shape="rect" coords="274, 172, 319, 202" href="Delta1bad.html?location=USMO0787" title="St Louis" alt="St Louis Airports Map" />
+  <area shape="rect" coords="175, 216, 240, 281" href="Delta8139.html?location=USTX0808" title="Lubbock" alt="Lubbock Airports Map" />
+  <area shape="rect" coords="132, 247, 176, 321" href="Delta08a4.html?location=USTX0413" title="El Paso" alt="El Paso Airports Map" />
+  <area shape="rect" coords="175, 279, 240, 325" href="Delta6ca7.html?location=USTX0346" title="Del Rio" alt="Del Rio Airports Map" />
+  <area shape="rect" coords="239, 245, 285, 286" href="Deltaa438.html?location=USTX1383" title="Tyler" alt="Tyler Airports Map" />
+  <area shape="rect" coords="238, 284, 277, 324" href="Deltaf8fc.html?location=USTX0617" title="Houston" alt="Houston Airports Map" />
+  <area shape="rect" coords="193, 323, 270, 374" href="Delta6f53.html?location=USTX0166" title="Brownsville" alt="Brownsville Airports Map" />
+  <area shape="rect" coords="274, 285, 338, 324" href="Delta87a3.html?location=USLA0338" title="New Orleans" alt="New Orleans Airports Map" />
+  <area shape="rect" coords="294, 52, 345, 117" href="Deltaa3ac.html?location=USMI0545" title="Menominee" alt="Menominee Airports Map" />
+  <area shape="rect" coords="294, 115, 346, 174" href="Delta4095.html?location=USIL0225" title="Chicago" alt="Chicago Airports Map" />
+  <area shape="rect" coords="318, 159, 375, 201" href="Deltaefcf.html?location=USKY0801" title="Covington" alt="Covington Airports Map" />
+  <area shape="rect" coords="344, 81, 376, 161" href="Deltab1d2.html?location=USMI0229" title="Detroit" alt="Detroit Airports Map" />
+  <area shape="rect" coords="274, 199, 337, 246" href="Deltaae0b.html?location=USTN0325" title="Memphis" alt="Memphis Airports Map" />
+  <area shape="rect" coords="336, 200, 377, 234" href="Delta0ca3.html?location=USTN0268" title="Knoxville" alt="Knoxville Airports Map" />
+  <area shape="rect" coords="284, 244, 339, 286" href="Delta6ac0.html?location=USMS0232" title="Meridian" alt="Meridian Airports Map" />
+  <area shape="rect" coords="336, 232, 376, 271" href="Delta81c4.html?location=USGA0028" title="Atlanta" alt="Atlanta Airports Map" />
+  <area shape="rect" coords="374, 266, 413, 301" href="Deltaa6fc.html?location=USGA0078" title="Brunswick" alt="Brunswick Airports Map" />
+  <area shape="rect" coords="337, 269, 375, 323" href="Delta4f2b.html?location=USFL0479" title="Tallahassee" alt="Tallahassee Airports Map" />
+  <area shape="rect" coords="374, 298, 414, 349" href="Deltac8e9.html?location=USFL0372" title="Orlando" alt="Orlando Airports Map" />
+  <area shape="rect" coords="375, 346, 448, 374" href="Deltae84c.html?location=USFL0244" title="Key West" alt="Key West Airports Map" />
+  <area shape="rect" coords="374, 218, 441, 269" href="Delta3e88.html?location=USNC0760" title="Wilmington" alt="Wilmington Airports Map" />
+  <area shape="rect" coords="373, 146, 405, 186" href="Delta7ac2.html?location=USWV0507" title="Pittsburgh" alt="Pittsburgh Airports Map" />
+  <area shape="rect" coords="403, 146, 458, 186" href="Delta67f1.html?location=USPA1276" title="Morgantown" alt="Morgantown Airports Map" />
+  <area shape="rect" coords="373, 184, 444, 222" href="Delta1132.html?location=USVA0652" title="Richmond" alt="Richmond Airports Map" />
+  <area shape="rect" coords="375, 102, 414, 148" href="Deltac6a3.html?location=USNY1232" title="Rochester" alt="Rochester Airports Map" />
+  <area shape="rect" coords="451,41,489,91" href="Deltaed2c.html?location=USME0017"title="Bangor" alt="Bangor Airports Map" />
+  <area shape="rect" coords="414,126,482,146" href="Delta28bc.html?location=USCT0094" title="Hartford" alt="Hartford Airports Map" />
+  <area shape="rect" coords="413,89,474,127" href="Deltab8e7.html?location=USVT0205" title="Rutland" alt="Rutland Airports Map" />
+</map>        
+
+<script type="Text/javascript">
+function ToggleOverlay(checkbox, folder) {
+  switch (folder) {
+    case "counties":
+      var control = document.getElementById("ctl00_ctl00_master_body_map_counties");
+      break;
+    case "highways":
+      var control = document.getElementById("ctl00_ctl00_master_body_map_highways");
+      break;
+    case "cities":
+      var control = document.getElementById("ctl00_ctl00_master_body_map_cities");
+      break;
+    case "WatchBoxes":
+      var control = document.getElementById("ctl00_ctl00_master_body_map_watchboxes");
+      break;
+  }
+  switch (folder) {
+    case "WatchBoxes":
+      control.style.backgroundImage = checkbox.checked ? 'url(http://images.intellicast.com/WxImages/AirportsWatchBoxes/usa.gif)' : '';
+      break;
+    default:
+      control.style.backgroundImage = checkbox.checked ? 'url(http://images.intellicast.com/images/Overlays/Airports/' + folder + '/usa.gif)' : '';
+      break;
+  }
+  setCookie(folder + "Overlay", checkbox.checked, 365);
+}
+
+function LoadOverlays() {
+  if (getCookie("countiesOverlay") != "") {
+    var counties = document.getElementById("ctl00_ctl00_master_body_map_counties");
+    var countiesToggle = document.getElementById("ToggleCounties");
+    counties.style.backgroundImage = getCookie("countiesOverlay") == "true" ? 'url(http://images.intellicast.com/images/Overlays/Airports/counties/usa.gif)' : '';
+    countiesToggle.checked = (getCookie("countiesOverlay") == "true");
+  }
+  if (getCookie("highwaysOverlay") != "") {
+    var highways = document.getElementById("ctl00_ctl00_master_body_map_highways");
+    var highwaysToggle = document.getElementById("ToggleHighways");
+    highways.style.backgroundImage = getCookie("highwaysOverlay") == "true" ? 'url(http://images.intellicast.com/images/Overlays/Airports/highways/usa.gif)' : '';
+    highwaysToggle.checked = (getCookie("highwaysOverlay") == "true");
+  }
+  if (getCookie("citiesOverlay") != "") {
+    var cities = document.getElementById("ctl00_ctl00_master_body_map_cities");
+    var citiesToggle = document.getElementById("ToggleCities");
+    cities.style.backgroundImage = getCookie("citiesOverlay") == "true" ? 'url(http://images.intellicast.com/images/Overlays/Airports/cities/usa.gif)' : '';
+    citiesToggle.checked = (getCookie("citiesOverlay") == "true");
+  }
+  if (getCookie("WatchBoxesOverlay")) {
+    var WatchBoxes = document.getElementById("ctl00_ctl00_master_body_map_watchboxes");
+    var WatchBoxesToggle = document.getElementById("ToggleWatchboxes");
+    WatchBoxes.style.backgroundImage = getCookie("WatchBoxesOverlay") == "true" ? 'url(http://images.intellicast.com/WxImages/AirportsWatchBoxes/usa.gif)' : '';
+    WatchBoxesToggle.checked = (getCookie("WatchBoxesOverlay") == "true");
+  }
+}
+</script>
+
+<div class="Chrome">
+  <div class="Title">Map Details</div>
+</div>
+<div id="weathercom" class="Content Container">
+  <strong>Description:</strong><br />
+  The Temperature 24-Hour Deltas image show the change in temperature in the past 24 hours.
+</div>   
+
+</div>
+<div id="rightColumn">
+  <div class="adHeader">
+    <div class="title">Advertisements</div>
+    <div class="miniAd"><a href="http://www.aolnews.com/category/nation/" target="_blank" onclick="javascript:linkTracker._trackPageview('../../AOL/Header/www.aolnews.com/category/nation/index.html');"><span>National News</span></a></div>
+  </div>
+  <!-- Old Ads -->
+  
+  <!-- Old Ads -->
+  <!-- New Ads -->
+  <div id="AdPageCounterDiv">
+    <div id="WX_PageCounter">
+      
+    </div>
+  </div>
+  <div>
+    <div id="WX_Top300Variable">
+      
+    </div>
+  </div>
+  <!-- Promo ad for storm/icast mobile -->
+	<div id="promoAd" style="position:relative;">
+    <a href="https://go.onelink.me/RFZA?pid=Intellicast&amp;c=Display" target="_blank">
+			<img style="display:block;" src="http://images.intellicast.com/App_Images/STORM_BANNERS_S7_300X125.jpg" alt="Storm Radar with NOAA Weather" />
+		</a>
+	</div>
+  <div>
+    <div id="WX_Mid300">
+      
+    </div>
+  </div>
+  <div>
+    <div id="WX_Hidden">
+      
+    </div>
+  </div>
+  <div>
+    <div id="WX_Tiles">
+  		<div style="float:left;">
+        <div id="WX_Tile1">
+          
+        </div>
+  		</div>
+  		<div style="float:right;">
+        <div id="WX_Tile2">
+          
+        </div>
+  		</div>
+  	</div>
+  </div>
+  <div>
+    <div id="WX_PaidSearch">
+      
+    </div>
+  </div>
+  <!-- New Ads -->
+</div>
+</div>
+
+		</form>
+	</div>
+
+	
+		<footer class="site-footer">
+			<div class="help-links">
+				<div class="container">
+					<a href="../../About/Default.html">About Us</a>
+					<a href="https://advertising.weather.com/contact/" target="_blank">Advertise with Us</a>
+					<a href="https://www.wunderground.com/about/contact-us">Contact Us</a>
+					
+					<a href="../../Help/Default.html">Help</a>
+					<a href="http://www.aolnews.com/" target="_blank">News</a>
+					<a href="http://www.aboutads.info/choices/" target="_blank" style="background: url(../../../icons.wxug.com/i/misc/adChoices.png) no-repeat right; padding-right: 20px;">Ad Choices</a>
+				</div>
+			</div>
+			<div class="legal-links">
+				<div class="container">
+					<a href="../../About/Terms.html">Terms of Use</a>
+					<a href="../../About/Privacy.html">Privacy Statement</a>
+					<span>&copy;Copyright 2019 TWC Product and Technology, LLC</span>
+					
+					<span>Version 4.6.201311.1</span>
+				</div>
+				<!-- MACHINE NAME: ICAST-WEB2 -->
+			</div>
+		</footer>
+	
+
+	
+	
+	
+  
+	<script type="text/javascript" src="http://images.intellicast.com/Scripts/core_20150225.js"></script>
+
+  <script>
+    var cod = {
+      latitude: '0',
+      longitude: '0',
+      unit: 'F'
+    };
+  </script>
+  <script src="http://images.intellicast.com/Scripts/cod_20150330.js"></script>
+</body>
+
+<!-- Mirrored from 96.8.93.198/National/Temperature/Delta.aspx?location=default&region=GRI by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 11 Jul 2019 22:31:53 GMT -->
+</html>

@@ -1,0 +1,78 @@
+﻿#content #conditions{width:265px;border-right:solid 1px #383e49;padding:5px 10px;}
+#content #hourly{width:173px;}
+
+#content #info{border-left:solid 1px #383e49;}
+#content #infoData div{float: left;}
+#content #infoData td{padding:5px 0px 0px 7px;}
+#content #daily{border-bottom:none;background-color:#ffffff;display:block;}
+#content #extended img{margin-right:5px;}
+#content #extended td{font-size:10px;}
+#content #extended{border-bottom:solid 1px #383e49;width:100%;background:#e3e6ea;}
+#content #extended span.Hi{font-size:20px;padding:0px;float:none;}
+#content #extended span.Lo{font-size:18px;padding:0px;float:none;}
+#content #extended .LeftColumn{vertical-align:top;text-align:center;padding:10px 5px;float:left;}
+#content #extended .MiddleColumn{vertical-align:top;padding:10px 5px;float:left;}
+#content #extended .RightColumn{padding:10px 4px;float:left;width:160px;}
+#content #extended .RightColumn img{border:solid 1px #383e49;}
+#content #pastObs, #content #todayHourly, #content #monthlyClimate, #content #dailyClimate{width:100%;}
+#content #pastObs #titles td{font-weight:bold;width:50px;font-size:10px;}
+#content #pastObs .DateTime{color:#666; padding-left: 5px;}
+#content #pastObs tr, #content #todayHourly tr, .TitlesAvgRecord{height:30px;}
+#content #todayHourly td{text-align:center;}
+#content #todayHourly #titlesTodayHourly td{font-weight:bold;width:47px;font-size:10px;border-bottom:solid 1px #383e49;}
+#content #todayHourly .DateTime{color:#666;font-weight:bold;padding-left:5px;}
+#content #monthlyClimate a{}
+#content #monthlyClimate td,#content  #dailyClimate td{width:95px;}
+#content #localLeftColumn{padding: 10px; text-align:center;}
+#content #localLeftColumn div{margin-bottom:8px;}
+#content #localWatchWarnings, #content #weatherAlertsType{padding:10px;}
+#content #localWatchWarnings td{line-height:20px;width:250px;}
+#content #regions{width:100%;}
+#content #regions td{vertical-align:top;border-top:solid 1px #e7f4fc;padding-top:5px;}
+
+#content #related{color:#900;font-weight:bold;}
+#content #imap{width:185px;height:100px;padding-left:2px;}
+#content #forecastHours td{border-bottom:solid 1px #383e49;}
+#content #chartFooter a{padding:0px 15px;}
+
+#content .Empty{width:12px;}
+#content .Hour{border-top:solid 1px #383e49;height:47px;}
+#content .ContainerLink{font-size:10px;background-color:#EAEBEC;border-top:solid 1px #383e49;text-align:center;padding:2px 3px;white-space:nowrap;}
+#content .DOW{text-align:center;border-bottom:solid 1px #383e49;width:100%;height:19px;border-right:solid 1px #383e49;width:65px;overflow:hidden;cursor:pointer;}
+#content .FWX{background-color:#fff;border-right:solid 1px #383e49;border-bottom:solid 1px #383e49;cursor:pointer;}
+#content .End{border-right:none;}
+#content .Weekend{background-color:#008eb8;color:#fff;}
+#content .Selected{font-weight:bold;}
+#content .FWXSelected{background:#e3e6ea;border-bottom:solid 1px #e3e6ea;}
+#content .Month{padding:3px;float:left;}
+#content .DayNum{padding:3px;float:right;background-color:#fff;border-bottom:solid 1px #383e49;border-left:solid 1px #383e49;color:#383e49;font-weight:bold;}
+#content .Wx{clear:both;text-align:center;font-size:10px;white-space:nowrap;margin-bottom:5px;}
+#content .Wx img{margin-top:6px;}
+#content .Hi{float:left;color:#9d0004;padding-left:4px;font-weight:bold;}
+#content .Lo{float:right;color:#008eb8;padding:4px 4px 0px 0px;font-weight:bold;}
+#content .Details{background-color:#e3e6ea;padding:10px;visibility:hidden;display:none;}
+#content .SubMenu{font-weight:bold;background-color:#EAEBEC;padding:0px 10px;height:23px;line-height:23px;font-family: 'Segoe UI', Tahoma, sans-serif;}
+#content .Gauge{margin:10px 0px;}
+#content .Gauge td{padding-right:5px;}
+#content .Meters td{padding-left:11px;line-height:16px;white-space:nowrap;}
+#content .Meters td div{padding-left:5px;}
+#content .Sun{background:url(../App_Images/sun.png) no-repeat;}
+#content .Moon{background:url(../App_Images/moon.png) no-repeat;}
+#content .Sun,#content .Moon{width:135px;height:50px;}
+#content .Sun div,#content .Moon div{margin:-1px 0px 0px 25px;}
+#content .Alternate{background-color:#f7f7f9;}
+#content .TitlesAvgRecord td{font-weight:bold;font-size:11px;border-bottom:solid 1px #383e49;font-family: 'Segoe UI', Tahoma, sans-serif;}
+#content .RowsLocalHistoric td{height:20px;border-top:solid 1px #383e49;}
+#content .HeaderGradientDark{background:#fff url(../App_Images/chrome_dark3.gif) repeat-x;}
+#content .AlertsContainer{width:225px;text-align:center;vertical-align:top;background-color:#EEE;border-right:solid 1px #383e49;}
+#content .DateTime{white-space:nowrap;}
+#content .SkiResortStates{float:left;margin-right:150px;}
+
+#content .Key{width:121px;background-color:#999;border:solid 1px #000;}
+#content .Key div{overflow:hidden;border-right:solid 1px #000;}
+#content .Key img{width:121px;height:12px;display:block;}
+
+#content .ChartLinks{line-height:25px;background:#e3e6ea;height:25px;font-size:10px;text-align:center;}
+#content .ChartLinks a{padding:0px 3px;}
+
+#content div.Selected{visibility:visible;display:block;font-weight:normal;}
